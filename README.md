@@ -1,5 +1,7 @@
 # amicro-sv
 
+[![Amicro SV, 157 micro interactions for Svelte 5](static/og.png)](https://amicro.enisdev.com)
+
 ![Svelte 5](https://img.shields.io/badge/Svelte-5-FF3E00?style=flat-square&logo=svelte&logoColor=white)
 ![SvelteKit 2](https://img.shields.io/badge/SvelteKit-2-FF3E00?style=flat-square&logo=svelte&logoColor=white)
 ![Tailwind CSS 4](https://img.shields.io/badge/Tailwind_CSS-4-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)
