@@ -2,8 +2,9 @@
 	import '../app.css';
 	import type { Snippet } from 'svelte';
 	import { motion, AnimatePresence } from 'motion-sv';
-	import { Sun, Moon } from '@lucide/svelte';
+	import { Sun, Moon, Menu, X } from '@lucide/svelte';
 	import { page } from '$app/state';
+	import { onClickOutside } from 'runed';
 	import { setAppState } from '$lib/app/app-state.svelte.js';
 	import { ThemeToggleCode } from '$lib/app/code-generator.js';
 	import AnimatedNumber from '$lib/app/components/sections/AnimatedNumber.svelte';
@@ -23,6 +24,18 @@
 	const footerLink = 'text-black dark:text-[#e9e9e9] dark:hover:text-white';
 
 	let stars = $state<number | null>(null);
+	let menuOpen = $state(false);
+	let menuRoot = $state<HTMLElement>();
+
+	onClickOutside(
+		() => menuRoot,
+		() => (menuOpen = false)
+	);
+
+	$effect(() => {
+		pathname;
+		menuOpen = false;
+	});
 
 	$effect(() => {
 		let active = true;
@@ -143,7 +156,7 @@
 				>
 					Svelte-Port
 				</span>
-				<nav class="flex items-center gap-[8px]">
+				<nav class="hidden sm:flex items-center gap-[8px]">
 					{#each navLinks as link (link.href)}
 						<a
 							href={link.href}
@@ -160,13 +173,13 @@
 				</nav>
 			</div>
 
-			<div class="flex items-center gap-[8px]">
+			<div class="flex items-center gap-[8px]" bind:this={menuRoot}>
 				<a
 					href="https://github.com/enisbu/amicro-sv"
 					target="_blank"
 					rel="noopener noreferrer"
 					title="Repo of this Svelte port"
-					class="inline-flex items-center justify-center gap-1.5 h-[36px] px-[13px] rounded-full font-sans text-[13px] font-medium leading-[16px] no-underline transition-colors duration-150 group {pillButton}"
+					class="hidden sm:inline-flex items-center justify-center gap-1.5 h-[36px] px-[13px] rounded-full font-sans text-[13px] font-medium leading-[16px] no-underline transition-colors duration-150 group {pillButton}"
 				>
 					<svg viewBox="0 0 16 16" fill="currentColor" class="w-auto h-[16px] max-w-[16px] block">
 						<path
@@ -208,8 +221,55 @@
 						<Moon class="w-[16px] h-[16px]" />
 					{/if}
 				</button>
+
+				<button
+					onclick={() => (menuOpen = !menuOpen)}
+					class="inline-flex sm:hidden items-center justify-center w-[36px] h-[36px] rounded-full transition-colors duration-150 cursor-pointer border-0 {pillButton}"
+					aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+					aria-expanded={menuOpen}
+				>
+					{#if menuOpen}
+						<X class="w-[18px] h-[18px]" />
+					{:else}
+						<Menu class="w-[18px] h-[18px]" />
+					{/if}
+				</button>
 			</div>
 		</div>
+
+		<AnimatePresence>
+			{#if menuOpen}
+				<motion.div
+					initial={{ opacity: 0, y: -8 }}
+					animate={{ opacity: 1, y: 0 }}
+					exit={{ opacity: 0, y: -8 }}
+					transition={{ duration: 0.18, ease: 'easeOut' }}
+					class="absolute top-[64px] left-6 right-6 z-[60] p-2 rounded-2xl border border-border shadow-2xl flex flex-col gap-1 sm:hidden backdrop-blur-xl bg-popover text-popover-foreground"
+				>
+					{#each navLinks as link (link.href)}
+						<a
+							href={link.href}
+							aria-current={isActive(link.href) ? 'page' : undefined}
+							class="flex items-center h-[42px] px-4 rounded-xl text-[14px] font-semibold no-underline transition-colors {isActive(
+								link.href
+							)
+								? 'bg-secondary text-foreground'
+								: 'text-muted-foreground hover:text-foreground hover:bg-secondary'}"
+						>
+							{link.label}
+						</a>
+					{/each}
+					<a
+						href="https://github.com/enisbu/amicro-sv"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="flex items-center h-[42px] px-4 rounded-xl text-[14px] font-semibold no-underline text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors"
+					>
+						GitHub
+					</a>
+				</motion.div>
+			{/if}
+		</AnimatePresence>
 	</header>
 
 	<AnimatePresence mode="wait">
