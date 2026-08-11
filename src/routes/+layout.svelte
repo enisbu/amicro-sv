@@ -286,25 +286,31 @@
 		{/key}
 	</AnimatePresence>
 
-	<footer class="relative z-10 w-full text-center pb-[24px] text-[13px] leading-[14px]">
-		<span class={footerText}>Created by</span>
+	<footer
+		class="relative z-10 w-full text-center text-balance px-6 pb-[24px] text-[13px] leading-[22px]"
+	>
+		<span class="whitespace-nowrap">
+			<span class={footerText}>Created by</span>
+			<a
+				class="no-underline ml-[4px] font-medium transition-colors {footerLink}"
+				href="https://x.com/SubhanHQ"
+				target="_blank"
+				rel="noopener noreferrer">Syed Subhan</a
+			>
+			<span class="mx-1 {footerText}">·</span>
+		</span>
+		<span class="whitespace-nowrap">
+			<span class={footerText}>Svelte port by</span>
+			<a
+				class="no-underline ml-[4px] font-medium transition-colors {footerLink}"
+				href="https://enisdev.com"
+				target="_blank"
+				rel="noopener noreferrer">enisdev</a
+			>
+			<span class="mx-1 {footerText}">·</span>
+		</span>
 		<a
-			class="no-underline ml-[4px] font-medium transition-colors {footerLink}"
-			href="https://x.com/SubhanHQ"
-			target="_blank"
-			rel="noopener noreferrer">Syed Subhan</a
-		>
-		<span class="mx-1 {footerText}">·</span>
-		<span class={footerText}>Svelte port by</span>
-		<a
-			class="no-underline ml-[4px] font-medium transition-colors {footerLink}"
-			href="https://enisdev.com"
-			target="_blank"
-			rel="noopener noreferrer">enisdev</a
-		>
-		<span class="mx-1 {footerText}">·</span>
-		<a
-			class="no-underline transition-colors {footerLink}"
+			class="no-underline whitespace-nowrap transition-colors {footerLink}"
 			href="https://github.com/enisbu/amicro-sv#readme">Terms &amp; License</a
 		>
 	</footer>
