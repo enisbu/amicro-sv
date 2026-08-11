@@ -150,7 +150,7 @@
 
 		<div class="flex flex-wrap items-center justify-center gap-3 mt-8">
 			<motion.a
-				href="https://github.com/Subhan-code/Amicro--Micro-transitions-"
+				href="https://github.com/enisbu/amicro-sv"
 				target="_blank"
 				rel="noopener noreferrer"
 				whileHover="hover"
