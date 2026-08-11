@@ -309,9 +309,15 @@
 			>
 			<span class="mx-1 {footerText}">·</span>
 		</span>
-		<a
-			class="no-underline whitespace-nowrap transition-colors {footerLink}"
-			href="https://github.com/enisbu/amicro-sv#readme">Terms &amp; License</a
+		<span class="whitespace-nowrap">
+			<a
+				class="no-underline transition-colors {footerLink}"
+				href="https://github.com/enisbu/amicro-sv#readme">Terms &amp; License</a
+			>
+			<span class="mx-1 {footerText}">·</span>
+		</span>
+		<a class="no-underline whitespace-nowrap transition-colors {footerLink}" href="/llms.txt"
+			>llms.txt</a
 		>
 	</footer>
 

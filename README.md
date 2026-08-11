@@ -27,7 +27,8 @@ Requires SvelteKit and Tailwind 4.
 ```
 
 The CLI writes the component into your `ui` alias under `amicro/`, installs `motion-sv` and drops
-the upstream MIT license next to it. Every name from the [install page](https://amicro.enisdev.com/install) works.
+the upstream MIT license next to it. Every name from the [install page](https://amicro.enisdev.com/install) works,
+or from [llms.txt](https://amicro.enisdev.com/llms.txt) if a coding agent is doing the picking.
 
 ## Development
 
@@ -37,7 +38,7 @@ pnpm dev
 pnpm check
 pnpm build
 pnpm test:amicro      # Playwright motion check, needs pnpm dev running
-pnpm registry:build   # regenerate registry.json and static/r
+pnpm registry:build   # regenerate registry.json, static/r and llms.txt
 ```
 
 ## Conventions
