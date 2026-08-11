@@ -195,11 +195,11 @@
 					</span>
 				</a>
 				<a
-					href="https://x.com/SubhanHQ"
+					href="https://x.com/enisdev"
 					target="_blank"
 					rel="noopener noreferrer"
-					title="Author of the original on X"
-					aria-label="Author of the original on X"
+					title="enisdev on X"
+					aria-label="enisdev on X"
 					class="hidden sm:inline-flex items-center justify-center w-[36px] h-[36px] rounded-full transition-colors duration-150 {pillButton}"
 				>
 					<svg viewBox="0 0 16 17" fill="currentColor" class="w-[16px] h-[17px] block">
