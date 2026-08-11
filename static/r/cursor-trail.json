@@ -1,0 +1,22 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "cursor-trail",
+	"title": "Cursor Trail",
+	"type": "registry:ui",
+	"description": "Cursor effect from Amicro, ported to Svelte 5 and motion-sv.",
+	"dependencies": [
+		"motion-sv"
+	],
+	"files": [
+		{
+			"content": "<script lang=\"ts\">\n\timport { motion } from 'motion-sv';\n\n\tconst Div = motion.div;\n\n\tinterface Props {\n\t\tcolor?: string;\n\t\tsize?: number;\n\t\tcount?: number;\n\t}\n\n\tlet { color = 'var(--signal)', size = 8, count = 6 }: Props = $props();\n\n\tlet x = $state(0);\n\tlet y = $state(0);\n\tlet isVisible = $state(false);\n\n\tconst dots = $derived(\n\t\tArray.from({ length: count }, (_, index) => ({\n\t\t\tindex,\n\n\t\t\ttransition: {\n\t\t\t\ttype: 'spring' as const,\n\t\t\t\tstiffness: 300 - index * 30,\n\t\t\t\tdamping: 25 + index * 2,\n\t\t\t\tmass: 0.2 + index * 0.1\n\t\t\t},\n\n\t\t\tdotSize: size * (1 - index / count),\n\t\t\topacity: 1 - index / count\n\t\t}))\n\t);\n\n\t$effect(() => {\n\t\tconst onMove = (event: MouseEvent) => {\n\t\t\tx = event.clientX;\n\t\t\ty = event.clientY;\n\t\t\tisVisible = true;\n\t\t};\n\t\tconst onLeave = () => (isVisible = false);\n\n\t\twindow.addEventListener('mousemove', onMove, { passive: true });\n\t\tdocument.addEventListener('mouseleave', onLeave);\n\n\t\treturn () => {\n\t\t\twindow.removeEventListener('mousemove', onMove);\n\t\t\tdocument.removeEventListener('mouseleave', onLeave);\n\t\t};\n\t});\n</script>\n\n{#if isVisible}\n\t{#each dots as dot (dot.index)}\n\t\t<Div\n\t\t\tanimate={{ x, y }}\n\t\t\ttransition={dot.transition}\n\t\t\tstyle={{\n\t\t\t\twidth: `${dot.dotSize}px`,\n\t\t\t\theight: `${dot.dotSize}px`,\n\t\t\t\topacity: dot.opacity,\n\t\t\t\tbackgroundColor: color\n\t\t\t}}\n\t\t\tclass=\"cursor-trail-dot\"\n\t\t\tdata-testid=\"cursor-trail-dot\"\n\t\t\tdata-index={dot.index}\n\t\t/>\n\t{/each}\n{/if}\n\n<style>\n\t:global(.cursor-trail-dot) {\n\t\tposition: fixed;\n\t\ttop: 0;\n\t\tleft: 0;\n\t\tz-index: 9999;\n\t\tborder-radius: 999px;\n\t\tpointer-events: none;\n\t\t\n\t\ttranslate: -50% -50%;\n\t}\n</style>\n",
+			"type": "registry:ui",
+			"target": "amicro/CursorTrail.svelte"
+		},
+		{
+			"content": "This file was ported from Amicro (React) and copied into your project by the\namicro-sv registry: https://amicro.enisdev.com\n\nOriginal: https://github.com/Subhan-code/Amicro--Micro-transitions-\n\nMIT License\n\nCopyright (c) 2026 SYED SUBHAN UDDIN\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+			"type": "registry:file",
+			"target": "amicro/LICENSE"
+		}
+	]
+}

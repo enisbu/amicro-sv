@@ -1,0 +1,1793 @@
+[
+	{
+		"name": "amicro-notice",
+		"title": "Amicro license",
+		"type": "registry:file",
+		"description": "Origin and MIT license, installed alongside every component of this port.",
+		"dependencies": [],
+		"registryDependencies": [],
+		"relativeUrl": "amicro-notice.json"
+	},
+	{
+		"name": "fade-down",
+		"title": "Fade Down",
+		"type": "registry:ui",
+		"description": "Entrance animation from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "fade-down.json"
+	},
+	{
+		"name": "fade-in",
+		"title": "Fade In",
+		"type": "registry:ui",
+		"description": "Entrance animation from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "fade-in.json"
+	},
+	{
+		"name": "fade-up",
+		"title": "Fade Up",
+		"type": "registry:ui",
+		"description": "Entrance animation from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "fade-up.json"
+	},
+	{
+		"name": "scale-in",
+		"title": "Scale In",
+		"type": "registry:ui",
+		"description": "Entrance animation from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "scale-in.json"
+	},
+	{
+		"name": "slide-left",
+		"title": "Slide Left",
+		"type": "registry:ui",
+		"description": "Entrance animation from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "slide-left.json"
+	},
+	{
+		"name": "slide-right",
+		"title": "Slide Right",
+		"type": "registry:ui",
+		"description": "Entrance animation from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "slide-right.json"
+	},
+	{
+		"name": "zoom-in",
+		"title": "Zoom In",
+		"type": "registry:ui",
+		"description": "Entrance animation from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "zoom-in.json"
+	},
+	{
+		"name": "card-hover",
+		"title": "Card Hover",
+		"type": "registry:ui",
+		"description": "Hover and gesture interaction from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "card-hover.json"
+	},
+	{
+		"name": "glow-button",
+		"title": "Glow Button",
+		"type": "registry:ui",
+		"description": "Hover and gesture interaction from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [],
+		"registryDependencies": [],
+		"relativeUrl": "glow-button.json"
+	},
+	{
+		"name": "magnetic-button",
+		"title": "Magnetic Button",
+		"type": "registry:ui",
+		"description": "Hover and gesture interaction from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "magnetic-button.json"
+	},
+	{
+		"name": "tilt-card",
+		"title": "Tilt Card",
+		"type": "registry:ui",
+		"description": "Hover and gesture interaction from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "tilt-card.json"
+	},
+	{
+		"name": "blur-text",
+		"title": "Blur Text",
+		"type": "registry:ui",
+		"description": "Text animation from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "blur-text.json"
+	},
+	{
+		"name": "character-stagger",
+		"title": "Character Stagger",
+		"type": "registry:ui",
+		"description": "Text animation from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "character-stagger.json"
+	},
+	{
+		"name": "text-reveal",
+		"title": "Text Reveal",
+		"type": "registry:ui",
+		"description": "Text animation from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "text-reveal.json"
+	},
+	{
+		"name": "word-reveal",
+		"title": "Word Reveal",
+		"type": "registry:ui",
+		"description": "Text animation from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "word-reveal.json"
+	},
+	{
+		"name": "progress-indicator",
+		"title": "Progress Indicator",
+		"type": "registry:ui",
+		"description": "Scroll driven effect from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "progress-indicator.json"
+	},
+	{
+		"name": "scroll-reveal",
+		"title": "Scroll Reveal",
+		"type": "registry:ui",
+		"description": "Scroll driven effect from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "scroll-reveal.json"
+	},
+	{
+		"name": "sticky-reveal",
+		"title": "Sticky Reveal",
+		"type": "registry:ui",
+		"description": "Scroll driven effect from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "sticky-reveal.json"
+	},
+	{
+		"name": "cursor-trail",
+		"title": "Cursor Trail",
+		"type": "registry:ui",
+		"description": "Cursor effect from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "cursor-trail.json"
+	},
+	{
+		"name": "mouse-follow",
+		"title": "Mouse Follow",
+		"type": "registry:ui",
+		"description": "Cursor effect from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "mouse-follow.json"
+	},
+	{
+		"name": "spotlight",
+		"title": "Spotlight",
+		"type": "registry:ui",
+		"description": "Cursor effect from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [],
+		"registryDependencies": [],
+		"relativeUrl": "spotlight.json"
+	},
+	{
+		"name": "page-transition",
+		"title": "Page Transition",
+		"type": "registry:ui",
+		"description": "Page transition from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "page-transition.json"
+	},
+	{
+		"name": "card-arc5",
+		"title": "Card Arc5",
+		"type": "registry:ui",
+		"description": "Card layout from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "card-arc5.json"
+	},
+	{
+		"name": "accordion-loader",
+		"title": "Accordion Loader",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "accordion-loader.json"
+	},
+	{
+		"name": "app-icon-load",
+		"title": "App Icon Load",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "app-icon-load.json"
+	},
+	{
+		"name": "apple-breathe",
+		"title": "Apple Breathe",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "apple-breathe.json"
+	},
+	{
+		"name": "apple-equalizer",
+		"title": "Apple Equalizer",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "apple-equalizer.json"
+	},
+	{
+		"name": "apple-icon-morph",
+		"title": "Apple Icon Morph",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "apple-icon-morph.json"
+	},
+	{
+		"name": "apple-pulse-dots",
+		"title": "Apple Pulse Dots",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "apple-pulse-dots.json"
+	},
+	{
+		"name": "apple-scale-pulse",
+		"title": "Apple Scale Pulse",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "apple-scale-pulse.json"
+	},
+	{
+		"name": "apple-sound-wave",
+		"title": "Apple Sound Wave",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "apple-sound-wave.json"
+	},
+	{
+		"name": "apple-text-reveal",
+		"title": "Apple Text Reveal",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "apple-text-reveal.json"
+	},
+	{
+		"name": "apple-unlock",
+		"title": "Apple Unlock",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "apple-unlock.json"
+	},
+	{
+		"name": "arc-tracer",
+		"title": "Arc Tracer",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "arc-tracer.json"
+	},
+	{
+		"name": "bar-cascade",
+		"title": "Bar Cascade",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "bar-cascade.json"
+	},
+	{
+		"name": "bar-sweep",
+		"title": "Bar Sweep",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "bar-sweep.json"
+	},
+	{
+		"name": "bobbing-dots",
+		"title": "Bobbing Dots",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "bobbing-dots.json"
+	},
+	{
+		"name": "bounce-dots",
+		"title": "Bounce Dots",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "bounce-dots.json"
+	},
+	{
+		"name": "bouncing-bars",
+		"title": "Bouncing Bars",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "bouncing-bars.json"
+	},
+	{
+		"name": "bouncing-dots",
+		"title": "Bouncing Dots",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "bouncing-dots.json"
+	},
+	{
+		"name": "bouncing-lines",
+		"title": "Bouncing Lines",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "bouncing-lines.json"
+	},
+	{
+		"name": "bouncing-square",
+		"title": "Bouncing Square",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "bouncing-square.json"
+	},
+	{
+		"name": "breathe-ring",
+		"title": "Breathe Ring",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "breathe-ring.json"
+	},
+	{
+		"name": "breathing-glow",
+		"title": "Breathing Glow",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "breathing-glow.json"
+	},
+	{
+		"name": "breathing-square",
+		"title": "Breathing Square",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "breathing-square.json"
+	},
+	{
+		"name": "circular-bars",
+		"title": "Circular Bars",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "circular-bars.json"
+	},
+	{
+		"name": "classic-spinner",
+		"title": "Classic Spinner",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "classic-spinner.json"
+	},
+	{
+		"name": "clock-spinner",
+		"title": "Clock Spinner",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "clock-spinner.json"
+	},
+	{
+		"name": "comet-spinner",
+		"title": "Comet Spinner",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "comet-spinner.json"
+	},
+	{
+		"name": "concentric-pulse",
+		"title": "Concentric Pulse",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "concentric-pulse.json"
+	},
+	{
+		"name": "concentric-ring",
+		"title": "Concentric Ring",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "concentric-ring.json"
+	},
+	{
+		"name": "concentric-squares",
+		"title": "Concentric Squares",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "concentric-squares.json"
+	},
+	{
+		"name": "conveyor-loop",
+		"title": "Conveyor Loop",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "conveyor-loop.json"
+	},
+	{
+		"name": "cross-spinner",
+		"title": "Cross Spinner",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "cross-spinner.json"
+	},
+	{
+		"name": "cube-flip-spring",
+		"title": "Cube Flip Spring",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "cube-flip-spring.json"
+	},
+	{
+		"name": "dash-ring",
+		"title": "Dash Ring",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "dash-ring.json"
+	},
+	{
+		"name": "dashed-spiral",
+		"title": "Dashed Spiral",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "dashed-spiral.json"
+	},
+	{
+		"name": "diamond-grid",
+		"title": "Diamond Grid",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "diamond-grid.json"
+	},
+	{
+		"name": "diamond-rotate-spring",
+		"title": "Diamond Rotate Spring",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "diamond-rotate-spring.json"
+	},
+	{
+		"name": "dot-spinner",
+		"title": "Dot Spinner",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "dot-spinner.json"
+	},
+	{
+		"name": "dots-ring",
+		"title": "Dots Ring",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "dots-ring.json"
+	},
+	{
+		"name": "double-ring",
+		"title": "Double Ring",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "double-ring.json"
+	},
+	{
+		"name": "drop-dot",
+		"title": "Drop Dot",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "drop-dot.json"
+	},
+	{
+		"name": "dual-arc",
+		"title": "Dual Arc",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "dual-arc.json"
+	},
+	{
+		"name": "dynamic-island",
+		"title": "Dynamic Island",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "dynamic-island.json"
+	},
+	{
+		"name": "elastic-bars",
+		"title": "Elastic Bars",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "elastic-bars.json"
+	},
+	{
+		"name": "elastic-square",
+		"title": "Elastic Square",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "elastic-square.json"
+	},
+	{
+		"name": "expanding-cross",
+		"title": "Expanding Cross",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "expanding-cross.json"
+	},
+	{
+		"name": "face-id-scan",
+		"title": "Face Id Scan",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "face-id-scan.json"
+	},
+	{
+		"name": "fade-arc",
+		"title": "Fade Arc",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [],
+		"registryDependencies": [],
+		"relativeUrl": "fade-arc.json"
+	},
+	{
+		"name": "fade-dots",
+		"title": "Fade Dots",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "fade-dots.json"
+	},
+	{
+		"name": "flip-square",
+		"title": "Flip Square",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "flip-square.json"
+	},
+	{
+		"name": "floating-diamonds",
+		"title": "Floating Diamonds",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "floating-diamonds.json"
+	},
+	{
+		"name": "fluid-bars",
+		"title": "Fluid Bars",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "fluid-bars.json"
+	},
+	{
+		"name": "fluid-diamond",
+		"title": "Fluid Diamond",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "fluid-diamond.json"
+	},
+	{
+		"name": "fluid-dot-orbit",
+		"title": "Fluid Dot Orbit",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "fluid-dot-orbit.json"
+	},
+	{
+		"name": "fluid-skeleton",
+		"title": "Fluid Skeleton",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "fluid-skeleton.json"
+	},
+	{
+		"name": "gears",
+		"title": "Gears",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "gears.json"
+	},
+	{
+		"name": "glassmorphic-card",
+		"title": "Glassmorphic Card",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "glassmorphic-card.json"
+	},
+	{
+		"name": "gradient-arc",
+		"title": "Gradient Arc",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "gradient-arc.json"
+	},
+	{
+		"name": "grid-dots",
+		"title": "Grid Dots",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "grid-dots.json"
+	},
+	{
+		"name": "haptic-ring",
+		"title": "Haptic Ring",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "haptic-ring.json"
+	},
+	{
+		"name": "heartbeat",
+		"title": "Heartbeat",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "heartbeat.json"
+	},
+	{
+		"name": "hexagon-spinner",
+		"title": "Hexagon Spinner",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "hexagon-spinner.json"
+	},
+	{
+		"name": "hourglass",
+		"title": "Hourglass",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "hourglass.json"
+	},
+	{
+		"name": "infinity-path",
+		"title": "Infinity Path",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "infinity-path.json"
+	},
+	{
+		"name": "intersecting-rings",
+		"title": "Intersecting Rings",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "intersecting-rings.json"
+	},
+	{
+		"name": "ios-spinner",
+		"title": "Ios Spinner",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "ios-spinner.json"
+	},
+	{
+		"name": "line-spinner",
+		"title": "Line Spinner",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "line-spinner.json"
+	},
+	{
+		"name": "liquid-dots",
+		"title": "Liquid Dots",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "liquid-dots.json"
+	},
+	{
+		"name": "mac-terminal",
+		"title": "Mac Terminal",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "mac-terminal.json"
+	},
+	{
+		"name": "magnetic-dots",
+		"title": "Magnetic Dots",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "magnetic-dots.json"
+	},
+	{
+		"name": "minimal-triangle",
+		"title": "Minimal Triangle",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "minimal-triangle.json"
+	},
+	{
+		"name": "morph-dot-ring",
+		"title": "Morph Dot Ring",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "morph-dot-ring.json"
+	},
+	{
+		"name": "morph-loader",
+		"title": "Morph Loader",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "morph-loader.json"
+	},
+	{
+		"name": "morphing-bars",
+		"title": "Morphing Bars",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "morphing-bars.json"
+	},
+	{
+		"name": "morphing-infinity",
+		"title": "Morphing Infinity",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "morphing-infinity.json"
+	},
+	{
+		"name": "morphing-ring",
+		"title": "Morphing Ring",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "morphing-ring.json"
+	},
+	{
+		"name": "morphing-shape",
+		"title": "Morphing Shape",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "morphing-shape.json"
+	},
+	{
+		"name": "newtons-cradle",
+		"title": "Newtons Cradle",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "newtons-cradle.json"
+	},
+	{
+		"name": "offset-rings",
+		"title": "Offset Rings",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "offset-rings.json"
+	},
+	{
+		"name": "orbiting-circles",
+		"title": "Orbiting Circles",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "orbiting-circles.json"
+	},
+	{
+		"name": "orbiting-dot",
+		"title": "Orbiting Dot",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "orbiting-dot.json"
+	},
+	{
+		"name": "origami-shape",
+		"title": "Origami Shape",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "origami-shape.json"
+	},
+	{
+		"name": "pendulum",
+		"title": "Pendulum",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "pendulum.json"
+	},
+	{
+		"name": "pulsating-dots",
+		"title": "Pulsating Dots",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "pulsating-dots.json"
+	},
+	{
+		"name": "pulse",
+		"title": "Pulse",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "pulse.json"
+	},
+	{
+		"name": "pulse-dot",
+		"title": "Pulse Dot",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "pulse-dot.json"
+	},
+	{
+		"name": "pulse-dots",
+		"title": "Pulse Dots",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "pulse-dots.json"
+	},
+	{
+		"name": "pulse-square",
+		"title": "Pulse Square",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "pulse-square.json"
+	},
+	{
+		"name": "pumping-heart",
+		"title": "Pumping Heart",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "pumping-heart.json"
+	},
+	{
+		"name": "radar-sweep",
+		"title": "Radar Sweep",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "radar-sweep.json"
+	},
+	{
+		"name": "ring-sweep",
+		"title": "Ring Sweep",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "ring-sweep.json"
+	},
+	{
+		"name": "ripple-effect",
+		"title": "Ripple Effect",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "ripple-effect.json"
+	},
+	{
+		"name": "rotating-cross",
+		"title": "Rotating Cross",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "rotating-cross.json"
+	},
+	{
+		"name": "rotating-triangle",
+		"title": "Rotating Triangle",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "rotating-triangle.json"
+	},
+	{
+		"name": "shape-shift-grid",
+		"title": "Shape Shift Grid",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "shape-shift-grid.json"
+	},
+	{
+		"name": "shimmer-line",
+		"title": "Shimmer Line",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "shimmer-line.json"
+	},
+	{
+		"name": "siri-wave",
+		"title": "Siri Wave",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "siri-wave.json"
+	},
+	{
+		"name": "skeleton",
+		"title": "Skeleton",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "skeleton.json"
+	},
+	{
+		"name": "skeleton-loader",
+		"title": "Skeleton Loader",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "skeleton-loader.json"
+	},
+	{
+		"name": "sliding-bars",
+		"title": "Sliding Bars",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "sliding-bars.json"
+	},
+	{
+		"name": "smooth-dot-shift",
+		"title": "Smooth Dot Shift",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "smooth-dot-shift.json"
+	},
+	{
+		"name": "smooth-ring",
+		"title": "Smooth Ring",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [],
+		"registryDependencies": [],
+		"relativeUrl": "smooth-ring.json"
+	},
+	{
+		"name": "smooth-rounded-square",
+		"title": "Smooth Rounded Square",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "smooth-rounded-square.json"
+	},
+	{
+		"name": "spinning-squares",
+		"title": "Spinning Squares",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "spinning-squares.json"
+	},
+	{
+		"name": "spiral-spinner",
+		"title": "Spiral Spinner",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "spiral-spinner.json"
+	},
+	{
+		"name": "spring-bars",
+		"title": "Spring Bars",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "spring-bars.json"
+	},
+	{
+		"name": "spring-dot-matrix",
+		"title": "Spring Dot Matrix",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "spring-dot-matrix.json"
+	},
+	{
+		"name": "spring-hexagon",
+		"title": "Spring Hexagon",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "spring-hexagon.json"
+	},
+	{
+		"name": "spring-ring-expand",
+		"title": "Spring Ring Expand",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "spring-ring-expand.json"
+	},
+	{
+		"name": "spring-text-pop",
+		"title": "Spring Text Pop",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "spring-text-pop.json"
+	},
+	{
+		"name": "square-accordion",
+		"title": "Square Accordion",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "square-accordion.json"
+	},
+	{
+		"name": "square-grid",
+		"title": "Square Grid",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "square-grid.json"
+	},
+	{
+		"name": "square-snake",
+		"title": "Square Snake",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "square-snake.json"
+	},
+	{
+		"name": "square-spinner",
+		"title": "Square Spinner",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "square-spinner.json"
+	},
+	{
+		"name": "stacked-bar-pulse",
+		"title": "Stacked Bar Pulse",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "stacked-bar-pulse.json"
+	},
+	{
+		"name": "swapping-dots",
+		"title": "Swapping Dots",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "swapping-dots.json"
+	},
+	{
+		"name": "swirling-spinner",
+		"title": "Swirling Spinner",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "swirling-spinner.json"
+	},
+	{
+		"name": "symmetric-wave",
+		"title": "Symmetric Wave",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "symmetric-wave.json"
+	},
+	{
+		"name": "terminal-loader",
+		"title": "Terminal Loader",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "terminal-loader.json"
+	},
+	{
+		"name": "text-blink",
+		"title": "Text Blink",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "text-blink.json"
+	},
+	{
+		"name": "text-dots",
+		"title": "Text Dots",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "text-dots.json"
+	},
+	{
+		"name": "text-morph",
+		"title": "Text Morph",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "text-morph.json"
+	},
+	{
+		"name": "text-shimmer",
+		"title": "Text Shimmer",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [],
+		"registryDependencies": [],
+		"relativeUrl": "text-shimmer.json"
+	},
+	{
+		"name": "text-shimmer-wave",
+		"title": "Text Shimmer Wave",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "text-shimmer-wave.json"
+	},
+	{
+		"name": "trailing-dots",
+		"title": "Trailing Dots",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "trailing-dots.json"
+	},
+	{
+		"name": "triple-dot-spinner",
+		"title": "Triple Dot Spinner",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "triple-dot-spinner.json"
+	},
+	{
+		"name": "twin-orbit",
+		"title": "Twin Orbit",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "twin-orbit.json"
+	},
+	{
+		"name": "typing",
+		"title": "Typing",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "typing.json"
+	},
+	{
+		"name": "typing-indicator",
+		"title": "Typing Indicator",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "typing-indicator.json"
+	},
+	{
+		"name": "wandering-cube",
+		"title": "Wandering Cube",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "wandering-cube.json"
+	},
+	{
+		"name": "watch-spinner",
+		"title": "Watch Spinner",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "watch-spinner.json"
+	},
+	{
+		"name": "wave-dots",
+		"title": "Wave Dots",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "wave-dots.json"
+	},
+	{
+		"name": "wave-physics-loader",
+		"title": "Wave Physics Loader",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "wave-physics-loader.json"
+	},
+	{
+		"name": "waveform-loader",
+		"title": "Waveform Loader",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "waveform-loader.json"
+	},
+	{
+		"name": "zig-zag-pulse",
+		"title": "Zig Zag Pulse",
+		"type": "registry:ui",
+		"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "zig-zag-pulse.json"
+	},
+	{
+		"name": "use-mouse-position",
+		"title": "Use Mouse Position",
+		"type": "registry:hook",
+		"description": "Hook from Amicro, ported to Svelte 5.",
+		"dependencies": [],
+		"registryDependencies": [],
+		"relativeUrl": "use-mouse-position.json"
+	},
+	{
+		"name": "use-reduced-motion",
+		"title": "Use Reduced Motion",
+		"type": "registry:hook",
+		"description": "Hook from Amicro, ported to Svelte 5.",
+		"dependencies": [],
+		"registryDependencies": [],
+		"relativeUrl": "use-reduced-motion.json"
+	},
+	{
+		"name": "use-scroll-progress",
+		"title": "Use Scroll Progress",
+		"type": "registry:hook",
+		"description": "Hook from Amicro, ported to Svelte 5.",
+		"dependencies": [],
+		"registryDependencies": [],
+		"relativeUrl": "use-scroll-progress.json"
+	},
+	{
+		"name": "use-stagger",
+		"title": "Use Stagger",
+		"type": "registry:hook",
+		"description": "Hook from Amicro, ported to Svelte 5.",
+		"dependencies": [],
+		"registryDependencies": [],
+		"relativeUrl": "use-stagger.json"
+	},
+	{
+		"name": "use-web-haptics",
+		"title": "Use Web Haptics",
+		"type": "registry:hook",
+		"description": "Hook from Amicro, ported to Svelte 5.",
+		"dependencies": [],
+		"registryDependencies": [],
+		"relativeUrl": "use-web-haptics.json"
+	},
+	{
+		"name": "presets",
+		"title": "Presets",
+		"type": "registry:lib",
+		"description": "Shared helper from Amicro, ported to Svelte 5.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "presets.json"
+	},
+	{
+		"name": "utils",
+		"title": "Utils",
+		"type": "registry:lib",
+		"description": "Shared helper from Amicro, ported to Svelte 5.",
+		"dependencies": [],
+		"registryDependencies": [],
+		"relativeUrl": "utils.json"
+	}
+]

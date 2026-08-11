@@ -1,0 +1,19 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "glow-button",
+	"title": "Glow Button",
+	"type": "registry:ui",
+	"description": "Hover and gesture interaction from Amicro, ported to Svelte 5 and motion-sv.",
+	"files": [
+		{
+			"content": "<script lang=\"ts\">\n\timport type { Snippet } from 'svelte';\n\n\tinterface Props {\n\t\tchildren?: Snippet;\n\t\tclass?: string;\n\t\tglowColor?: string;\n\t\tonclick?: () => void;\n\t}\n\n\tlet {\n\t\tchildren,\n\t\tclass: className = '',\n\t\tglowColor = 'rgba(59, 130, 246, 0.15)',\n\t\tonclick\n\t}: Props = $props();\n\n\tlet node = $state<HTMLButtonElement | null>(null);\n\tlet x = $state(0);\n\tlet y = $state(0);\n\tlet opacity = $state(0);\n\n\tfunction onpointermove(event: PointerEvent) {\n\t\tif (!node) return;\n\t\tconst rect = node.getBoundingClientRect();\n\t\tx = event.clientX - rect.left;\n\t\ty = event.clientY - rect.top;\n\t}\n</script>\n\n<button\n\tbind:this={node}\n\t{onpointermove}\n\tonpointerenter={() => (opacity = 1)}\n\tonpointerleave={() => (opacity = 0)}\n\t{onclick}\n\tclass={`glow-btn ${className}`}\n\tdata-testid=\"glow-button\"\n>\n\t<div\n\t\tclass=\"glow-layer\"\n\t\tstyle:opacity\n\t\tstyle:background={`radial-gradient(120px circle at ${x}px ${y}px, ${glowColor}, transparent 80%)`}\n\t></div>\n\n\t<span class=\"glow-label\">{@render children?.()}</span>\n</button>\n\n<style>\n\t.glow-btn {\n\t\tposition: relative;\n\t\tdisplay: inline-flex;\n\t\talign-items: center;\n\t\tjustify-content: center;\n\t\toverflow: hidden;\n\t\theight: 2.75rem;\n\t\tpadding-inline: 1.5rem;\n\t\tborder: 1px solid var(--gray-11);\n\t\tborder-radius: 0.75rem;\n\t\tbackground: var(--gray-12);\n\t\tcolor: var(--gray-1);\n\t\tfont-family: inherit;\n\t\tfont-size: 0.875rem;\n\t\tfont-weight: 500;\n\t\tcursor: pointer;\n\t\tbox-shadow: 0 2px 6px rgb(0 0 0 / 0.14);\n\t\ttransition: border-color 200ms var(--ease-swift);\n\t}\n\n\t.glow-btn:hover {\n\t\tborder-color: var(--gray-9);\n\t}\n\n\t.glow-layer {\n\t\tposition: absolute;\n\t\tinset: -1px;\n\t\tborder-radius: 0.75rem;\n\t\tpointer-events: none;\n\t\ttransition: opacity 300ms var(--ease-swift);\n\t}\n\n\t.glow-label {\n\t\tposition: relative;\n\t\tz-index: 1;\n\t}\n</style>\n",
+			"type": "registry:ui",
+			"target": "amicro/GlowButton.svelte"
+		},
+		{
+			"content": "This file was ported from Amicro (React) and copied into your project by the\namicro-sv registry: https://amicro.enisdev.com\n\nOriginal: https://github.com/Subhan-code/Amicro--Micro-transitions-\n\nMIT License\n\nCopyright (c) 2026 SYED SUBHAN UDDIN\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+			"type": "registry:file",
+			"target": "amicro/LICENSE"
+		}
+	]
+}

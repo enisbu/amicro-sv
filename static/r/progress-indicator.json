@@ -1,0 +1,22 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "progress-indicator",
+	"title": "Progress Indicator",
+	"type": "registry:ui",
+	"description": "Scroll driven effect from Amicro, ported to Svelte 5 and motion-sv.",
+	"dependencies": [
+		"motion-sv"
+	],
+	"files": [
+		{
+			"content": "<script lang=\"ts\">\n\timport { motion, useScroll, useSpring } from 'motion-sv';\n\n\tconst Div = motion.div;\n\n\tinterface Props {\n\t\tcolor?: string;\n\t\theight?: number;\n\t\tclass?: string;\n\t}\n\n\tlet { color = 'var(--accent, #3b82f6)', height = 4, class: className = '' }: Props = $props();\n\n\tconst { scrollYProgress } = useScroll();\n\n\tconst scaleX = useSpring(scrollYProgress, { stiffness: 100, damping: 30, restDelta: 0.001 });\n</script>\n\n<Div\n\tstyle={{ scaleX, height: `${height}px`, background: color }}\n\tclass={['amicro-progress', className]}\n\taria-hidden=\"true\"\n></Div>\n\n<style>\n\t:global(.amicro-progress) {\n\t\tposition: fixed;\n\t\ttop: 0;\n\t\tright: 0;\n\t\tleft: 0;\n\t\tz-index: 9999;\n\t\tpointer-events: none;\n\t\t\n\t\ttransform-origin: 0 50%;\n\t}\n</style>\n",
+			"type": "registry:ui",
+			"target": "amicro/ProgressIndicator.svelte"
+		},
+		{
+			"content": "This file was ported from Amicro (React) and copied into your project by the\namicro-sv registry: https://amicro.enisdev.com\n\nOriginal: https://github.com/Subhan-code/Amicro--Micro-transitions-\n\nMIT License\n\nCopyright (c) 2026 SYED SUBHAN UDDIN\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+			"type": "registry:file",
+			"target": "amicro/LICENSE"
+		}
+	]
+}

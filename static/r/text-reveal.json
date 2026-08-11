@@ -1,0 +1,22 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "text-reveal",
+	"title": "Text Reveal",
+	"type": "registry:ui",
+	"description": "Text animation from Amicro, ported to Svelte 5 and motion-sv.",
+	"dependencies": [
+		"motion-sv"
+	],
+	"files": [
+		{
+			"content": "<script lang=\"ts\">\n\timport { motion } from 'motion-sv';\n\n\tconst Div = motion.div;\n\tconst Span = motion.span;\n\n\tinterface Props {\n\t\ttext: string;\n\t\tduration?: number;\n\t\tstaggerDelay?: number;\n\t\tclass?: string;\n\t}\n\n\tlet { text, duration = 0.8, staggerDelay = 0.15, class: className = '' }: Props = $props();\n\n\tconst lines = $derived(text.split('\\n'));\n\n\tconst containerVariants = $derived({\n\t\thidden: { opacity: 0 },\n\t\tvisible: {\n\t\t\topacity: 1,\n\t\t\ttransition: { staggerChildren: staggerDelay }\n\t\t}\n\t});\n\n\tconst itemVariants = $derived({\n\n\t\thidden: { y: '100%' },\n\t\tvisible: {\n\t\t\ty: 0,\n\t\t\ttransition: {\n\t\t\t\tduration,\n\n\t\t\t\tease: [0.16, 1, 0.3, 1] as [number, number, number, number]\n\t\t\t}\n\t\t}\n\t});\n</script>\n\n<Div\n\tvariants={containerVariants}\n\tinitial=\"hidden\"\n\twhileInView=\"visible\"\n\tinViewOptions={{ once: true, margin: '-20% 0%' }}\n\tclass={`text-reveal ${className}`}\n\tdata-testid=\"text-reveal\"\n>\n\t{#each lines as line, index (index)}\n\t\t<div class=\"text-reveal-mask\">\n\t\t\t<Span variants={itemVariants} class=\"text-reveal-line\">{line}</Span>\n\t\t</div>\n\t{/each}\n</Div>\n\n<style>\n\t:global(.text-reveal) {\n\t\tdisplay: flex;\n\t\tflex-direction: column;\n\t}\n\n\t.text-reveal-mask {\n\t\toverflow: hidden;\n\t\tpadding-block: 0.25rem;\n\t}\n\n\t:global(.text-reveal .text-reveal-line) {\n\t\tdisplay: block;\n\t}\n</style>\n",
+			"type": "registry:ui",
+			"target": "amicro/TextReveal.svelte"
+		},
+		{
+			"content": "This file was ported from Amicro (React) and copied into your project by the\namicro-sv registry: https://amicro.enisdev.com\n\nOriginal: https://github.com/Subhan-code/Amicro--Micro-transitions-\n\nMIT License\n\nCopyright (c) 2026 SYED SUBHAN UDDIN\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+			"type": "registry:file",
+			"target": "amicro/LICENSE"
+		}
+	]
+}

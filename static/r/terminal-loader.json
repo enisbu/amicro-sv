@@ -1,0 +1,22 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "terminal-loader",
+	"title": "Terminal Loader",
+	"type": "registry:ui",
+	"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+	"dependencies": [
+		"motion-sv"
+	],
+	"files": [
+		{
+			"content": "<script lang=\"ts\">\n\timport { motion } from 'motion-sv';\n\n\tconst Span = motion.span;\n</script>\n\n<div\n\tclass=\"bg-zinc-900 dark:bg-white text-zinc-100 font-mono text-[10px] p-3 rounded-md w-full h-16 flex flex-col justify-end overflow-hidden shadow-sm\"\n>\n\t<div class=\"flex text-zinc-500 dark:text-zinc-300 mb-1 leading-none\">\n\t\t<span>$</span>\n\t\t<span class=\"ml-2\">loading...</span>\n\t</div>\n\t<div class=\"flex items-center leading-none\">\n\t\t<span class=\"text-emerald-400\">&gt;</span>\n\t\t<Span\n\t\t\tclass=\"ml-2 w-1.5 h-2.5 bg-zinc-100 dark:bg-zinc-800 block\"\n\t\t\tanimate={{ opacity: [1, 0, 1] }}\n\t\t\ttransition={{ duration: 0.8, repeat: Infinity, ease: 'linear' }}\n\t\t/>\n\t</div>\n</div>\n",
+			"type": "registry:ui",
+			"target": "amicro/TerminalLoader.svelte"
+		},
+		{
+			"content": "This file was ported from Amicro (React) and copied into your project by the\namicro-sv registry: https://amicro.enisdev.com\n\nOriginal: https://github.com/Subhan-code/Amicro--Micro-transitions-\n\nMIT License\n\nCopyright (c) 2026 SYED SUBHAN UDDIN\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+			"type": "registry:file",
+			"target": "amicro/LICENSE"
+		}
+	]
+}

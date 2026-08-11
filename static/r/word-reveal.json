@@ -1,0 +1,22 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "word-reveal",
+	"title": "Word Reveal",
+	"type": "registry:ui",
+	"description": "Text animation from Amicro, ported to Svelte 5 and motion-sv.",
+	"dependencies": [
+		"motion-sv"
+	],
+	"files": [
+		{
+			"content": "<script lang=\"ts\">\n\timport { motion } from 'motion-sv';\n\n\tconst Div = motion.div;\n\tconst Span = motion.span;\n\n\tinterface Props {\n\t\ttext: string;\n\t\tduration?: number;\n\t\tstaggerDelay?: number;\n\t\tclass?: string;\n\t}\n\n\tlet { text, duration = 0.5, staggerDelay = 0.04, class: className = '' }: Props = $props();\n\n\tconst words = $derived(text.split(/\\s+/));\n\n\tconst containerVariants = $derived({\n\t\thidden: { opacity: 0 },\n\t\tvisible: {\n\t\t\topacity: 1,\n\t\t\ttransition: { staggerChildren: staggerDelay }\n\t\t}\n\t});\n\n\tconst wordVariants = $derived({\n\t\thidden: { opacity: 0, y: 15, scale: 0.9 },\n\t\tvisible: {\n\t\t\topacity: 1,\n\t\t\ty: 0,\n\t\t\tscale: 1,\n\t\t\ttransition: {\n\t\t\t\tduration,\n\n\t\t\t\tease: [0.215, 0.61, 0.355, 1] as [number, number, number, number]\n\t\t\t}\n\t\t}\n\t});\n</script>\n\n<Div\n\tvariants={containerVariants}\n\tinitial=\"hidden\"\n\twhileInView=\"visible\"\n\tinViewOptions={{ once: true, margin: '-10% 0%' }}\n\tclass={`word-reveal ${className}`}\n\tdata-testid=\"word-reveal\"\n>\n\t{#each words as word, index (index)}\n\t\t<Span variants={wordVariants} class=\"word-reveal-word\">{word}</Span>\n\t{/each}\n</Div>\n\n<style>\n\t:global(.word-reveal) {\n\t\tdisplay: flex;\n\t\tflex-wrap: wrap;\n\t\tcolumn-gap: 0.5rem;\n\t\trow-gap: 0.375rem;\n\t}\n\n\t:global(.word-reveal .word-reveal-word) {\n\t\tdisplay: inline-block;\n\t}\n</style>\n",
+			"type": "registry:ui",
+			"target": "amicro/WordReveal.svelte"
+		},
+		{
+			"content": "This file was ported from Amicro (React) and copied into your project by the\namicro-sv registry: https://amicro.enisdev.com\n\nOriginal: https://github.com/Subhan-code/Amicro--Micro-transitions-\n\nMIT License\n\nCopyright (c) 2026 SYED SUBHAN UDDIN\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+			"type": "registry:file",
+			"target": "amicro/LICENSE"
+		}
+	]
+}

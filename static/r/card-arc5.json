@@ -1,0 +1,22 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "card-arc5",
+	"title": "Card Arc5",
+	"type": "registry:ui",
+	"description": "Card layout from Amicro, ported to Svelte 5 and motion-sv.",
+	"dependencies": [
+		"motion-sv"
+	],
+	"files": [
+		{
+			"content": "<script lang=\"ts\">\n\timport { motion } from 'motion-sv';\n\n\tconst Div = motion.div;\n\n\tinterface Props {\n\t\tangle?: number;\n\t\tgap?: number;\n\t\tyOffset?: number;\n\t\tduration?: number;\n\t\thoverIntensity?: number;\n\t\thovered?: boolean;\n\t\tspring?: boolean;\n\t\tcardClass?: string;\n\t\tclass?: string;\n\t\timages?: string[];\n\t}\n\n\tlet {\n\t\tangle = 30,\n\t\tgap = 70,\n\t\tyOffset = 10,\n\t\tduration = 0.5,\n\t\thoverIntensity = 1,\n\t\thovered = undefined,\n\t\tspring = true,\n\t\tcardClass = '',\n\t\tclass: className = '',\n\t\timages\n\t}: Props = $props();\n\n\tconst cards = [0, 1, 2, 3, 4];\n\tconst center = 2;\n\n\tlet isHovered = $state(false);\n\n\tlet active = $derived(hovered !== undefined ? hovered : isHovered);\n\n\tconst transition = $derived(\n\t\tspring\n\t\t\t? { type: 'spring' as const, stiffness: 180, damping: 20, mass: 0.8 }\n\t\t\t: { duration, ease: [0.2, 0.8, 0.2, 1] as [number, number, number, number] }\n\t);\n\n\tfunction target(index: number, isActive: boolean) {\n\t\tconst dist = index - center;\n\n\t\tif (!isActive) {\n\t\t\treturn { rotate: 0, x: 0, y: 0, scale: 1 };\n\t\t}\n\n\t\tlet y: number;\n\t\tif (Math.abs(dist) === 2) y = yOffset;\n\t\telse if (Math.abs(dist) === 1) y = -0.2 * yOffset;\n\t\telse y = -yOffset;\n\n\t\treturn {\n\t\t\trotate: dist * (angle / center) * hoverIntensity,\n\t\t\tx: dist * (gap / center) * hoverIntensity,\n\t\t\ty: y * hoverIntensity,\n\t\t\tscale: dist === 0 ? 1.05 : 1\n\t\t};\n\t}\n</script>\n\n<!-- svelte-ignore a11y_no_static_element_interactions -->\n<div\n\tclass={`card-arc-5 ${className}`}\n\tonpointerenter={() => (isHovered = true)}\n\tonpointerleave={() => (isHovered = false)}\n\tdata-testid=\"card-arc-5\"\n\tdata-active={active}\n>\n\t{#each cards as i (i)}\n\t\t<Div\n\t\t\tanimate={target(i, active)}\n\t\t\t{transition}\n\t\t\tstyle={{ zIndex: 3 - Math.abs(i - center) }}\n\t\t\tclass={`arc-card ${cardClass}`}\n\t\t\tdata-card={i}\n\t\t>\n\t\t\t{#if images?.length}\n\t\t\t\t<img src={images[i % images.length]} alt=\"\" />\n\t\t\t{/if}\n\t\t</Div>\n\t{/each}\n</div>\n\n<style>\n\t.card-arc-5 {\n\t\tposition: relative;\n\t\tdisplay: flex;\n\t\talign-items: center;\n\t\tjustify-content: center;\n\t\twidth: 8rem;\n\t\theight: 11rem;\n\t\tcursor: pointer;\n\t}\n\n\t:global(.card-arc-5 .arc-card) {\n\t\tposition: absolute;\n\t\tinset: 0;\n\t\toverflow: hidden;\n\t\tborder: 1px solid rgb(255 255 255 / 0.2);\n\t\tborder-radius: 1rem;\n\t\tbackground: var(--gray-6);\n\t\tbox-shadow:\n\t\t\t0 4px 10px -2px rgb(0 0 0 / 0.15),\n\t\t\t0 2px 6px -2px rgb(0 0 0 / 0.1);\n\t\t\n\t\ttransform-origin: 50% 100%;\n\t}\n\n\t:global(.card-arc-5 .arc-card img) {\n\t\twidth: 100%;\n\t\theight: 100%;\n\t\tobject-fit: cover;\n\t}\n</style>\n",
+			"type": "registry:ui",
+			"target": "amicro/CardArc5.svelte"
+		},
+		{
+			"content": "This file was ported from Amicro (React) and copied into your project by the\namicro-sv registry: https://amicro.enisdev.com\n\nOriginal: https://github.com/Subhan-code/Amicro--Micro-transitions-\n\nMIT License\n\nCopyright (c) 2026 SYED SUBHAN UDDIN\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+			"type": "registry:file",
+			"target": "amicro/LICENSE"
+		}
+	]
+}

@@ -1,0 +1,22 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "text-morph",
+	"title": "Text Morph",
+	"type": "registry:ui",
+	"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+	"dependencies": [
+		"motion-sv"
+	],
+	"files": [
+		{
+			"content": "<script lang=\"ts\">\n\timport { motion } from 'motion-sv';\n\n\tconst Div = motion.div;\n</script>\n\n<div\n\tclass=\"relative h-6 w-24 flex items-center justify-center font-medium text-sm text-zinc-900 dark:text-white overflow-hidden\"\n>\n\t<Div\n\t\tclass=\"absolute\"\n\t\tanimate={{ opacity: [1, 0, 0, 1], y: [0, -16, 16, 0] }}\n\t\ttransition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}\n\t>\n\t\tLoading\n\t</Div>\n\t<Div\n\t\tclass=\"absolute\"\n\t\tanimate={{ opacity: [0, 1, 1, 0], y: [16, 0, 0, -16] }}\n\t\ttransition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}\n\t>\n\t\tWait\n\t</Div>\n</div>\n",
+			"type": "registry:ui",
+			"target": "amicro/TextMorph.svelte"
+		},
+		{
+			"content": "This file was ported from Amicro (React) and copied into your project by the\namicro-sv registry: https://amicro.enisdev.com\n\nOriginal: https://github.com/Subhan-code/Amicro--Micro-transitions-\n\nMIT License\n\nCopyright (c) 2026 SYED SUBHAN UDDIN\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+			"type": "registry:file",
+			"target": "amicro/LICENSE"
+		}
+	]
+}

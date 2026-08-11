@@ -1,0 +1,22 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "orbiting-circles",
+	"title": "Orbiting Circles",
+	"type": "registry:ui",
+	"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+	"dependencies": [
+		"motion-sv"
+	],
+	"files": [
+		{
+			"content": "<script lang=\"ts\">\n\timport { motion } from 'motion-sv';\n\n\tconst Div = motion.div;\n</script>\n\n<div class=\"relative w-12 h-12 flex items-center justify-center\">\n\t<div class=\"w-3 h-3 bg-zinc-800 dark:bg-white rounded-full\"></div>\n\t{#each [0, 1] as i}\n\t\t<Div\n\t\t\tclass=\"absolute w-full h-full\"\n\t\t\tanimate={{ rotate: i === 0 ? 360 : -360 }}\n\t\t\ttransition={{ duration: 2, repeat: Infinity, ease: 'linear' }}\n\t\t>\n\t\t\t<div class=\"absolute top-0 left-1/2 -ml-1 w-2 h-2 bg-zinc-500 dark:bg-zinc-350 rounded-full\"></div>\n\t\t</Div>\n\t{/each}\n</div>\n",
+			"type": "registry:ui",
+			"target": "amicro/OrbitingCircles.svelte"
+		},
+		{
+			"content": "This file was ported from Amicro (React) and copied into your project by the\namicro-sv registry: https://amicro.enisdev.com\n\nOriginal: https://github.com/Subhan-code/Amicro--Micro-transitions-\n\nMIT License\n\nCopyright (c) 2026 SYED SUBHAN UDDIN\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+			"type": "registry:file",
+			"target": "amicro/LICENSE"
+		}
+	]
+}

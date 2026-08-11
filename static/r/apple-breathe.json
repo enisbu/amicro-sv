@@ -1,0 +1,22 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "apple-breathe",
+	"title": "Apple Breathe",
+	"type": "registry:ui",
+	"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+	"dependencies": [
+		"motion-sv"
+	],
+	"files": [
+		{
+			"content": "<script lang=\"ts\">\n\timport { motion } from 'motion-sv';\n\n\tconst Div = motion.div;\n\n\tconst dots = [0, 60, 120, 180, 240, 300].map((angle, idx) => ({\n\t\tangle,\n\t\tbgClass:\n\t\t\tidx % 2 === 0\n\t\t\t\t? 'bg-teal-400/35 dark:bg-teal-400/40'\n\t\t\t\t: 'bg-cyan-400/35 dark:bg-cyan-400/40',\n\t\tx: Math.cos((angle * Math.PI) / 180) * 11,\n\t\ty: Math.sin((angle * Math.PI) / 180) * 11\n\t}));\n</script>\n\n<div class=\"relative flex items-center justify-center w-12 h-12\">\n\t{#each dots as dot}\n\t\t<Div\n\t\t\tclass=\"absolute w-3.5 h-3.5 rounded-full {dot.bgClass}\"\n\t\t\tstyle={{ transformOrigin: 'center' }}\n\t\t\tanimate={{\n\t\t\t\tscale: [1, 1.75, 1],\n\t\t\t\tx: [0, dot.x, 0],\n\t\t\t\ty: [0, dot.y, 0]\n\t\t\t}}\n\t\t\ttransition={{\n\t\t\t\tduration: 3.6,\n\t\t\t\trepeat: Infinity,\n\t\t\t\tease: 'easeInOut'\n\t\t\t}}\n\t\t/>\n\t{/each}\n</div>\n",
+			"type": "registry:ui",
+			"target": "amicro/AppleBreathe.svelte"
+		},
+		{
+			"content": "This file was ported from Amicro (React) and copied into your project by the\namicro-sv registry: https://amicro.enisdev.com\n\nOriginal: https://github.com/Subhan-code/Amicro--Micro-transitions-\n\nMIT License\n\nCopyright (c) 2026 SYED SUBHAN UDDIN\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+			"type": "registry:file",
+			"target": "amicro/LICENSE"
+		}
+	]
+}

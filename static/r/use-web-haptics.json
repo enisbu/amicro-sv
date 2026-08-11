@@ -1,0 +1,19 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "use-web-haptics",
+	"title": "Use Web Haptics",
+	"type": "registry:hook",
+	"description": "Hook from Amicro, ported to Svelte 5.",
+	"files": [
+		{
+			"content": "export type HapticsType = 'light' | 'medium' | 'heavy' | 'success' | 'warning' | 'error';\n\nconst patterns: Record<HapticsType, number | number[]> = {\n\tlight: 10,\n\tmedium: 25,\n\theavy: 50,\n\tsuccess: [15, 60, 15],\n\twarning: [30, 60, 30],\n\terror: [60, 60, 60, 60, 60]\n};\n\nexport function haptic(type: HapticsType | number | number[] = 'light'): boolean {\n\tif (typeof window === 'undefined' || !window.navigator?.vibrate) return false;\n\n\tconst pattern = typeof type === 'string' ? patterns[type] : type;\n\n\ttry {\n\t\treturn window.navigator.vibrate(pattern);\n\t} catch (error) {\n\t\tconsole.warn('Vibration API error:', error);\n\t\treturn false;\n\t}\n}\n",
+			"type": "registry:hook",
+			"target": "amicro/use-web-haptics.ts"
+		},
+		{
+			"content": "This file was ported from Amicro (React) and copied into your project by the\namicro-sv registry: https://amicro.enisdev.com\n\nOriginal: https://github.com/Subhan-code/Amicro--Micro-transitions-\n\nMIT License\n\nCopyright (c) 2026 SYED SUBHAN UDDIN\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+			"type": "registry:file",
+			"target": "amicro/LICENSE"
+		}
+	]
+}

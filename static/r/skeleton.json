@@ -1,0 +1,22 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "skeleton",
+	"title": "Skeleton",
+	"type": "registry:ui",
+	"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+	"dependencies": [
+		"motion-sv"
+	],
+	"files": [
+		{
+			"content": "<script lang=\"ts\">\n\timport { motion } from 'motion-sv';\n\n\tconst Div = motion.div;\n\n\tinterface Props {\n\t\tclass?: string;\n\t\tshimmerColor?: 'light' | 'dark';\n\t}\n\n\tlet { class: className = '', shimmerColor = 'dark' }: Props = $props();\n\n\tconst shimmerGradient = $derived(\n\t\tshimmerColor === 'dark'\n\t\t\t? 'linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.05) 50%, rgba(255,255,255,0) 100%)'\n\t\t\t: 'linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.04) 50%, rgba(0,0,0,0) 100%)'\n\t);\n</script>\n\n<div\n\tclass=\"relative overflow-hidden rounded-md bg-neutral-200/50 dark:bg-neutral-800/40 {className}\"\n>\n\t<Div\n\t\tinitial={{ x: '-150%' }}\n\t\tanimate={{ x: '150%' }}\n\t\ttransition={{ repeat: Infinity, duration: 1.6, ease: 'easeInOut' }}\n\t\tstyle={{ background: shimmerGradient }}\n\t\tclass=\"absolute inset-0 w-[80%] h-full\"\n\t/>\n</div>\n",
+			"type": "registry:ui",
+			"target": "amicro/Skeleton.svelte"
+		},
+		{
+			"content": "This file was ported from Amicro (React) and copied into your project by the\namicro-sv registry: https://amicro.enisdev.com\n\nOriginal: https://github.com/Subhan-code/Amicro--Micro-transitions-\n\nMIT License\n\nCopyright (c) 2026 SYED SUBHAN UDDIN\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+			"type": "registry:file",
+			"target": "amicro/LICENSE"
+		}
+	]
+}

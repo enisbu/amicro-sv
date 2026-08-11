@@ -1,0 +1,22 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "dynamic-island",
+	"title": "Dynamic Island",
+	"type": "registry:ui",
+	"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+	"dependencies": [
+		"motion-sv"
+	],
+	"files": [
+		{
+			"content": "<script lang=\"ts\">\n\timport { motion } from 'motion-sv';\n\n\tconst Div = motion.div;\n</script>\n\n<Div\n\tclass=\"bg-zinc-950 dark:bg-zinc-900 border border-black/10 dark:border-white/10 rounded-full flex items-center justify-center px-4 py-2 gap-3 h-8 shadow-sm\"\n\tanimate={{\n\t\twidth: [80, 110, 80]\n\t}}\n\ttransition={{\n\t\tduration: 2.2,\n\t\trepeat: Infinity,\n\t\tease: 'easeInOut'\n\t}}\n>\n\t<Div\n\t\tclass=\"w-1.5 h-1.5 rounded-full bg-emerald-500\"\n\t\tanimate={{ opacity: [0.4, 1, 0.4] }}\n\t\ttransition={{ duration: 1.1, repeat: Infinity, ease: 'easeInOut' }}\n\t/>\n\t<div class=\"flex gap-1 items-center h-2\">\n\t\t{#each [0, 1, 2] as i}\n\t\t\t<Div\n\t\t\t\tclass=\"w-0.5 bg-zinc-300 dark:bg-zinc-500 rounded-full\"\n\t\t\t\tanimate={{ height: [3, 8, 3] }}\n\t\t\t\ttransition={{\n\t\t\t\t\tduration: 0.8,\n\t\t\t\t\trepeat: Infinity,\n\t\t\t\t\tease: 'easeInOut',\n\t\t\t\t\tdelay: i * 0.15\n\t\t\t\t}}\n\t\t\t/>\n\t\t{/each}\n\t</div>\n</Div>\n",
+			"type": "registry:ui",
+			"target": "amicro/DynamicIsland.svelte"
+		},
+		{
+			"content": "This file was ported from Amicro (React) and copied into your project by the\namicro-sv registry: https://amicro.enisdev.com\n\nOriginal: https://github.com/Subhan-code/Amicro--Micro-transitions-\n\nMIT License\n\nCopyright (c) 2026 SYED SUBHAN UDDIN\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+			"type": "registry:file",
+			"target": "amicro/LICENSE"
+		}
+	]
+}

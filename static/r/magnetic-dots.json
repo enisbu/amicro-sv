@@ -1,0 +1,22 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "magnetic-dots",
+	"title": "Magnetic Dots",
+	"type": "registry:ui",
+	"description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+	"dependencies": [
+		"motion-sv"
+	],
+	"files": [
+		{
+			"content": "<script lang=\"ts\">\n\timport { motion } from 'motion-sv';\n\n\tconst Div = motion.div;\n</script>\n\n<div class=\"flex space-x-1.5\" style=\"filter: url(#goo-magnetic)\">\n\t<svg width=\"0\" height=\"0\" class=\"absolute hidden\">\n\t\t<defs>\n\t\t\t<filter id=\"goo-magnetic\">\n\t\t\t\t<feGaussianBlur in=\"SourceGraphic\" stdDeviation=\"2\" result=\"blur\" />\n\t\t\t\t<feColorMatrix\n\t\t\t\t\tin=\"blur\"\n\t\t\t\t\tmode=\"matrix\"\n\t\t\t\t\tvalues=\"1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 15 -7\"\n\t\t\t\t\tresult=\"goo\"\n\t\t\t\t/>\n\t\t\t\t<feComposite in=\"SourceGraphic\" in2=\"goo\" operator=\"atop\" />\n\t\t\t</filter>\n\t\t</defs>\n\t</svg>\n\t<Div\n\t\tclass=\"w-4 h-4 bg-zinc-800 dark:bg-white rounded-full\"\n\t\tanimate={{ x: [0, 8, 0] }}\n\t\ttransition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}\n\t/>\n\t<Div\n\t\tclass=\"w-4 h-4 bg-zinc-800 dark:bg-white rounded-full\"\n\t\tanimate={{ x: [0, -8, 0] }}\n\t\ttransition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}\n\t/>\n</div>\n",
+			"type": "registry:ui",
+			"target": "amicro/MagneticDots.svelte"
+		},
+		{
+			"content": "This file was ported from Amicro (React) and copied into your project by the\namicro-sv registry: https://amicro.enisdev.com\n\nOriginal: https://github.com/Subhan-code/Amicro--Micro-transitions-\n\nMIT License\n\nCopyright (c) 2026 SYED SUBHAN UDDIN\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+			"type": "registry:file",
+			"target": "amicro/LICENSE"
+		}
+	]
+}

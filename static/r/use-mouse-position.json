@@ -1,0 +1,19 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "use-mouse-position",
+	"title": "Use Mouse Position",
+	"type": "registry:hook",
+	"description": "Hook from Amicro, ported to Svelte 5.",
+	"files": [
+		{
+			"content": "import type { Attachment } from 'svelte/attachments';\n\nexport interface MousePosition {\n\tx: number;\n\ty: number;\n\telementX: number;\n\telementY: number;\n}\n\nexport class MousePositionTracker implements MousePosition {\n\tx = $state(0);\n\ty = $state(0);\n\telementX = $state(0);\n\telementY = $state(0);\n\n\tconstructor(node: () => HTMLElement | null | undefined = () => null) {\n\t\t$effect(() => {\n\t\t\tconst handle = (event: MouseEvent) => {\n\t\t\t\tthis.x = event.clientX;\n\t\t\t\tthis.y = event.clientY;\n\n\t\t\t\tconst element = node();\n\t\t\t\tif (element) {\n\t\t\t\t\tconst rect = element.getBoundingClientRect();\n\t\t\t\t\tthis.elementX = event.clientX - rect.left;\n\t\t\t\t\tthis.elementY = event.clientY - rect.top;\n\t\t\t\t} else {\n\t\t\t\t\tthis.elementX = 0;\n\t\t\t\t\tthis.elementY = 0;\n\t\t\t\t}\n\t\t\t};\n\n\t\t\twindow.addEventListener('mousemove', handle, { passive: true });\n\t\t\treturn () => window.removeEventListener('mousemove', handle);\n\t\t});\n\t}\n}\n\nexport function mousePositionOn(\n\tonMove: (position: MousePosition) => void\n): Attachment<HTMLElement> {\n\treturn (node) => {\n\t\tconst handle = (event: MouseEvent) => {\n\t\t\tconst rect = node.getBoundingClientRect();\n\t\t\tonMove({\n\t\t\t\tx: event.clientX,\n\t\t\t\ty: event.clientY,\n\t\t\t\telementX: event.clientX - rect.left,\n\t\t\t\telementY: event.clientY - rect.top\n\t\t\t});\n\t\t};\n\n\t\twindow.addEventListener('mousemove', handle, { passive: true });\n\t\treturn () => window.removeEventListener('mousemove', handle);\n\t};\n}\n",
+			"type": "registry:hook",
+			"target": "amicro/use-mouse-position.svelte.ts"
+		},
+		{
+			"content": "This file was ported from Amicro (React) and copied into your project by the\namicro-sv registry: https://amicro.enisdev.com\n\nOriginal: https://github.com/Subhan-code/Amicro--Micro-transitions-\n\nMIT License\n\nCopyright (c) 2026 SYED SUBHAN UDDIN\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+			"type": "registry:file",
+			"target": "amicro/LICENSE"
+		}
+	]
+}

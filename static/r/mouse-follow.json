@@ -1,0 +1,22 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "mouse-follow",
+	"title": "Mouse Follow",
+	"type": "registry:ui",
+	"description": "Cursor effect from Amicro, ported to Svelte 5 and motion-sv.",
+	"dependencies": [
+		"motion-sv"
+	],
+	"files": [
+		{
+			"content": "<script lang=\"ts\">\n\timport { motion } from 'motion-sv';\n\timport type { Snippet } from 'svelte';\n\n\tconst Div = motion.div;\n\n\tinterface Props {\n\t\tchildren?: Snippet;\n\t\tstiffness?: number;\n\t\tdamping?: number;\n\t\tclass?: string;\n\t}\n\n\tlet { children, stiffness = 180, damping = 20, class: className = '' }: Props = $props();\n\n\tlet x = $state(0);\n\tlet y = $state(0);\n\tlet isVisible = $state(false);\n\n\tconst springConfig = $derived({ type: 'spring' as const, stiffness, damping });\n\n\t$effect(() => {\n\t\tconst onMove = (event: MouseEvent) => {\n\t\t\tx = event.clientX;\n\t\t\ty = event.clientY;\n\t\t\tisVisible = true;\n\t\t};\n\t\tconst onLeave = () => (isVisible = false);\n\n\t\twindow.addEventListener('mousemove', onMove, { passive: true });\n\t\tdocument.addEventListener('mouseleave', onLeave);\n\n\t\treturn () => {\n\t\t\twindow.removeEventListener('mousemove', onMove);\n\t\t\tdocument.removeEventListener('mouseleave', onLeave);\n\t\t};\n\t});\n</script>\n\n{#if isVisible}\n\t<Div\n\t\tanimate={{ x, y }}\n\t\ttransition={springConfig}\n\t\tclass={`mouse-follow ${className}`}\n\t\tdata-testid=\"mouse-follow\"\n\t>\n\t\t{#if children}\n\t\t\t{@render children()}\n\t\t{:else}\n\t\t\t<div class=\"mouse-follow-ring\"></div>\n\t\t{/if}\n\t</Div>\n{/if}\n\n<style>\n\t:global(.mouse-follow) {\n\t\tposition: fixed;\n\t\ttop: 0;\n\t\tleft: 0;\n\t\tz-index: 9998;\n\t\tpointer-events: none;\n\t\t\n\t\ttranslate: -50% -50%;\n\t}\n\n\t.mouse-follow-ring {\n\t\twidth: 1.5rem;\n\t\theight: 1.5rem;\n\t\tborder: 1px solid color-mix(in oklch, var(--signal) 50%, transparent);\n\t\tborder-radius: 999px;\n\t\tbackground: color-mix(in oklch, var(--signal) 10%, transparent);\n\t}\n</style>\n",
+			"type": "registry:ui",
+			"target": "amicro/MouseFollow.svelte"
+		},
+		{
+			"content": "This file was ported from Amicro (React) and copied into your project by the\namicro-sv registry: https://amicro.enisdev.com\n\nOriginal: https://github.com/Subhan-code/Amicro--Micro-transitions-\n\nMIT License\n\nCopyright (c) 2026 SYED SUBHAN UDDIN\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+			"type": "registry:file",
+			"target": "amicro/LICENSE"
+		}
+	]
+}

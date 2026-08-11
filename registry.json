@@ -1,0 +1,3608 @@
+{
+  "$schema": "https://shadcn-svelte.com/schema/registry.json",
+  "name": "amicro-sv",
+  "homepage": "https://amicro.enisdev.com",
+  "items": [
+    {
+      "name": "amicro-notice",
+      "type": "registry:file",
+      "title": "Amicro license",
+      "description": "Origin and MIT license, installed alongside every component of this port.",
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "fade-down",
+      "type": "registry:ui",
+      "title": "Fade Down",
+      "description": "Entrance animation from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/entrance/FadeDown.svelte",
+          "type": "registry:ui",
+          "target": "amicro/FadeDown.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "fade-in",
+      "type": "registry:ui",
+      "title": "Fade In",
+      "description": "Entrance animation from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/entrance/FadeIn.svelte",
+          "type": "registry:ui",
+          "target": "amicro/FadeIn.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "fade-up",
+      "type": "registry:ui",
+      "title": "Fade Up",
+      "description": "Entrance animation from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/entrance/FadeUp.svelte",
+          "type": "registry:ui",
+          "target": "amicro/FadeUp.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "scale-in",
+      "type": "registry:ui",
+      "title": "Scale In",
+      "description": "Entrance animation from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/entrance/ScaleIn.svelte",
+          "type": "registry:ui",
+          "target": "amicro/ScaleIn.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "slide-left",
+      "type": "registry:ui",
+      "title": "Slide Left",
+      "description": "Entrance animation from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/entrance/SlideLeft.svelte",
+          "type": "registry:ui",
+          "target": "amicro/SlideLeft.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "slide-right",
+      "type": "registry:ui",
+      "title": "Slide Right",
+      "description": "Entrance animation from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/entrance/SlideRight.svelte",
+          "type": "registry:ui",
+          "target": "amicro/SlideRight.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "zoom-in",
+      "type": "registry:ui",
+      "title": "Zoom In",
+      "description": "Entrance animation from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/entrance/ZoomIn.svelte",
+          "type": "registry:ui",
+          "target": "amicro/ZoomIn.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "card-hover",
+      "type": "registry:ui",
+      "title": "Card Hover",
+      "description": "Hover and gesture interaction from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/hover/CardHover.svelte",
+          "type": "registry:ui",
+          "target": "amicro/CardHover.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "glow-button",
+      "type": "registry:ui",
+      "title": "Glow Button",
+      "description": "Hover and gesture interaction from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/hover/GlowButton.svelte",
+          "type": "registry:ui",
+          "target": "amicro/GlowButton.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "magnetic-button",
+      "type": "registry:ui",
+      "title": "Magnetic Button",
+      "description": "Hover and gesture interaction from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/hover/MagneticButton.svelte",
+          "type": "registry:ui",
+          "target": "amicro/MagneticButton.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "tilt-card",
+      "type": "registry:ui",
+      "title": "Tilt Card",
+      "description": "Hover and gesture interaction from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/hover/TiltCard.svelte",
+          "type": "registry:ui",
+          "target": "amicro/TiltCard.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "blur-text",
+      "type": "registry:ui",
+      "title": "Blur Text",
+      "description": "Text animation from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/text/BlurText.svelte",
+          "type": "registry:ui",
+          "target": "amicro/BlurText.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "character-stagger",
+      "type": "registry:ui",
+      "title": "Character Stagger",
+      "description": "Text animation from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/text/CharacterStagger.svelte",
+          "type": "registry:ui",
+          "target": "amicro/CharacterStagger.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "text-reveal",
+      "type": "registry:ui",
+      "title": "Text Reveal",
+      "description": "Text animation from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/text/TextReveal.svelte",
+          "type": "registry:ui",
+          "target": "amicro/TextReveal.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "word-reveal",
+      "type": "registry:ui",
+      "title": "Word Reveal",
+      "description": "Text animation from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/text/WordReveal.svelte",
+          "type": "registry:ui",
+          "target": "amicro/WordReveal.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "progress-indicator",
+      "type": "registry:ui",
+      "title": "Progress Indicator",
+      "description": "Scroll driven effect from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/scroll/ProgressIndicator.svelte",
+          "type": "registry:ui",
+          "target": "amicro/ProgressIndicator.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "scroll-reveal",
+      "type": "registry:ui",
+      "title": "Scroll Reveal",
+      "description": "Scroll driven effect from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/scroll/ScrollReveal.svelte",
+          "type": "registry:ui",
+          "target": "amicro/ScrollReveal.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "sticky-reveal",
+      "type": "registry:ui",
+      "title": "Sticky Reveal",
+      "description": "Scroll driven effect from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/scroll/StickyReveal.svelte",
+          "type": "registry:ui",
+          "target": "amicro/StickyReveal.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "cursor-trail",
+      "type": "registry:ui",
+      "title": "Cursor Trail",
+      "description": "Cursor effect from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/cursor/CursorTrail.svelte",
+          "type": "registry:ui",
+          "target": "amicro/CursorTrail.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "mouse-follow",
+      "type": "registry:ui",
+      "title": "Mouse Follow",
+      "description": "Cursor effect from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/cursor/MouseFollow.svelte",
+          "type": "registry:ui",
+          "target": "amicro/MouseFollow.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "spotlight",
+      "type": "registry:ui",
+      "title": "Spotlight",
+      "description": "Cursor effect from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/cursor/Spotlight.svelte",
+          "type": "registry:ui",
+          "target": "amicro/Spotlight.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "page-transition",
+      "type": "registry:ui",
+      "title": "Page Transition",
+      "description": "Page transition from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/transitions/PageTransition.svelte",
+          "type": "registry:ui",
+          "target": "amicro/PageTransition.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "card-arc5",
+      "type": "registry:ui",
+      "title": "Card Arc5",
+      "description": "Card layout from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/cards/CardArc5.svelte",
+          "type": "registry:ui",
+          "target": "amicro/CardArc5.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "accordion-loader",
+      "type": "registry:ui",
+      "title": "Accordion Loader",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/AccordionLoader.svelte",
+          "type": "registry:ui",
+          "target": "amicro/AccordionLoader.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "app-icon-load",
+      "type": "registry:ui",
+      "title": "App Icon Load",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/AppIconLoad.svelte",
+          "type": "registry:ui",
+          "target": "amicro/AppIconLoad.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "apple-breathe",
+      "type": "registry:ui",
+      "title": "Apple Breathe",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/AppleBreathe.svelte",
+          "type": "registry:ui",
+          "target": "amicro/AppleBreathe.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "apple-equalizer",
+      "type": "registry:ui",
+      "title": "Apple Equalizer",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/AppleEqualizer.svelte",
+          "type": "registry:ui",
+          "target": "amicro/AppleEqualizer.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "apple-icon-morph",
+      "type": "registry:ui",
+      "title": "Apple Icon Morph",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/AppleIconMorph.svelte",
+          "type": "registry:ui",
+          "target": "amicro/AppleIconMorph.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "apple-pulse-dots",
+      "type": "registry:ui",
+      "title": "Apple Pulse Dots",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/ApplePulseDots.svelte",
+          "type": "registry:ui",
+          "target": "amicro/ApplePulseDots.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "apple-scale-pulse",
+      "type": "registry:ui",
+      "title": "Apple Scale Pulse",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/AppleScalePulse.svelte",
+          "type": "registry:ui",
+          "target": "amicro/AppleScalePulse.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "apple-sound-wave",
+      "type": "registry:ui",
+      "title": "Apple Sound Wave",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/AppleSoundWave.svelte",
+          "type": "registry:ui",
+          "target": "amicro/AppleSoundWave.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "apple-text-reveal",
+      "type": "registry:ui",
+      "title": "Apple Text Reveal",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/AppleTextReveal.svelte",
+          "type": "registry:ui",
+          "target": "amicro/AppleTextReveal.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "apple-unlock",
+      "type": "registry:ui",
+      "title": "Apple Unlock",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/AppleUnlock.svelte",
+          "type": "registry:ui",
+          "target": "amicro/AppleUnlock.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "arc-tracer",
+      "type": "registry:ui",
+      "title": "Arc Tracer",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/ArcTracer.svelte",
+          "type": "registry:ui",
+          "target": "amicro/ArcTracer.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "bar-cascade",
+      "type": "registry:ui",
+      "title": "Bar Cascade",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/BarCascade.svelte",
+          "type": "registry:ui",
+          "target": "amicro/BarCascade.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "bar-sweep",
+      "type": "registry:ui",
+      "title": "Bar Sweep",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/BarSweep.svelte",
+          "type": "registry:ui",
+          "target": "amicro/BarSweep.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "bobbing-dots",
+      "type": "registry:ui",
+      "title": "Bobbing Dots",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/BobbingDots.svelte",
+          "type": "registry:ui",
+          "target": "amicro/BobbingDots.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "bounce-dots",
+      "type": "registry:ui",
+      "title": "Bounce Dots",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/BounceDots.svelte",
+          "type": "registry:ui",
+          "target": "amicro/BounceDots.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "bouncing-bars",
+      "type": "registry:ui",
+      "title": "Bouncing Bars",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/BouncingBars.svelte",
+          "type": "registry:ui",
+          "target": "amicro/BouncingBars.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "bouncing-dots",
+      "type": "registry:ui",
+      "title": "Bouncing Dots",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/BouncingDots.svelte",
+          "type": "registry:ui",
+          "target": "amicro/BouncingDots.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "bouncing-lines",
+      "type": "registry:ui",
+      "title": "Bouncing Lines",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/BouncingLines.svelte",
+          "type": "registry:ui",
+          "target": "amicro/BouncingLines.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "bouncing-square",
+      "type": "registry:ui",
+      "title": "Bouncing Square",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/BouncingSquare.svelte",
+          "type": "registry:ui",
+          "target": "amicro/BouncingSquare.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "breathe-ring",
+      "type": "registry:ui",
+      "title": "Breathe Ring",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/BreatheRing.svelte",
+          "type": "registry:ui",
+          "target": "amicro/BreatheRing.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "breathing-glow",
+      "type": "registry:ui",
+      "title": "Breathing Glow",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/BreathingGlow.svelte",
+          "type": "registry:ui",
+          "target": "amicro/BreathingGlow.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "breathing-square",
+      "type": "registry:ui",
+      "title": "Breathing Square",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/BreathingSquare.svelte",
+          "type": "registry:ui",
+          "target": "amicro/BreathingSquare.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "circular-bars",
+      "type": "registry:ui",
+      "title": "Circular Bars",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/CircularBars.svelte",
+          "type": "registry:ui",
+          "target": "amicro/CircularBars.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "classic-spinner",
+      "type": "registry:ui",
+      "title": "Classic Spinner",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/ClassicSpinner.svelte",
+          "type": "registry:ui",
+          "target": "amicro/ClassicSpinner.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "clock-spinner",
+      "type": "registry:ui",
+      "title": "Clock Spinner",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/ClockSpinner.svelte",
+          "type": "registry:ui",
+          "target": "amicro/ClockSpinner.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "comet-spinner",
+      "type": "registry:ui",
+      "title": "Comet Spinner",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/CometSpinner.svelte",
+          "type": "registry:ui",
+          "target": "amicro/CometSpinner.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "concentric-pulse",
+      "type": "registry:ui",
+      "title": "Concentric Pulse",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/ConcentricPulse.svelte",
+          "type": "registry:ui",
+          "target": "amicro/ConcentricPulse.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "concentric-ring",
+      "type": "registry:ui",
+      "title": "Concentric Ring",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/ConcentricRing.svelte",
+          "type": "registry:ui",
+          "target": "amicro/ConcentricRing.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "concentric-squares",
+      "type": "registry:ui",
+      "title": "Concentric Squares",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/ConcentricSquares.svelte",
+          "type": "registry:ui",
+          "target": "amicro/ConcentricSquares.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "conveyor-loop",
+      "type": "registry:ui",
+      "title": "Conveyor Loop",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/ConveyorLoop.svelte",
+          "type": "registry:ui",
+          "target": "amicro/ConveyorLoop.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "cross-spinner",
+      "type": "registry:ui",
+      "title": "Cross Spinner",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/CrossSpinner.svelte",
+          "type": "registry:ui",
+          "target": "amicro/CrossSpinner.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "cube-flip-spring",
+      "type": "registry:ui",
+      "title": "Cube Flip Spring",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/CubeFlipSpring.svelte",
+          "type": "registry:ui",
+          "target": "amicro/CubeFlipSpring.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "dash-ring",
+      "type": "registry:ui",
+      "title": "Dash Ring",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/DashRing.svelte",
+          "type": "registry:ui",
+          "target": "amicro/DashRing.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "dashed-spiral",
+      "type": "registry:ui",
+      "title": "Dashed Spiral",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/DashedSpiral.svelte",
+          "type": "registry:ui",
+          "target": "amicro/DashedSpiral.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "diamond-grid",
+      "type": "registry:ui",
+      "title": "Diamond Grid",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/DiamondGrid.svelte",
+          "type": "registry:ui",
+          "target": "amicro/DiamondGrid.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "diamond-rotate-spring",
+      "type": "registry:ui",
+      "title": "Diamond Rotate Spring",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/DiamondRotateSpring.svelte",
+          "type": "registry:ui",
+          "target": "amicro/DiamondRotateSpring.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "dot-spinner",
+      "type": "registry:ui",
+      "title": "Dot Spinner",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/DotSpinner.svelte",
+          "type": "registry:ui",
+          "target": "amicro/DotSpinner.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "dots-ring",
+      "type": "registry:ui",
+      "title": "Dots Ring",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/DotsRing.svelte",
+          "type": "registry:ui",
+          "target": "amicro/DotsRing.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "double-ring",
+      "type": "registry:ui",
+      "title": "Double Ring",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/DoubleRing.svelte",
+          "type": "registry:ui",
+          "target": "amicro/DoubleRing.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "drop-dot",
+      "type": "registry:ui",
+      "title": "Drop Dot",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/DropDot.svelte",
+          "type": "registry:ui",
+          "target": "amicro/DropDot.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "dual-arc",
+      "type": "registry:ui",
+      "title": "Dual Arc",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/DualArc.svelte",
+          "type": "registry:ui",
+          "target": "amicro/DualArc.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "dynamic-island",
+      "type": "registry:ui",
+      "title": "Dynamic Island",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/DynamicIsland.svelte",
+          "type": "registry:ui",
+          "target": "amicro/DynamicIsland.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "elastic-bars",
+      "type": "registry:ui",
+      "title": "Elastic Bars",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/ElasticBars.svelte",
+          "type": "registry:ui",
+          "target": "amicro/ElasticBars.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "elastic-square",
+      "type": "registry:ui",
+      "title": "Elastic Square",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/ElasticSquare.svelte",
+          "type": "registry:ui",
+          "target": "amicro/ElasticSquare.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "expanding-cross",
+      "type": "registry:ui",
+      "title": "Expanding Cross",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/ExpandingCross.svelte",
+          "type": "registry:ui",
+          "target": "amicro/ExpandingCross.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "face-id-scan",
+      "type": "registry:ui",
+      "title": "Face Id Scan",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/FaceIdScan.svelte",
+          "type": "registry:ui",
+          "target": "amicro/FaceIdScan.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "fade-arc",
+      "type": "registry:ui",
+      "title": "Fade Arc",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/FadeArc.svelte",
+          "type": "registry:ui",
+          "target": "amicro/FadeArc.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "fade-dots",
+      "type": "registry:ui",
+      "title": "Fade Dots",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/FadeDots.svelte",
+          "type": "registry:ui",
+          "target": "amicro/FadeDots.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "flip-square",
+      "type": "registry:ui",
+      "title": "Flip Square",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/FlipSquare.svelte",
+          "type": "registry:ui",
+          "target": "amicro/FlipSquare.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "floating-diamonds",
+      "type": "registry:ui",
+      "title": "Floating Diamonds",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/FloatingDiamonds.svelte",
+          "type": "registry:ui",
+          "target": "amicro/FloatingDiamonds.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "fluid-bars",
+      "type": "registry:ui",
+      "title": "Fluid Bars",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/FluidBars.svelte",
+          "type": "registry:ui",
+          "target": "amicro/FluidBars.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "fluid-diamond",
+      "type": "registry:ui",
+      "title": "Fluid Diamond",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/FluidDiamond.svelte",
+          "type": "registry:ui",
+          "target": "amicro/FluidDiamond.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "fluid-dot-orbit",
+      "type": "registry:ui",
+      "title": "Fluid Dot Orbit",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/FluidDotOrbit.svelte",
+          "type": "registry:ui",
+          "target": "amicro/FluidDotOrbit.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "fluid-skeleton",
+      "type": "registry:ui",
+      "title": "Fluid Skeleton",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/FluidSkeleton.svelte",
+          "type": "registry:ui",
+          "target": "amicro/FluidSkeleton.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "gears",
+      "type": "registry:ui",
+      "title": "Gears",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/Gears.svelte",
+          "type": "registry:ui",
+          "target": "amicro/Gears.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "glassmorphic-card",
+      "type": "registry:ui",
+      "title": "Glassmorphic Card",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/GlassmorphicCard.svelte",
+          "type": "registry:ui",
+          "target": "amicro/GlassmorphicCard.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "gradient-arc",
+      "type": "registry:ui",
+      "title": "Gradient Arc",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/GradientArc.svelte",
+          "type": "registry:ui",
+          "target": "amicro/GradientArc.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "grid-dots",
+      "type": "registry:ui",
+      "title": "Grid Dots",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/GridDots.svelte",
+          "type": "registry:ui",
+          "target": "amicro/GridDots.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "haptic-ring",
+      "type": "registry:ui",
+      "title": "Haptic Ring",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/HapticRing.svelte",
+          "type": "registry:ui",
+          "target": "amicro/HapticRing.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "heartbeat",
+      "type": "registry:ui",
+      "title": "Heartbeat",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/Heartbeat.svelte",
+          "type": "registry:ui",
+          "target": "amicro/Heartbeat.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "hexagon-spinner",
+      "type": "registry:ui",
+      "title": "Hexagon Spinner",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/HexagonSpinner.svelte",
+          "type": "registry:ui",
+          "target": "amicro/HexagonSpinner.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "hourglass",
+      "type": "registry:ui",
+      "title": "Hourglass",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/Hourglass.svelte",
+          "type": "registry:ui",
+          "target": "amicro/Hourglass.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "infinity-path",
+      "type": "registry:ui",
+      "title": "Infinity Path",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/InfinityPath.svelte",
+          "type": "registry:ui",
+          "target": "amicro/InfinityPath.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "intersecting-rings",
+      "type": "registry:ui",
+      "title": "Intersecting Rings",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/IntersectingRings.svelte",
+          "type": "registry:ui",
+          "target": "amicro/IntersectingRings.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "ios-spinner",
+      "type": "registry:ui",
+      "title": "Ios Spinner",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/IosSpinner.svelte",
+          "type": "registry:ui",
+          "target": "amicro/IosSpinner.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "line-spinner",
+      "type": "registry:ui",
+      "title": "Line Spinner",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/LineSpinner.svelte",
+          "type": "registry:ui",
+          "target": "amicro/LineSpinner.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "liquid-dots",
+      "type": "registry:ui",
+      "title": "Liquid Dots",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/LiquidDots.svelte",
+          "type": "registry:ui",
+          "target": "amicro/LiquidDots.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "mac-terminal",
+      "type": "registry:ui",
+      "title": "Mac Terminal",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/MacTerminal.svelte",
+          "type": "registry:ui",
+          "target": "amicro/MacTerminal.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "magnetic-dots",
+      "type": "registry:ui",
+      "title": "Magnetic Dots",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/MagneticDots.svelte",
+          "type": "registry:ui",
+          "target": "amicro/MagneticDots.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "minimal-triangle",
+      "type": "registry:ui",
+      "title": "Minimal Triangle",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/MinimalTriangle.svelte",
+          "type": "registry:ui",
+          "target": "amicro/MinimalTriangle.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "morph-dot-ring",
+      "type": "registry:ui",
+      "title": "Morph Dot Ring",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/MorphDotRing.svelte",
+          "type": "registry:ui",
+          "target": "amicro/MorphDotRing.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "morph-loader",
+      "type": "registry:ui",
+      "title": "Morph Loader",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/MorphLoader.svelte",
+          "type": "registry:ui",
+          "target": "amicro/MorphLoader.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "morphing-bars",
+      "type": "registry:ui",
+      "title": "Morphing Bars",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/MorphingBars.svelte",
+          "type": "registry:ui",
+          "target": "amicro/MorphingBars.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "morphing-infinity",
+      "type": "registry:ui",
+      "title": "Morphing Infinity",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/MorphingInfinity.svelte",
+          "type": "registry:ui",
+          "target": "amicro/MorphingInfinity.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "morphing-ring",
+      "type": "registry:ui",
+      "title": "Morphing Ring",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/MorphingRing.svelte",
+          "type": "registry:ui",
+          "target": "amicro/MorphingRing.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "morphing-shape",
+      "type": "registry:ui",
+      "title": "Morphing Shape",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/MorphingShape.svelte",
+          "type": "registry:ui",
+          "target": "amicro/MorphingShape.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "newtons-cradle",
+      "type": "registry:ui",
+      "title": "Newtons Cradle",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/NewtonsCradle.svelte",
+          "type": "registry:ui",
+          "target": "amicro/NewtonsCradle.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "offset-rings",
+      "type": "registry:ui",
+      "title": "Offset Rings",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/OffsetRings.svelte",
+          "type": "registry:ui",
+          "target": "amicro/OffsetRings.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "orbiting-circles",
+      "type": "registry:ui",
+      "title": "Orbiting Circles",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/OrbitingCircles.svelte",
+          "type": "registry:ui",
+          "target": "amicro/OrbitingCircles.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "orbiting-dot",
+      "type": "registry:ui",
+      "title": "Orbiting Dot",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/OrbitingDot.svelte",
+          "type": "registry:ui",
+          "target": "amicro/OrbitingDot.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "origami-shape",
+      "type": "registry:ui",
+      "title": "Origami Shape",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/OrigamiShape.svelte",
+          "type": "registry:ui",
+          "target": "amicro/OrigamiShape.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "pendulum",
+      "type": "registry:ui",
+      "title": "Pendulum",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/Pendulum.svelte",
+          "type": "registry:ui",
+          "target": "amicro/Pendulum.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "pulsating-dots",
+      "type": "registry:ui",
+      "title": "Pulsating Dots",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/PulsatingDots.svelte",
+          "type": "registry:ui",
+          "target": "amicro/PulsatingDots.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "pulse",
+      "type": "registry:ui",
+      "title": "Pulse",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/Pulse.svelte",
+          "type": "registry:ui",
+          "target": "amicro/Pulse.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "pulse-dot",
+      "type": "registry:ui",
+      "title": "Pulse Dot",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/PulseDot.svelte",
+          "type": "registry:ui",
+          "target": "amicro/PulseDot.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "pulse-dots",
+      "type": "registry:ui",
+      "title": "Pulse Dots",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/PulseDots.svelte",
+          "type": "registry:ui",
+          "target": "amicro/PulseDots.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "pulse-square",
+      "type": "registry:ui",
+      "title": "Pulse Square",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/PulseSquare.svelte",
+          "type": "registry:ui",
+          "target": "amicro/PulseSquare.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "pumping-heart",
+      "type": "registry:ui",
+      "title": "Pumping Heart",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/PumpingHeart.svelte",
+          "type": "registry:ui",
+          "target": "amicro/PumpingHeart.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "radar-sweep",
+      "type": "registry:ui",
+      "title": "Radar Sweep",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/RadarSweep.svelte",
+          "type": "registry:ui",
+          "target": "amicro/RadarSweep.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "ring-sweep",
+      "type": "registry:ui",
+      "title": "Ring Sweep",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/RingSweep.svelte",
+          "type": "registry:ui",
+          "target": "amicro/RingSweep.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "ripple-effect",
+      "type": "registry:ui",
+      "title": "Ripple Effect",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/RippleEffect.svelte",
+          "type": "registry:ui",
+          "target": "amicro/RippleEffect.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "rotating-cross",
+      "type": "registry:ui",
+      "title": "Rotating Cross",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/RotatingCross.svelte",
+          "type": "registry:ui",
+          "target": "amicro/RotatingCross.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "rotating-triangle",
+      "type": "registry:ui",
+      "title": "Rotating Triangle",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/RotatingTriangle.svelte",
+          "type": "registry:ui",
+          "target": "amicro/RotatingTriangle.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "shape-shift-grid",
+      "type": "registry:ui",
+      "title": "Shape Shift Grid",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/ShapeShiftGrid.svelte",
+          "type": "registry:ui",
+          "target": "amicro/ShapeShiftGrid.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "shimmer-line",
+      "type": "registry:ui",
+      "title": "Shimmer Line",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/ShimmerLine.svelte",
+          "type": "registry:ui",
+          "target": "amicro/ShimmerLine.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "siri-wave",
+      "type": "registry:ui",
+      "title": "Siri Wave",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/SiriWave.svelte",
+          "type": "registry:ui",
+          "target": "amicro/SiriWave.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "skeleton",
+      "type": "registry:ui",
+      "title": "Skeleton",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/Skeleton.svelte",
+          "type": "registry:ui",
+          "target": "amicro/Skeleton.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "skeleton-loader",
+      "type": "registry:ui",
+      "title": "Skeleton Loader",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/SkeletonLoader.svelte",
+          "type": "registry:ui",
+          "target": "amicro/SkeletonLoader.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "sliding-bars",
+      "type": "registry:ui",
+      "title": "Sliding Bars",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/SlidingBars.svelte",
+          "type": "registry:ui",
+          "target": "amicro/SlidingBars.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "smooth-dot-shift",
+      "type": "registry:ui",
+      "title": "Smooth Dot Shift",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/SmoothDotShift.svelte",
+          "type": "registry:ui",
+          "target": "amicro/SmoothDotShift.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "smooth-ring",
+      "type": "registry:ui",
+      "title": "Smooth Ring",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/SmoothRing.svelte",
+          "type": "registry:ui",
+          "target": "amicro/SmoothRing.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "smooth-rounded-square",
+      "type": "registry:ui",
+      "title": "Smooth Rounded Square",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/SmoothRoundedSquare.svelte",
+          "type": "registry:ui",
+          "target": "amicro/SmoothRoundedSquare.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "spinning-squares",
+      "type": "registry:ui",
+      "title": "Spinning Squares",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/SpinningSquares.svelte",
+          "type": "registry:ui",
+          "target": "amicro/SpinningSquares.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "spiral-spinner",
+      "type": "registry:ui",
+      "title": "Spiral Spinner",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/SpiralSpinner.svelte",
+          "type": "registry:ui",
+          "target": "amicro/SpiralSpinner.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "spring-bars",
+      "type": "registry:ui",
+      "title": "Spring Bars",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/SpringBars.svelte",
+          "type": "registry:ui",
+          "target": "amicro/SpringBars.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "spring-dot-matrix",
+      "type": "registry:ui",
+      "title": "Spring Dot Matrix",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/SpringDotMatrix.svelte",
+          "type": "registry:ui",
+          "target": "amicro/SpringDotMatrix.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "spring-hexagon",
+      "type": "registry:ui",
+      "title": "Spring Hexagon",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/SpringHexagon.svelte",
+          "type": "registry:ui",
+          "target": "amicro/SpringHexagon.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "spring-ring-expand",
+      "type": "registry:ui",
+      "title": "Spring Ring Expand",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/SpringRingExpand.svelte",
+          "type": "registry:ui",
+          "target": "amicro/SpringRingExpand.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "spring-text-pop",
+      "type": "registry:ui",
+      "title": "Spring Text Pop",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/SpringTextPop.svelte",
+          "type": "registry:ui",
+          "target": "amicro/SpringTextPop.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "square-accordion",
+      "type": "registry:ui",
+      "title": "Square Accordion",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/SquareAccordion.svelte",
+          "type": "registry:ui",
+          "target": "amicro/SquareAccordion.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "square-grid",
+      "type": "registry:ui",
+      "title": "Square Grid",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/SquareGrid.svelte",
+          "type": "registry:ui",
+          "target": "amicro/SquareGrid.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "square-snake",
+      "type": "registry:ui",
+      "title": "Square Snake",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/SquareSnake.svelte",
+          "type": "registry:ui",
+          "target": "amicro/SquareSnake.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "square-spinner",
+      "type": "registry:ui",
+      "title": "Square Spinner",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/SquareSpinner.svelte",
+          "type": "registry:ui",
+          "target": "amicro/SquareSpinner.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "stacked-bar-pulse",
+      "type": "registry:ui",
+      "title": "Stacked Bar Pulse",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/StackedBarPulse.svelte",
+          "type": "registry:ui",
+          "target": "amicro/StackedBarPulse.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "swapping-dots",
+      "type": "registry:ui",
+      "title": "Swapping Dots",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/SwappingDots.svelte",
+          "type": "registry:ui",
+          "target": "amicro/SwappingDots.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "swirling-spinner",
+      "type": "registry:ui",
+      "title": "Swirling Spinner",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/SwirlingSpinner.svelte",
+          "type": "registry:ui",
+          "target": "amicro/SwirlingSpinner.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "symmetric-wave",
+      "type": "registry:ui",
+      "title": "Symmetric Wave",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/SymmetricWave.svelte",
+          "type": "registry:ui",
+          "target": "amicro/SymmetricWave.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "terminal-loader",
+      "type": "registry:ui",
+      "title": "Terminal Loader",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/TerminalLoader.svelte",
+          "type": "registry:ui",
+          "target": "amicro/TerminalLoader.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "text-blink",
+      "type": "registry:ui",
+      "title": "Text Blink",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/TextBlink.svelte",
+          "type": "registry:ui",
+          "target": "amicro/TextBlink.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "text-dots",
+      "type": "registry:ui",
+      "title": "Text Dots",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/TextDots.svelte",
+          "type": "registry:ui",
+          "target": "amicro/TextDots.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "text-morph",
+      "type": "registry:ui",
+      "title": "Text Morph",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/TextMorph.svelte",
+          "type": "registry:ui",
+          "target": "amicro/TextMorph.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "text-shimmer",
+      "type": "registry:ui",
+      "title": "Text Shimmer",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/TextShimmer.svelte",
+          "type": "registry:ui",
+          "target": "amicro/TextShimmer.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "text-shimmer-wave",
+      "type": "registry:ui",
+      "title": "Text Shimmer Wave",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/TextShimmerWave.svelte",
+          "type": "registry:ui",
+          "target": "amicro/TextShimmerWave.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "trailing-dots",
+      "type": "registry:ui",
+      "title": "Trailing Dots",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/TrailingDots.svelte",
+          "type": "registry:ui",
+          "target": "amicro/TrailingDots.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "triple-dot-spinner",
+      "type": "registry:ui",
+      "title": "Triple Dot Spinner",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/TripleDotSpinner.svelte",
+          "type": "registry:ui",
+          "target": "amicro/TripleDotSpinner.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "twin-orbit",
+      "type": "registry:ui",
+      "title": "Twin Orbit",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/TwinOrbit.svelte",
+          "type": "registry:ui",
+          "target": "amicro/TwinOrbit.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "typing",
+      "type": "registry:ui",
+      "title": "Typing",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/Typing.svelte",
+          "type": "registry:ui",
+          "target": "amicro/Typing.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "typing-indicator",
+      "type": "registry:ui",
+      "title": "Typing Indicator",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/TypingIndicator.svelte",
+          "type": "registry:ui",
+          "target": "amicro/TypingIndicator.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "wandering-cube",
+      "type": "registry:ui",
+      "title": "Wandering Cube",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/WanderingCube.svelte",
+          "type": "registry:ui",
+          "target": "amicro/WanderingCube.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "watch-spinner",
+      "type": "registry:ui",
+      "title": "Watch Spinner",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/WatchSpinner.svelte",
+          "type": "registry:ui",
+          "target": "amicro/WatchSpinner.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "wave-dots",
+      "type": "registry:ui",
+      "title": "Wave Dots",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/WaveDots.svelte",
+          "type": "registry:ui",
+          "target": "amicro/WaveDots.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "wave-physics-loader",
+      "type": "registry:ui",
+      "title": "Wave Physics Loader",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/WavePhysicsLoader.svelte",
+          "type": "registry:ui",
+          "target": "amicro/WavePhysicsLoader.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "waveform-loader",
+      "type": "registry:ui",
+      "title": "Waveform Loader",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/WaveformLoader.svelte",
+          "type": "registry:ui",
+          "target": "amicro/WaveformLoader.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "zig-zag-pulse",
+      "type": "registry:ui",
+      "title": "Zig Zag Pulse",
+      "description": "Loader from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/loading/ZigZagPulse.svelte",
+          "type": "registry:ui",
+          "target": "amicro/ZigZagPulse.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "use-mouse-position",
+      "type": "registry:hook",
+      "title": "Use Mouse Position",
+      "description": "Hook from Amicro, ported to Svelte 5.",
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/hooks/use-mouse-position.svelte.ts",
+          "type": "registry:hook",
+          "target": "amicro/use-mouse-position.svelte.ts"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "use-reduced-motion",
+      "type": "registry:hook",
+      "title": "Use Reduced Motion",
+      "description": "Hook from Amicro, ported to Svelte 5.",
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/hooks/use-reduced-motion.svelte.ts",
+          "type": "registry:hook",
+          "target": "amicro/use-reduced-motion.svelte.ts"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "use-scroll-progress",
+      "type": "registry:hook",
+      "title": "Use Scroll Progress",
+      "description": "Hook from Amicro, ported to Svelte 5.",
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/hooks/use-scroll-progress.svelte.ts",
+          "type": "registry:hook",
+          "target": "amicro/use-scroll-progress.svelte.ts"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "use-stagger",
+      "type": "registry:hook",
+      "title": "Use Stagger",
+      "description": "Hook from Amicro, ported to Svelte 5.",
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/hooks/use-stagger.ts",
+          "type": "registry:hook",
+          "target": "amicro/use-stagger.ts"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "use-web-haptics",
+      "type": "registry:hook",
+      "title": "Use Web Haptics",
+      "description": "Hook from Amicro, ported to Svelte 5.",
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/hooks/use-web-haptics.ts",
+          "type": "registry:hook",
+          "target": "amicro/use-web-haptics.ts"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "presets",
+      "type": "registry:lib",
+      "title": "Presets",
+      "description": "Shared helper from Amicro, ported to Svelte 5.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/lib/presets.ts",
+          "type": "registry:lib",
+          "target": "amicro/presets.ts"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "utils",
+      "type": "registry:lib",
+      "title": "Utils",
+      "description": "Shared helper from Amicro, ported to Svelte 5.",
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/amicro/lib/utils.ts",
+          "type": "registry:lib",
+          "target": "amicro/utils.ts"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    }
+  ]
+}

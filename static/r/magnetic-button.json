@@ -1,0 +1,22 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "magnetic-button",
+	"title": "Magnetic Button",
+	"type": "registry:ui",
+	"description": "Hover and gesture interaction from Amicro, ported to Svelte 5 and motion-sv.",
+	"dependencies": [
+		"motion-sv"
+	],
+	"files": [
+		{
+			"content": "<script lang=\"ts\">\n\timport { motion } from 'motion-sv';\n\timport type { Snippet } from 'svelte';\n\n\tconst Button = motion.button;\n\n\tinterface Props {\n\t\tchildren?: Snippet;\n\t\trange?: number;\n\t\tstrength?: number;\n\t\tclass?: string;\n\t\tonclick?: () => void;\n\t}\n\n\tlet { children, range = 45, strength = 0.35, class: className = '', onclick }: Props = $props();\n\n\tlet node = $state<HTMLElement | null>(null);\n\tlet x = $state(0);\n\tlet y = $state(0);\n\n\tconst springConfig = { type: 'spring', stiffness: 150, damping: 15, mass: 0.6 } as const;\n\n\tfunction onpointermove(event: PointerEvent) {\n\t\tif (!node) return;\n\t\tconst { left, top, width, height } = node.getBoundingClientRect();\n\t\tconst centerX = left + width / 2;\n\t\tconst centerY = top + height / 2;\n\t\tconst dist = Math.hypot(event.clientX - centerX, event.clientY - centerY);\n\n\t\tif (dist < range) {\n\t\t\tx = (event.clientX - centerX) * strength;\n\t\t\ty = (event.clientY - centerY) * strength;\n\t\t} else {\n\t\t\tx = 0;\n\t\t\ty = 0;\n\t\t}\n\t}\n\n\tfunction onpointerleave() {\n\t\tx = 0;\n\t\ty = 0;\n\t}\n</script>\n\n<Button\n\tbind:ref={node}\n\t{onpointermove}\n\t{onpointerleave}\n\t{onclick}\n\tanimate={{ x, y }}\n\ttransition={springConfig}\n\twhileHover={{ scale: 1.03 }}\n\twhilePress={{ scale: 0.97 }}\n\tclass={`magnetic-btn ${className}`}\n\tdata-testid=\"magnetic-button\"\n>\n\t<span class=\"label\">{@render children?.()}</span>\n</Button>\n\n<style>\n\t:global(.magnetic-btn) {\n\t\tposition: relative;\n\t\tdisplay: inline-flex;\n\t\talign-items: center;\n\t\tjustify-content: center;\n\t\theight: 2.75rem;\n\t\tpadding-inline: 1.5rem;\n\t\tborder: 0;\n\t\tborder-radius: 999px;\n\t\tbackground: var(--gray-12);\n\t\tcolor: var(--gray-1);\n\t\tfont-family: inherit;\n\t\tfont-size: 0.875rem;\n\t\tfont-weight: 600;\n\t\tcursor: pointer;\n\t\tuser-select: none;\n\t\tbox-shadow: 0 1px 2px rgb(0 0 0 / 0.12);\n\t}\n\n\t.label {\n\t\tposition: relative;\n\t\tz-index: 1;\n\t\tdisplay: block;\n\t\tpointer-events: none;\n\t}\n</style>\n",
+			"type": "registry:ui",
+			"target": "amicro/MagneticButton.svelte"
+		},
+		{
+			"content": "This file was ported from Amicro (React) and copied into your project by the\namicro-sv registry: https://amicro.enisdev.com\n\nOriginal: https://github.com/Subhan-code/Amicro--Micro-transitions-\n\nMIT License\n\nCopyright (c) 2026 SYED SUBHAN UDDIN\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+			"type": "registry:file",
+			"target": "amicro/LICENSE"
+		}
+	]
+}
