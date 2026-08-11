@@ -124,7 +124,7 @@
 			and Motion.
 		</p>
 		<p
-			class="mt-4 text-[13px] sm:text-[14px] leading-[19px] sm:leading-[20px] max-w-[530px] text-balance transition-colors duration-300 text-black opacity-70 dark:text-[#8f8f8f] dark:opacity-100"
+			class="mt-4 text-[14px] sm:text-[17px] leading-[20px] sm:leading-[25px] max-w-[530px] text-balance transition-colors duration-300 text-black opacity-70 dark:text-[#8f8f8f] dark:opacity-100"
 		>
 			SvelteKit port of
 			<a
