@@ -15,11 +15,17 @@ Demo: [amicro.enisdev.com](https://amicro.enisdev.com). Install page: [amicro.en
 
 ## Install
 
-Requires SvelteKit, Tailwind 4 and a `components.json`.
+Requires SvelteKit and Tailwind 4.
 
-```bash
-npx shadcn-svelte@latest add https://amicro.enisdev.com/r/fade-in.json
 ```
+╭────────────────────────────────────── amicro-sv registry ───────────────────────────────────────╮
+│ npx shadcn-svelte@latest init                                            set up components.json │
+│ npx shadcn-svelte@latest add https://amicro.enisdev.com/r/fade-in.json   add a component        │
+╰─────────────────────────────────────────────────────────────────────────────────────────────────╯
+```
+
+The CLI writes the component into your `ui` alias under `amicro/`, installs `motion-sv` and drops
+the upstream MIT license next to it. Every name from the [install page](https://amicro.enisdev.com/install) works.
 
 ## Development
 
