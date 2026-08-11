@@ -12,15 +12,19 @@ const NOTICE_FILE = {
 };
 
 const UI_GROUPS = {
-	entrance: 'Entrance animation',
-	hover: 'Hover and gesture interaction',
-	text: 'Text animation',
-	scroll: 'Scroll driven effect',
-	cursor: 'Cursor effect',
-	transitions: 'Page transition',
-	cards: 'Card layout',
-	loading: 'Loader'
+	entrance: { item: 'Entrance animation', section: 'Entrance animations' },
+	hover: { item: 'Hover and gesture interaction', section: 'Hover and gesture' },
+	text: { item: 'Text animation', section: 'Text animations' },
+	scroll: { item: 'Scroll driven effect', section: 'Scroll driven effects' },
+	cursor: { item: 'Cursor effect', section: 'Cursor effects' },
+	transitions: { item: 'Page transition', section: 'Page transitions' },
+	cards: { item: 'Card layout', section: 'Card layouts' },
+	loading: { item: 'Loader', section: 'Loaders' }
 };
+
+const SITE = 'https://amicro.enisdev.com';
+const sections = new Map();
+const section = (title, name) => sections.set(title, [...(sections.get(title) ?? []), name]);
 
 const kebab = (name) =>
 	name
@@ -73,11 +77,12 @@ const items = [
 	}
 ];
 
-for (const [group, label] of Object.entries(UI_GROUPS)) {
+for (const [group, { item: label, section: title }] of Object.entries(UI_GROUPS)) {
 	for (const file of listFiles(group)) {
 		if (!file.endsWith('.svelte')) continue;
 		const source = readSource(group, file);
 		const name = kebab(file);
+		section(title, name);
 		items.push({
 			name,
 			type: 'registry:ui',
@@ -97,14 +102,15 @@ for (const [group, label] of Object.entries(UI_GROUPS)) {
 	}
 }
 
-for (const [group, type, label] of [
-	['hooks', 'registry:hook', 'Hook'],
-	['lib', 'registry:lib', 'Shared helper']
+for (const [group, type, label, title] of [
+	['hooks', 'registry:hook', 'Hook', 'Hooks'],
+	['lib', 'registry:lib', 'Shared helper', 'Helpers']
 ]) {
 	for (const file of listFiles(group)) {
 		if (!file.endsWith('.ts')) continue;
 		const source = readSource(group, file);
 		const name = kebab(file);
+		section(title, name);
 		items.push({
 			name,
 			type,
@@ -141,6 +147,50 @@ writeFileSync(
 	join(ROOT, 'src/lib/app/data/registry-items.ts'),
 	`export interface RegistryItem {\n\tname: string;\n\ttitle: string;\n\ttype: string;\n\tdescription: string;\n}\n\nexport const REGISTRY_ITEMS: RegistryItem[] = ${JSON.stringify(catalog, null, 1)};\n`
 );
+
+const titleOf = new Map(items.map((item) => [item.name, item.title]));
+
+const llms = [
+	'# Amicro SV',
+	'',
+	`> ${items.filter((item) => item.type === 'registry:ui').length} micro interaction components for Svelte 5 plus the hooks and helpers behind them, pulled into your project one file at a time from a shadcn style registry. Entrance and hover animations, text and scroll effects, cursor effects, page transitions, card layouts and ${sections.get('Loaders')?.length ?? 0} loaders, all running on motion-sv.`,
+	'',
+	'Amicro SV is a Svelte 5 port of Amicro (React, MIT) by Syed Subhan and is not affiliated with the original. There is no npm package: each item is a plain Svelte file with motion-sv as its only runtime dependency, copied into your repo, yours to edit afterwards.',
+	'',
+	'Requirements: a SvelteKit 2 project on Svelte 5 with Tailwind 4 and a components.json.',
+	'',
+	'Set up the shadcn-svelte CLI once:',
+	'',
+	'    npx shadcn-svelte@latest init',
+	'',
+	'Add a component, swapping fade-in for any name below:',
+	'',
+	`    npx shadcn-svelte@latest add ${SITE}/r/fade-in.json`,
+	'',
+	`The CLI writes the file into your ui alias under amicro/, installs motion-sv and drops the upstream MIT license next to it. Every item resolves at ${SITE}/r/<name>.json, so the command can be built from a name alone.`,
+	'',
+	'## Docs',
+	'',
+	`- [Catalog](${SITE}): live demos of every component`,
+	`- [Install page](${SITE}/install): searchable list with a copyable command per item`,
+	'- [Repo](https://github.com/enisbu/amicro-sv): source, porting contract and the motion-sv API differences against Motion for React',
+	'- [Original](https://github.com/Subhan-code/Amicro--Micro-transitions-): the React library this port descends from'
+];
+
+for (const [title, names] of sections) {
+	llms.push('', `## ${title} (${names.length})`, '');
+	for (const name of names) llms.push(`- [${name}](${SITE}/r/${name}.json): ${titleOf.get(name)}`);
+}
+
+llms.push(
+	'',
+	'## License',
+	'',
+	`- [MIT notice](${SITE}/r/${NOTICE_ITEM}.json): copyright of the original, installed alongside every component`,
+	''
+);
+
+writeFileSync(join(ROOT, 'static/llms.txt'), llms.join('\n'));
 
 const byType = items.reduce((acc, item) => ({ ...acc, [item.type]: (acc[item.type] ?? 0) + 1 }), {});
 console.log(`registry.json: ${items.length} items`);
