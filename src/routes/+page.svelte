@@ -51,8 +51,17 @@
 		catalogTab = id;
 	};
 
+	// Every section keeps its own layout namespace, so the snapshot has to be
+	// triggered per section instead of from one shared scope.
+	let buttonsSection = $state<ButtonsSection>();
+	let spreadsSection = $state<CardsSection>();
+	let carouselsSection = $state<CardsSection>();
+
 	const toggleSort = () => {
 		sortBy = sortBy === 'default' ? 'alphabetical' : 'default';
+		buttonsSection?.snapshot();
+		spreadsSection?.snapshot();
+		carouselsSection?.snapshot();
 	};
 
 	const tabs: { id: CatalogTabType; label: string }[] = [
@@ -383,17 +392,32 @@
 	>
 		{#if visitedTabs.has('buttons')}
 			<div class={catalogTab === 'buttons' ? 'contents' : 'hidden'}>
-				<ButtonsSection buttons={displayedButtons} {layout} active={catalogTab === 'buttons'} />
+				<ButtonsSection
+					bind:this={buttonsSection}
+					buttons={displayedButtons}
+					{layout}
+					active={catalogTab === 'buttons'}
+				/>
 			</div>
 		{/if}
 		{#if visitedTabs.has('cards')}
 			<div class={catalogTab === 'cards' ? 'contents' : 'hidden'}>
-				<CardsSection cards={spreadCards} {layout} active={catalogTab === 'cards'} />
+				<CardsSection
+					bind:this={spreadsSection}
+					cards={spreadCards}
+					{layout}
+					active={catalogTab === 'cards'}
+				/>
 			</div>
 		{/if}
 		{#if visitedTabs.has('carousels')}
 			<div class={catalogTab === 'carousels' ? 'contents' : 'hidden'}>
-				<CardsSection cards={carouselCards} {layout} active={catalogTab === 'carousels'} />
+				<CardsSection
+					bind:this={carouselsSection}
+					cards={carouselCards}
+					{layout}
+					active={catalogTab === 'carousels'}
+				/>
 			</div>
 		{/if}
 		{#if catalogTab === 'loaders'}

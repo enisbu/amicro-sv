@@ -42,6 +42,15 @@
 		wasActive = visible;
 	});
 
+	/**
+	 * Snapshot the current card positions from outside this component.
+	 * Same reason as in ButtonsSection: a keyed reorder needs its snapshot in
+	 * the handler that changes the state, not in the render cycle.
+	 */
+	export function snapshot() {
+		if (active) layoutMotion.update();
+	}
+
 	const app = getAppState();
 	const isDark = $derived(app.theme === 'dark');
 

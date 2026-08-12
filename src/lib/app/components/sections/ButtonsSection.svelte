@@ -28,6 +28,18 @@
 		wasActive = visible;
 	});
 
+	/**
+	 * Snapshot the current tile positions from outside this component.
+	 *
+	 * The `$effect.pre` above runs inside Svelte's render cycle, which is early
+	 * enough when a class on the container changes but too late when the keyed
+	 * `{#each}` only reorders existing nodes. A reorder has to be snapshotted in
+	 * the same handler that changes the state, before Svelte touches the DOM.
+	 */
+	export function snapshot() {
+		if (active) layoutMotion.update();
+	}
+
 	const app = getAppState();
 	const isDark = $derived(app.theme === 'dark');
 	const isGrid = $derived(layout === 'grid');
