@@ -61,8 +61,17 @@ exported `interface Props`. No `export let`.
 - `viewport={{...}}` is called `inViewOptions={{...}}`.
 - Layout animations need `createLayoutMotion(motion)` plus `<layout.div>` and
   `layout.update.with(fn)` around the state change. The `layout` prop alone is not enough.
-- Reordering a keyed list additionally needs a changing `layoutDependency` (the index,
-  for example). Without an option change motion sees no reason to run the FLIP.
+- Reordering a keyed list is the strict case: the snapshot has to happen in the handler
+  that changes the state, before Svelte touches the DOM. A `$effect.pre` that calls
+  `update()` is not a substitute. It is early enough when a class on the container
+  changes, because that re-renders the children, but a reorder only moves existing nodes
+  and by then the snapshot is worthless. A changing `layoutDependency` does not save it
+  either, and neither does `layout` over `layout="position"`. Both were measured.
+- If the state lives above the component that owns the namespace, export a
+  `snapshot()` from that component and call it right after the state change
+  (`ButtonsSection.svelte`, `CardsSection.svelte`, used by `toggleSort` in
+  `src/routes/+page.svelte`). Do not lift the namespace up to share one scope, that
+  breaks the rule below.
 - One layout namespace per visible area, and never snapshot while that area is hidden.
   `update()` snapshots every registered element, and a `display: none` element reports a
   zero box, so it flies in from (0, 0) once it becomes visible.
