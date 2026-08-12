@@ -7,7 +7,18 @@
 ![Tailwind CSS 4](https://img.shields.io/badge/Tailwind_CSS-4-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)
 ![MIT](https://img.shields.io/badge/License-MIT-6366F1?style=flat-square)
 
-Port of [Amicro](https://github.com/Subhan-code/Amicro--Micro-transitions-) (React, MIT) to Svelte 5, running on [motion-sv](https://github.com/hanielu/motion-svelte).
+Port of [Amicro](https://github.com/Subhan-code/Amicro--Micro-transitions-) (React, MIT) by [Syed Subhan](https://x.com/SubhanHQ) to Svelte 5, running on [motion-sv](https://github.com/hanielu/motion-svelte).
+
+## Credits / Original
+
+Every component here started as Amicro, built by [Syed Subhan](https://x.com/SubhanHQ) in React on
+Framer Motion. He designed the interactions, this repo moves them to Svelte 5 and motion-sv.
+
+- Original project: [Amicro (Micro-transitions)](https://github.com/Subhan-code/Amicro--Micro-transitions-), npm `@subhanhq/amicro`
+- Author: SYED SUBHAN UDDIN, [@SubhanHQ](https://x.com/SubhanHQ)
+- License: MIT, inherited. Full provenance in [NOTICE.md](NOTICE.md), original license text in [LICENSE.upstream](LICENSE.upstream)
+
+If you want the React original, go to his repo. This port exists because Svelte had no equivalent.
 
 motion-sv is the best Motion port for Svelte I know of, and this site is the stress test: 157 components that exist in React, rebuilt to show what carries over and where Svelte and React actually diverge.
 

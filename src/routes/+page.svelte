@@ -119,7 +119,13 @@
 				target="_blank"
 				rel="noopener noreferrer"
 				class="underline underline-offset-2 transition-colors {heroLink}">Amicro</a
-			>, built with Svelte 5 and
+			>, the React original by
+			<a
+				href="https://x.com/SubhanHQ"
+				target="_blank"
+				rel="noopener noreferrer"
+				class="underline underline-offset-2 transition-colors {heroLink}">Syed Subhan</a
+			>. Rebuilt with Svelte 5 and
 			<a
 				href="https://github.com/hanielu/motion-svelte"
 				target="_blank"
