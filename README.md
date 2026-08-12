@@ -17,10 +17,12 @@ Demo: [amicro.enisdev.com](https://amicro.enisdev.com). Install page: [amicro.en
 
 ## Install
 
-Requires SvelteKit and Tailwind 4.
+Requires SvelteKit and Tailwind 4. `shadcn-svelte init` does not install Tailwind, it exits when
+Tailwind is missing, so add it first.
 
 ```
 ╭────────────────────────────────────── amicro-sv registry ───────────────────────────────────────╮
+│ npx sv add tailwindcss                                                   add Tailwind 4         │
 │ npx shadcn-svelte@latest init                                            set up components.json │
 │ npx shadcn-svelte@latest add https://amicro.enisdev.com/r/fade-in.json   add a component        │
 ╰─────────────────────────────────────────────────────────────────────────────────────────────────╯

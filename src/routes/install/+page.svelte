@@ -75,8 +75,28 @@
 			Before you start
 		</h2>
 		<p class="mt-3 text-[14px] leading-[22px] max-w-[620px]">
-			A SvelteKit project with Tailwind 4 and a <code class="font-mono">components.json</code>. If
-			you have none yet:
+			A SvelteKit project with Tailwind 4 and a <code class="font-mono">components.json</code>.
+			<code class="font-mono">shadcn-svelte init</code> expects Tailwind to be there already and
+			exits with "This CLI version requires Tailwind CSS v4 and Svelte v5" if it is missing, so add
+			Tailwind first:
+		</p>
+		<div class="mt-4 flex items-center gap-2 p-1 pl-4 rounded-full border border-border bg-card">
+			<code class="flex-1 font-mono text-[13px] truncate">npx sv add tailwindcss</code>
+			<button
+				onclick={() => copy('npx sv add tailwindcss', 'tailwind')}
+				type="button"
+				aria-label="Copy Tailwind command"
+				class="shrink-0 w-9 h-9 rounded-full flex items-center justify-center bg-secondary hover:bg-secondary-hover text-secondary-foreground transition-colors cursor-pointer border-0"
+			>
+				{#if copied === 'tailwind'}
+					<Check class="w-4 h-4" />
+				{:else}
+					<Copy class="w-4 h-4" />
+				{/if}
+			</button>
+		</div>
+		<p class="mt-4 text-[14px] leading-[22px] max-w-[620px]">
+			Then create the <code class="font-mono">components.json</code>:
 		</p>
 		<div class="mt-4 flex items-center gap-2 p-1 pl-4 rounded-full border border-border bg-card">
 			<code class="flex-1 font-mono text-[13px] truncate">npx shadcn-svelte@latest init</code>

@@ -10,6 +10,7 @@
 	import ButtonsSection from '$lib/app/components/sections/ButtonsSection.svelte';
 	import CardsSection from '$lib/app/components/sections/CardsSection.svelte';
 	import LoadersSection from '$lib/app/components/sections/LoadersSection.svelte';
+	import { githubStars } from './stars.remote.js';
 
 	type LayoutMode = 'list' | 'grid' | 'matrix';
 	type SortMode = 'default' | 'alphabetical';
@@ -34,7 +35,6 @@
 	let catalogTab = $state<CatalogTabType>('buttons');
 	let dropdownOpen = $state(false);
 	let moreDropdownOpen = $state(false);
-	let stars = $state<number | null>(null);
 	let gridAnchor = $state<HTMLDivElement>();
 
 	const visitedTabs = new SvelteSet<CatalogTabType>(['buttons']);
@@ -63,19 +63,6 @@
 	];
 
 	const tabLabel = $derived(tabs.find((t) => t.id === catalogTab)?.label ?? '');
-
-	$effect(() => {
-		let active = true;
-		fetch('https://api.github.com/repos/enisbu/amicro-sv')
-			.then((res) => res.json())
-			.then((data) => {
-				if (active && data.stargazers_count !== undefined) stars = data.stargazers_count;
-			})
-			.catch((err) => console.error('Failed to load star count:', err));
-		return () => {
-			active = false;
-		};
-	});
 
 	const displayedButtons = $derived.by(() => {
 		const sorted = [...buttonsData];
@@ -148,7 +135,9 @@
 			>.
 		</p>
 
-		<div class="flex flex-wrap items-center justify-center gap-3 mt-8">
+		<div
+			class="flex flex-col sm:flex-row items-center justify-center gap-3 mt-8 w-full max-w-[260px] sm:max-w-none mx-auto"
+		>
 			<motion.a
 				href="https://github.com/enisbu/amicro-sv"
 				target="_blank"
@@ -164,7 +153,7 @@
 							: '0 10px 25px -5px rgba(0,0,0,0.15)'
 					}
 				}}
-				class="inline-flex items-center justify-center gap-1.5 h-[36px] px-[16px] rounded-full text-[13px] font-medium no-underline transition-colors cursor-pointer border-0 bg-neutral-950 text-white hover:bg-neutral-800 dark:bg-white dark:text-black dark:hover:bg-neutral-200"
+				class="inline-flex w-full sm:w-auto items-center justify-center gap-1.5 h-[36px] px-[16px] rounded-full text-[13px] font-medium no-underline transition-colors cursor-pointer border-0 bg-neutral-950 text-white hover:bg-neutral-800 dark:bg-white dark:text-black dark:hover:bg-neutral-200"
 			>
 				<motion.div
 					variants={{ hover: { rotate: [0, -15, 15, -15, 0], scale: 1.15 } }}
@@ -174,7 +163,8 @@
 					<Github class="w-4 h-4" />
 				</motion.div>
 				<span>GitHub Repo</span>
-				{#if stars !== null}
+				{@const stars = await githubStars()}
+				{#if stars > 0}
 					<span
 						class="text-[10.5px] px-1.5 py-0.5 rounded-full font-semibold ml-1 bg-white/20 text-white/90 dark:bg-black/10 dark:text-black/70"
 					>
@@ -195,7 +185,7 @@
 							: '0 10px 25px -5px rgba(0,0,0,0.05)'
 					}
 				}}
-				class="inline-flex items-center justify-center h-[36px] px-[16px] rounded-full text-[13px] font-medium border cursor-pointer transition-colors bg-card border-neutral-200 text-black hover:bg-neutral-50 shadow-sm dark:border-neutral-800 dark:text-white dark:hover:bg-neutral-800 dark:shadow-none"
+				class="inline-flex w-full sm:w-auto items-center justify-center h-[36px] px-[16px] rounded-full text-[13px] font-medium border cursor-pointer transition-colors bg-card border-neutral-200 text-black hover:bg-neutral-50 shadow-sm dark:border-neutral-800 dark:text-white dark:hover:bg-neutral-800 dark:shadow-none"
 			>
 				<motion.div
 					variants={{ hover: { y: [0, -4, 4, -2, 2, 0] } }}

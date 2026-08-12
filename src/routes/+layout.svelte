@@ -8,6 +8,7 @@
 	import { setAppState } from '$lib/app/app-state.svelte.js';
 	import { ThemeToggleCode } from '$lib/app/code-generator.js';
 	import AnimatedNumber from '$lib/app/components/sections/AnimatedNumber.svelte';
+	import { githubStars } from './stars.remote.js';
 
 	interface Props {
 		children?: Snippet;
@@ -23,7 +24,7 @@
 	const footerText = 'text-black opacity-60 dark:text-[#8f8f8f] dark:opacity-100';
 	const footerLink = 'text-black dark:text-[#e9e9e9] dark:hover:text-white';
 
-	let stars = $state<number | null>(null);
+	const stars = $derived(await githubStars());
 	let menuOpen = $state(false);
 	let menuRoot = $state<HTMLElement>();
 
@@ -35,19 +36,6 @@
 	$effect(() => {
 		pathname;
 		menuOpen = false;
-	});
-
-	$effect(() => {
-		let active = true;
-		fetch('https://api.github.com/repos/enisbu/amicro-sv')
-			.then((res) => res.json())
-			.then((data) => {
-				if (active && data.stargazers_count !== undefined) stars = data.stargazers_count;
-			})
-			.catch((err) => console.error('Failed to load star count:', err));
-		return () => {
-			active = false;
-		};
 	});
 
 	async function handleThemeToggle() {
@@ -187,7 +175,7 @@
 						></path>
 					</svg>
 					<span class="inline-block">
-						{#if stars !== null}
+						{#if stars > 0}
 							<AnimatedNumber value={stars} />
 						{:else}
 							Star

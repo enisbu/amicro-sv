@@ -7,7 +7,7 @@
 
 	let { value }: Props = $props();
 
-	let displayValue = $state(0);
+	let displayValue = $state<number | null>(null);
 
 	$effect(() => {
 		if (value === null) return;
@@ -20,4 +20,4 @@
 	});
 </script>
 
-{#if value !== null}{displayValue}{/if}
+{#if value !== null}{displayValue ?? value}{/if}
