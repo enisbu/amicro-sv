@@ -22,7 +22,7 @@ const UI_GROUPS = {
 	loading: { item: 'Loader', section: 'Loaders' }
 };
 
-const SITE = 'https://amicro.enisdev.com';
+const SITE = 'https://amicro-sv.enisdev.com';
 const sections = new Map();
 const section = (title, name) => sections.set(title, [...(sections.get(title) ?? []), name]);
 
@@ -133,7 +133,7 @@ for (const [group, type, label, title] of [
 const registry = {
 	$schema: 'https://shadcn-svelte.com/schema/registry.json',
 	name: 'amicro-sv',
-	homepage: 'https://amicro.enisdev.com',
+	homepage: SITE,
 	items
 };
 

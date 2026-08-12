@@ -4,7 +4,7 @@
 	import { getAppState } from '$lib/app/app-state.svelte.js';
 	import { REGISTRY_ITEMS } from '$lib/app/data/registry-items.js';
 
-	const REGISTRY_BASE = 'https://amicro.enisdev.com/r';
+	const REGISTRY_BASE = 'https://amicro-sv.enisdev.com/r';
 
 	const TYPE_LABELS: Record<string, string> = {
 		'registry:ui': 'Component',

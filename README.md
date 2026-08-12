@@ -1,6 +1,6 @@
 # amicro-sv
 
-[![Amicro SV, 157 micro interactions for Svelte 5](static/og.png)](https://amicro.enisdev.com)
+[![Amicro SV, 157 micro interactions for Svelte 5](static/og.png)](https://amicro-sv.enisdev.com)
 
 ![Svelte 5](https://img.shields.io/badge/Svelte-5-FF3E00?style=flat-square&logo=svelte&logoColor=white)
 ![SvelteKit 2](https://img.shields.io/badge/SvelteKit-2-FF3E00?style=flat-square&logo=svelte&logoColor=white)
@@ -24,7 +24,7 @@ motion-sv is the best Motion port for Svelte I know of, and this site is the str
 
 157 components in `src/lib/amicro/`, published as 165 shadcn style registry items.
 
-Demo: [amicro.enisdev.com](https://amicro.enisdev.com). Install page: [amicro.enisdev.com/install](https://amicro.enisdev.com/install).
+Demo: [amicro-sv.enisdev.com](https://amicro-sv.enisdev.com). Install page: [amicro-sv.enisdev.com/install](https://amicro-sv.enisdev.com/install).
 
 ## Install
 
@@ -35,13 +35,13 @@ Tailwind is missing, so add it first.
 ╭────────────────────────────────────── amicro-sv registry ───────────────────────────────────────╮
 │ npx sv add tailwindcss                                                   add Tailwind 4         │
 │ npx shadcn-svelte@latest init                                            set up components.json │
-│ npx shadcn-svelte@latest add https://amicro.enisdev.com/r/fade-in.json   add a component        │
+│ npx shadcn-svelte@latest add https://amicro-sv.enisdev.com/r/fade-in.json   add a component        │
 ╰─────────────────────────────────────────────────────────────────────────────────────────────────╯
 ```
 
 The CLI writes the component into your `ui` alias under `amicro/`, installs `motion-sv` and drops
-the upstream MIT license next to it. Every name from the [install page](https://amicro.enisdev.com/install) works,
-or from [llms.txt](https://amicro.enisdev.com/llms.txt) if a coding agent is doing the picking.
+the upstream MIT license next to it. Every name from the [install page](https://amicro-sv.enisdev.com/install) works,
+or from [llms.txt](https://amicro-sv.enisdev.com/llms.txt) if a coding agent is doing the picking.
 
 ## Development
 

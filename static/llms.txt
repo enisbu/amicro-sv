@@ -12,211 +12,211 @@ Set up the shadcn-svelte CLI once:
 
 Add a component, swapping fade-in for any name below:
 
-    npx shadcn-svelte@latest add https://amicro.enisdev.com/r/fade-in.json
+    npx shadcn-svelte@latest add https://amicro-sv.enisdev.com/r/fade-in.json
 
-The CLI writes the file into your ui alias under amicro/, installs motion-sv and drops the upstream MIT license next to it. Every item resolves at https://amicro.enisdev.com/r/<name>.json, so the command can be built from a name alone.
+The CLI writes the file into your ui alias under amicro/, installs motion-sv and drops the upstream MIT license next to it. Every item resolves at https://amicro-sv.enisdev.com/r/<name>.json, so the command can be built from a name alone.
 
 ## Docs
 
-- [Catalog](https://amicro.enisdev.com): live demos of every component
-- [Install page](https://amicro.enisdev.com/install): searchable list with a copyable command per item
+- [Catalog](https://amicro-sv.enisdev.com): live demos of every component
+- [Install page](https://amicro-sv.enisdev.com/install): searchable list with a copyable command per item
 - [Repo](https://github.com/enisbu/amicro-sv): source, porting contract and the motion-sv API differences against Motion for React
 - [Original](https://github.com/Subhan-code/Amicro--Micro-transitions-): the React library this port descends from
 
 ## Entrance animations (7)
 
-- [fade-down](https://amicro.enisdev.com/r/fade-down.json): Fade Down
-- [fade-in](https://amicro.enisdev.com/r/fade-in.json): Fade In
-- [fade-up](https://amicro.enisdev.com/r/fade-up.json): Fade Up
-- [scale-in](https://amicro.enisdev.com/r/scale-in.json): Scale In
-- [slide-left](https://amicro.enisdev.com/r/slide-left.json): Slide Left
-- [slide-right](https://amicro.enisdev.com/r/slide-right.json): Slide Right
-- [zoom-in](https://amicro.enisdev.com/r/zoom-in.json): Zoom In
+- [fade-down](https://amicro-sv.enisdev.com/r/fade-down.json): Fade Down
+- [fade-in](https://amicro-sv.enisdev.com/r/fade-in.json): Fade In
+- [fade-up](https://amicro-sv.enisdev.com/r/fade-up.json): Fade Up
+- [scale-in](https://amicro-sv.enisdev.com/r/scale-in.json): Scale In
+- [slide-left](https://amicro-sv.enisdev.com/r/slide-left.json): Slide Left
+- [slide-right](https://amicro-sv.enisdev.com/r/slide-right.json): Slide Right
+- [zoom-in](https://amicro-sv.enisdev.com/r/zoom-in.json): Zoom In
 
 ## Hover and gesture (4)
 
-- [card-hover](https://amicro.enisdev.com/r/card-hover.json): Card Hover
-- [glow-button](https://amicro.enisdev.com/r/glow-button.json): Glow Button
-- [magnetic-button](https://amicro.enisdev.com/r/magnetic-button.json): Magnetic Button
-- [tilt-card](https://amicro.enisdev.com/r/tilt-card.json): Tilt Card
+- [card-hover](https://amicro-sv.enisdev.com/r/card-hover.json): Card Hover
+- [glow-button](https://amicro-sv.enisdev.com/r/glow-button.json): Glow Button
+- [magnetic-button](https://amicro-sv.enisdev.com/r/magnetic-button.json): Magnetic Button
+- [tilt-card](https://amicro-sv.enisdev.com/r/tilt-card.json): Tilt Card
 
 ## Text animations (4)
 
-- [blur-text](https://amicro.enisdev.com/r/blur-text.json): Blur Text
-- [character-stagger](https://amicro.enisdev.com/r/character-stagger.json): Character Stagger
-- [text-reveal](https://amicro.enisdev.com/r/text-reveal.json): Text Reveal
-- [word-reveal](https://amicro.enisdev.com/r/word-reveal.json): Word Reveal
+- [blur-text](https://amicro-sv.enisdev.com/r/blur-text.json): Blur Text
+- [character-stagger](https://amicro-sv.enisdev.com/r/character-stagger.json): Character Stagger
+- [text-reveal](https://amicro-sv.enisdev.com/r/text-reveal.json): Text Reveal
+- [word-reveal](https://amicro-sv.enisdev.com/r/word-reveal.json): Word Reveal
 
 ## Scroll driven effects (3)
 
-- [progress-indicator](https://amicro.enisdev.com/r/progress-indicator.json): Progress Indicator
-- [scroll-reveal](https://amicro.enisdev.com/r/scroll-reveal.json): Scroll Reveal
-- [sticky-reveal](https://amicro.enisdev.com/r/sticky-reveal.json): Sticky Reveal
+- [progress-indicator](https://amicro-sv.enisdev.com/r/progress-indicator.json): Progress Indicator
+- [scroll-reveal](https://amicro-sv.enisdev.com/r/scroll-reveal.json): Scroll Reveal
+- [sticky-reveal](https://amicro-sv.enisdev.com/r/sticky-reveal.json): Sticky Reveal
 
 ## Cursor effects (3)
 
-- [cursor-trail](https://amicro.enisdev.com/r/cursor-trail.json): Cursor Trail
-- [mouse-follow](https://amicro.enisdev.com/r/mouse-follow.json): Mouse Follow
-- [spotlight](https://amicro.enisdev.com/r/spotlight.json): Spotlight
+- [cursor-trail](https://amicro-sv.enisdev.com/r/cursor-trail.json): Cursor Trail
+- [mouse-follow](https://amicro-sv.enisdev.com/r/mouse-follow.json): Mouse Follow
+- [spotlight](https://amicro-sv.enisdev.com/r/spotlight.json): Spotlight
 
 ## Page transitions (1)
 
-- [page-transition](https://amicro.enisdev.com/r/page-transition.json): Page Transition
+- [page-transition](https://amicro-sv.enisdev.com/r/page-transition.json): Page Transition
 
 ## Card layouts (1)
 
-- [card-arc5](https://amicro.enisdev.com/r/card-arc5.json): Card Arc5
+- [card-arc5](https://amicro-sv.enisdev.com/r/card-arc5.json): Card Arc5
 
 ## Loaders (134)
 
-- [accordion-loader](https://amicro.enisdev.com/r/accordion-loader.json): Accordion Loader
-- [app-icon-load](https://amicro.enisdev.com/r/app-icon-load.json): App Icon Load
-- [apple-breathe](https://amicro.enisdev.com/r/apple-breathe.json): Apple Breathe
-- [apple-equalizer](https://amicro.enisdev.com/r/apple-equalizer.json): Apple Equalizer
-- [apple-icon-morph](https://amicro.enisdev.com/r/apple-icon-morph.json): Apple Icon Morph
-- [apple-pulse-dots](https://amicro.enisdev.com/r/apple-pulse-dots.json): Apple Pulse Dots
-- [apple-scale-pulse](https://amicro.enisdev.com/r/apple-scale-pulse.json): Apple Scale Pulse
-- [apple-sound-wave](https://amicro.enisdev.com/r/apple-sound-wave.json): Apple Sound Wave
-- [apple-text-reveal](https://amicro.enisdev.com/r/apple-text-reveal.json): Apple Text Reveal
-- [apple-unlock](https://amicro.enisdev.com/r/apple-unlock.json): Apple Unlock
-- [arc-tracer](https://amicro.enisdev.com/r/arc-tracer.json): Arc Tracer
-- [bar-cascade](https://amicro.enisdev.com/r/bar-cascade.json): Bar Cascade
-- [bar-sweep](https://amicro.enisdev.com/r/bar-sweep.json): Bar Sweep
-- [bobbing-dots](https://amicro.enisdev.com/r/bobbing-dots.json): Bobbing Dots
-- [bounce-dots](https://amicro.enisdev.com/r/bounce-dots.json): Bounce Dots
-- [bouncing-bars](https://amicro.enisdev.com/r/bouncing-bars.json): Bouncing Bars
-- [bouncing-dots](https://amicro.enisdev.com/r/bouncing-dots.json): Bouncing Dots
-- [bouncing-lines](https://amicro.enisdev.com/r/bouncing-lines.json): Bouncing Lines
-- [bouncing-square](https://amicro.enisdev.com/r/bouncing-square.json): Bouncing Square
-- [breathe-ring](https://amicro.enisdev.com/r/breathe-ring.json): Breathe Ring
-- [breathing-glow](https://amicro.enisdev.com/r/breathing-glow.json): Breathing Glow
-- [breathing-square](https://amicro.enisdev.com/r/breathing-square.json): Breathing Square
-- [circular-bars](https://amicro.enisdev.com/r/circular-bars.json): Circular Bars
-- [classic-spinner](https://amicro.enisdev.com/r/classic-spinner.json): Classic Spinner
-- [clock-spinner](https://amicro.enisdev.com/r/clock-spinner.json): Clock Spinner
-- [comet-spinner](https://amicro.enisdev.com/r/comet-spinner.json): Comet Spinner
-- [concentric-pulse](https://amicro.enisdev.com/r/concentric-pulse.json): Concentric Pulse
-- [concentric-ring](https://amicro.enisdev.com/r/concentric-ring.json): Concentric Ring
-- [concentric-squares](https://amicro.enisdev.com/r/concentric-squares.json): Concentric Squares
-- [conveyor-loop](https://amicro.enisdev.com/r/conveyor-loop.json): Conveyor Loop
-- [cross-spinner](https://amicro.enisdev.com/r/cross-spinner.json): Cross Spinner
-- [cube-flip-spring](https://amicro.enisdev.com/r/cube-flip-spring.json): Cube Flip Spring
-- [dash-ring](https://amicro.enisdev.com/r/dash-ring.json): Dash Ring
-- [dashed-spiral](https://amicro.enisdev.com/r/dashed-spiral.json): Dashed Spiral
-- [diamond-grid](https://amicro.enisdev.com/r/diamond-grid.json): Diamond Grid
-- [diamond-rotate-spring](https://amicro.enisdev.com/r/diamond-rotate-spring.json): Diamond Rotate Spring
-- [dot-spinner](https://amicro.enisdev.com/r/dot-spinner.json): Dot Spinner
-- [dots-ring](https://amicro.enisdev.com/r/dots-ring.json): Dots Ring
-- [double-ring](https://amicro.enisdev.com/r/double-ring.json): Double Ring
-- [drop-dot](https://amicro.enisdev.com/r/drop-dot.json): Drop Dot
-- [dual-arc](https://amicro.enisdev.com/r/dual-arc.json): Dual Arc
-- [dynamic-island](https://amicro.enisdev.com/r/dynamic-island.json): Dynamic Island
-- [elastic-bars](https://amicro.enisdev.com/r/elastic-bars.json): Elastic Bars
-- [elastic-square](https://amicro.enisdev.com/r/elastic-square.json): Elastic Square
-- [expanding-cross](https://amicro.enisdev.com/r/expanding-cross.json): Expanding Cross
-- [face-id-scan](https://amicro.enisdev.com/r/face-id-scan.json): Face Id Scan
-- [fade-arc](https://amicro.enisdev.com/r/fade-arc.json): Fade Arc
-- [fade-dots](https://amicro.enisdev.com/r/fade-dots.json): Fade Dots
-- [flip-square](https://amicro.enisdev.com/r/flip-square.json): Flip Square
-- [floating-diamonds](https://amicro.enisdev.com/r/floating-diamonds.json): Floating Diamonds
-- [fluid-bars](https://amicro.enisdev.com/r/fluid-bars.json): Fluid Bars
-- [fluid-diamond](https://amicro.enisdev.com/r/fluid-diamond.json): Fluid Diamond
-- [fluid-dot-orbit](https://amicro.enisdev.com/r/fluid-dot-orbit.json): Fluid Dot Orbit
-- [fluid-skeleton](https://amicro.enisdev.com/r/fluid-skeleton.json): Fluid Skeleton
-- [gears](https://amicro.enisdev.com/r/gears.json): Gears
-- [glassmorphic-card](https://amicro.enisdev.com/r/glassmorphic-card.json): Glassmorphic Card
-- [gradient-arc](https://amicro.enisdev.com/r/gradient-arc.json): Gradient Arc
-- [grid-dots](https://amicro.enisdev.com/r/grid-dots.json): Grid Dots
-- [haptic-ring](https://amicro.enisdev.com/r/haptic-ring.json): Haptic Ring
-- [heartbeat](https://amicro.enisdev.com/r/heartbeat.json): Heartbeat
-- [hexagon-spinner](https://amicro.enisdev.com/r/hexagon-spinner.json): Hexagon Spinner
-- [hourglass](https://amicro.enisdev.com/r/hourglass.json): Hourglass
-- [infinity-path](https://amicro.enisdev.com/r/infinity-path.json): Infinity Path
-- [intersecting-rings](https://amicro.enisdev.com/r/intersecting-rings.json): Intersecting Rings
-- [ios-spinner](https://amicro.enisdev.com/r/ios-spinner.json): Ios Spinner
-- [line-spinner](https://amicro.enisdev.com/r/line-spinner.json): Line Spinner
-- [liquid-dots](https://amicro.enisdev.com/r/liquid-dots.json): Liquid Dots
-- [mac-terminal](https://amicro.enisdev.com/r/mac-terminal.json): Mac Terminal
-- [magnetic-dots](https://amicro.enisdev.com/r/magnetic-dots.json): Magnetic Dots
-- [minimal-triangle](https://amicro.enisdev.com/r/minimal-triangle.json): Minimal Triangle
-- [morph-dot-ring](https://amicro.enisdev.com/r/morph-dot-ring.json): Morph Dot Ring
-- [morph-loader](https://amicro.enisdev.com/r/morph-loader.json): Morph Loader
-- [morphing-bars](https://amicro.enisdev.com/r/morphing-bars.json): Morphing Bars
-- [morphing-infinity](https://amicro.enisdev.com/r/morphing-infinity.json): Morphing Infinity
-- [morphing-ring](https://amicro.enisdev.com/r/morphing-ring.json): Morphing Ring
-- [morphing-shape](https://amicro.enisdev.com/r/morphing-shape.json): Morphing Shape
-- [newtons-cradle](https://amicro.enisdev.com/r/newtons-cradle.json): Newtons Cradle
-- [offset-rings](https://amicro.enisdev.com/r/offset-rings.json): Offset Rings
-- [orbiting-circles](https://amicro.enisdev.com/r/orbiting-circles.json): Orbiting Circles
-- [orbiting-dot](https://amicro.enisdev.com/r/orbiting-dot.json): Orbiting Dot
-- [origami-shape](https://amicro.enisdev.com/r/origami-shape.json): Origami Shape
-- [pendulum](https://amicro.enisdev.com/r/pendulum.json): Pendulum
-- [pulsating-dots](https://amicro.enisdev.com/r/pulsating-dots.json): Pulsating Dots
-- [pulse](https://amicro.enisdev.com/r/pulse.json): Pulse
-- [pulse-dot](https://amicro.enisdev.com/r/pulse-dot.json): Pulse Dot
-- [pulse-dots](https://amicro.enisdev.com/r/pulse-dots.json): Pulse Dots
-- [pulse-square](https://amicro.enisdev.com/r/pulse-square.json): Pulse Square
-- [pumping-heart](https://amicro.enisdev.com/r/pumping-heart.json): Pumping Heart
-- [radar-sweep](https://amicro.enisdev.com/r/radar-sweep.json): Radar Sweep
-- [ring-sweep](https://amicro.enisdev.com/r/ring-sweep.json): Ring Sweep
-- [ripple-effect](https://amicro.enisdev.com/r/ripple-effect.json): Ripple Effect
-- [rotating-cross](https://amicro.enisdev.com/r/rotating-cross.json): Rotating Cross
-- [rotating-triangle](https://amicro.enisdev.com/r/rotating-triangle.json): Rotating Triangle
-- [shape-shift-grid](https://amicro.enisdev.com/r/shape-shift-grid.json): Shape Shift Grid
-- [shimmer-line](https://amicro.enisdev.com/r/shimmer-line.json): Shimmer Line
-- [siri-wave](https://amicro.enisdev.com/r/siri-wave.json): Siri Wave
-- [skeleton](https://amicro.enisdev.com/r/skeleton.json): Skeleton
-- [skeleton-loader](https://amicro.enisdev.com/r/skeleton-loader.json): Skeleton Loader
-- [sliding-bars](https://amicro.enisdev.com/r/sliding-bars.json): Sliding Bars
-- [smooth-dot-shift](https://amicro.enisdev.com/r/smooth-dot-shift.json): Smooth Dot Shift
-- [smooth-ring](https://amicro.enisdev.com/r/smooth-ring.json): Smooth Ring
-- [smooth-rounded-square](https://amicro.enisdev.com/r/smooth-rounded-square.json): Smooth Rounded Square
-- [spinning-squares](https://amicro.enisdev.com/r/spinning-squares.json): Spinning Squares
-- [spiral-spinner](https://amicro.enisdev.com/r/spiral-spinner.json): Spiral Spinner
-- [spring-bars](https://amicro.enisdev.com/r/spring-bars.json): Spring Bars
-- [spring-dot-matrix](https://amicro.enisdev.com/r/spring-dot-matrix.json): Spring Dot Matrix
-- [spring-hexagon](https://amicro.enisdev.com/r/spring-hexagon.json): Spring Hexagon
-- [spring-ring-expand](https://amicro.enisdev.com/r/spring-ring-expand.json): Spring Ring Expand
-- [spring-text-pop](https://amicro.enisdev.com/r/spring-text-pop.json): Spring Text Pop
-- [square-accordion](https://amicro.enisdev.com/r/square-accordion.json): Square Accordion
-- [square-grid](https://amicro.enisdev.com/r/square-grid.json): Square Grid
-- [square-snake](https://amicro.enisdev.com/r/square-snake.json): Square Snake
-- [square-spinner](https://amicro.enisdev.com/r/square-spinner.json): Square Spinner
-- [stacked-bar-pulse](https://amicro.enisdev.com/r/stacked-bar-pulse.json): Stacked Bar Pulse
-- [swapping-dots](https://amicro.enisdev.com/r/swapping-dots.json): Swapping Dots
-- [swirling-spinner](https://amicro.enisdev.com/r/swirling-spinner.json): Swirling Spinner
-- [symmetric-wave](https://amicro.enisdev.com/r/symmetric-wave.json): Symmetric Wave
-- [terminal-loader](https://amicro.enisdev.com/r/terminal-loader.json): Terminal Loader
-- [text-blink](https://amicro.enisdev.com/r/text-blink.json): Text Blink
-- [text-dots](https://amicro.enisdev.com/r/text-dots.json): Text Dots
-- [text-morph](https://amicro.enisdev.com/r/text-morph.json): Text Morph
-- [text-shimmer](https://amicro.enisdev.com/r/text-shimmer.json): Text Shimmer
-- [text-shimmer-wave](https://amicro.enisdev.com/r/text-shimmer-wave.json): Text Shimmer Wave
-- [trailing-dots](https://amicro.enisdev.com/r/trailing-dots.json): Trailing Dots
-- [triple-dot-spinner](https://amicro.enisdev.com/r/triple-dot-spinner.json): Triple Dot Spinner
-- [twin-orbit](https://amicro.enisdev.com/r/twin-orbit.json): Twin Orbit
-- [typing](https://amicro.enisdev.com/r/typing.json): Typing
-- [typing-indicator](https://amicro.enisdev.com/r/typing-indicator.json): Typing Indicator
-- [wandering-cube](https://amicro.enisdev.com/r/wandering-cube.json): Wandering Cube
-- [watch-spinner](https://amicro.enisdev.com/r/watch-spinner.json): Watch Spinner
-- [wave-dots](https://amicro.enisdev.com/r/wave-dots.json): Wave Dots
-- [wave-physics-loader](https://amicro.enisdev.com/r/wave-physics-loader.json): Wave Physics Loader
-- [waveform-loader](https://amicro.enisdev.com/r/waveform-loader.json): Waveform Loader
-- [zig-zag-pulse](https://amicro.enisdev.com/r/zig-zag-pulse.json): Zig Zag Pulse
+- [accordion-loader](https://amicro-sv.enisdev.com/r/accordion-loader.json): Accordion Loader
+- [app-icon-load](https://amicro-sv.enisdev.com/r/app-icon-load.json): App Icon Load
+- [apple-breathe](https://amicro-sv.enisdev.com/r/apple-breathe.json): Apple Breathe
+- [apple-equalizer](https://amicro-sv.enisdev.com/r/apple-equalizer.json): Apple Equalizer
+- [apple-icon-morph](https://amicro-sv.enisdev.com/r/apple-icon-morph.json): Apple Icon Morph
+- [apple-pulse-dots](https://amicro-sv.enisdev.com/r/apple-pulse-dots.json): Apple Pulse Dots
+- [apple-scale-pulse](https://amicro-sv.enisdev.com/r/apple-scale-pulse.json): Apple Scale Pulse
+- [apple-sound-wave](https://amicro-sv.enisdev.com/r/apple-sound-wave.json): Apple Sound Wave
+- [apple-text-reveal](https://amicro-sv.enisdev.com/r/apple-text-reveal.json): Apple Text Reveal
+- [apple-unlock](https://amicro-sv.enisdev.com/r/apple-unlock.json): Apple Unlock
+- [arc-tracer](https://amicro-sv.enisdev.com/r/arc-tracer.json): Arc Tracer
+- [bar-cascade](https://amicro-sv.enisdev.com/r/bar-cascade.json): Bar Cascade
+- [bar-sweep](https://amicro-sv.enisdev.com/r/bar-sweep.json): Bar Sweep
+- [bobbing-dots](https://amicro-sv.enisdev.com/r/bobbing-dots.json): Bobbing Dots
+- [bounce-dots](https://amicro-sv.enisdev.com/r/bounce-dots.json): Bounce Dots
+- [bouncing-bars](https://amicro-sv.enisdev.com/r/bouncing-bars.json): Bouncing Bars
+- [bouncing-dots](https://amicro-sv.enisdev.com/r/bouncing-dots.json): Bouncing Dots
+- [bouncing-lines](https://amicro-sv.enisdev.com/r/bouncing-lines.json): Bouncing Lines
+- [bouncing-square](https://amicro-sv.enisdev.com/r/bouncing-square.json): Bouncing Square
+- [breathe-ring](https://amicro-sv.enisdev.com/r/breathe-ring.json): Breathe Ring
+- [breathing-glow](https://amicro-sv.enisdev.com/r/breathing-glow.json): Breathing Glow
+- [breathing-square](https://amicro-sv.enisdev.com/r/breathing-square.json): Breathing Square
+- [circular-bars](https://amicro-sv.enisdev.com/r/circular-bars.json): Circular Bars
+- [classic-spinner](https://amicro-sv.enisdev.com/r/classic-spinner.json): Classic Spinner
+- [clock-spinner](https://amicro-sv.enisdev.com/r/clock-spinner.json): Clock Spinner
+- [comet-spinner](https://amicro-sv.enisdev.com/r/comet-spinner.json): Comet Spinner
+- [concentric-pulse](https://amicro-sv.enisdev.com/r/concentric-pulse.json): Concentric Pulse
+- [concentric-ring](https://amicro-sv.enisdev.com/r/concentric-ring.json): Concentric Ring
+- [concentric-squares](https://amicro-sv.enisdev.com/r/concentric-squares.json): Concentric Squares
+- [conveyor-loop](https://amicro-sv.enisdev.com/r/conveyor-loop.json): Conveyor Loop
+- [cross-spinner](https://amicro-sv.enisdev.com/r/cross-spinner.json): Cross Spinner
+- [cube-flip-spring](https://amicro-sv.enisdev.com/r/cube-flip-spring.json): Cube Flip Spring
+- [dash-ring](https://amicro-sv.enisdev.com/r/dash-ring.json): Dash Ring
+- [dashed-spiral](https://amicro-sv.enisdev.com/r/dashed-spiral.json): Dashed Spiral
+- [diamond-grid](https://amicro-sv.enisdev.com/r/diamond-grid.json): Diamond Grid
+- [diamond-rotate-spring](https://amicro-sv.enisdev.com/r/diamond-rotate-spring.json): Diamond Rotate Spring
+- [dot-spinner](https://amicro-sv.enisdev.com/r/dot-spinner.json): Dot Spinner
+- [dots-ring](https://amicro-sv.enisdev.com/r/dots-ring.json): Dots Ring
+- [double-ring](https://amicro-sv.enisdev.com/r/double-ring.json): Double Ring
+- [drop-dot](https://amicro-sv.enisdev.com/r/drop-dot.json): Drop Dot
+- [dual-arc](https://amicro-sv.enisdev.com/r/dual-arc.json): Dual Arc
+- [dynamic-island](https://amicro-sv.enisdev.com/r/dynamic-island.json): Dynamic Island
+- [elastic-bars](https://amicro-sv.enisdev.com/r/elastic-bars.json): Elastic Bars
+- [elastic-square](https://amicro-sv.enisdev.com/r/elastic-square.json): Elastic Square
+- [expanding-cross](https://amicro-sv.enisdev.com/r/expanding-cross.json): Expanding Cross
+- [face-id-scan](https://amicro-sv.enisdev.com/r/face-id-scan.json): Face Id Scan
+- [fade-arc](https://amicro-sv.enisdev.com/r/fade-arc.json): Fade Arc
+- [fade-dots](https://amicro-sv.enisdev.com/r/fade-dots.json): Fade Dots
+- [flip-square](https://amicro-sv.enisdev.com/r/flip-square.json): Flip Square
+- [floating-diamonds](https://amicro-sv.enisdev.com/r/floating-diamonds.json): Floating Diamonds
+- [fluid-bars](https://amicro-sv.enisdev.com/r/fluid-bars.json): Fluid Bars
+- [fluid-diamond](https://amicro-sv.enisdev.com/r/fluid-diamond.json): Fluid Diamond
+- [fluid-dot-orbit](https://amicro-sv.enisdev.com/r/fluid-dot-orbit.json): Fluid Dot Orbit
+- [fluid-skeleton](https://amicro-sv.enisdev.com/r/fluid-skeleton.json): Fluid Skeleton
+- [gears](https://amicro-sv.enisdev.com/r/gears.json): Gears
+- [glassmorphic-card](https://amicro-sv.enisdev.com/r/glassmorphic-card.json): Glassmorphic Card
+- [gradient-arc](https://amicro-sv.enisdev.com/r/gradient-arc.json): Gradient Arc
+- [grid-dots](https://amicro-sv.enisdev.com/r/grid-dots.json): Grid Dots
+- [haptic-ring](https://amicro-sv.enisdev.com/r/haptic-ring.json): Haptic Ring
+- [heartbeat](https://amicro-sv.enisdev.com/r/heartbeat.json): Heartbeat
+- [hexagon-spinner](https://amicro-sv.enisdev.com/r/hexagon-spinner.json): Hexagon Spinner
+- [hourglass](https://amicro-sv.enisdev.com/r/hourglass.json): Hourglass
+- [infinity-path](https://amicro-sv.enisdev.com/r/infinity-path.json): Infinity Path
+- [intersecting-rings](https://amicro-sv.enisdev.com/r/intersecting-rings.json): Intersecting Rings
+- [ios-spinner](https://amicro-sv.enisdev.com/r/ios-spinner.json): Ios Spinner
+- [line-spinner](https://amicro-sv.enisdev.com/r/line-spinner.json): Line Spinner
+- [liquid-dots](https://amicro-sv.enisdev.com/r/liquid-dots.json): Liquid Dots
+- [mac-terminal](https://amicro-sv.enisdev.com/r/mac-terminal.json): Mac Terminal
+- [magnetic-dots](https://amicro-sv.enisdev.com/r/magnetic-dots.json): Magnetic Dots
+- [minimal-triangle](https://amicro-sv.enisdev.com/r/minimal-triangle.json): Minimal Triangle
+- [morph-dot-ring](https://amicro-sv.enisdev.com/r/morph-dot-ring.json): Morph Dot Ring
+- [morph-loader](https://amicro-sv.enisdev.com/r/morph-loader.json): Morph Loader
+- [morphing-bars](https://amicro-sv.enisdev.com/r/morphing-bars.json): Morphing Bars
+- [morphing-infinity](https://amicro-sv.enisdev.com/r/morphing-infinity.json): Morphing Infinity
+- [morphing-ring](https://amicro-sv.enisdev.com/r/morphing-ring.json): Morphing Ring
+- [morphing-shape](https://amicro-sv.enisdev.com/r/morphing-shape.json): Morphing Shape
+- [newtons-cradle](https://amicro-sv.enisdev.com/r/newtons-cradle.json): Newtons Cradle
+- [offset-rings](https://amicro-sv.enisdev.com/r/offset-rings.json): Offset Rings
+- [orbiting-circles](https://amicro-sv.enisdev.com/r/orbiting-circles.json): Orbiting Circles
+- [orbiting-dot](https://amicro-sv.enisdev.com/r/orbiting-dot.json): Orbiting Dot
+- [origami-shape](https://amicro-sv.enisdev.com/r/origami-shape.json): Origami Shape
+- [pendulum](https://amicro-sv.enisdev.com/r/pendulum.json): Pendulum
+- [pulsating-dots](https://amicro-sv.enisdev.com/r/pulsating-dots.json): Pulsating Dots
+- [pulse](https://amicro-sv.enisdev.com/r/pulse.json): Pulse
+- [pulse-dot](https://amicro-sv.enisdev.com/r/pulse-dot.json): Pulse Dot
+- [pulse-dots](https://amicro-sv.enisdev.com/r/pulse-dots.json): Pulse Dots
+- [pulse-square](https://amicro-sv.enisdev.com/r/pulse-square.json): Pulse Square
+- [pumping-heart](https://amicro-sv.enisdev.com/r/pumping-heart.json): Pumping Heart
+- [radar-sweep](https://amicro-sv.enisdev.com/r/radar-sweep.json): Radar Sweep
+- [ring-sweep](https://amicro-sv.enisdev.com/r/ring-sweep.json): Ring Sweep
+- [ripple-effect](https://amicro-sv.enisdev.com/r/ripple-effect.json): Ripple Effect
+- [rotating-cross](https://amicro-sv.enisdev.com/r/rotating-cross.json): Rotating Cross
+- [rotating-triangle](https://amicro-sv.enisdev.com/r/rotating-triangle.json): Rotating Triangle
+- [shape-shift-grid](https://amicro-sv.enisdev.com/r/shape-shift-grid.json): Shape Shift Grid
+- [shimmer-line](https://amicro-sv.enisdev.com/r/shimmer-line.json): Shimmer Line
+- [siri-wave](https://amicro-sv.enisdev.com/r/siri-wave.json): Siri Wave
+- [skeleton](https://amicro-sv.enisdev.com/r/skeleton.json): Skeleton
+- [skeleton-loader](https://amicro-sv.enisdev.com/r/skeleton-loader.json): Skeleton Loader
+- [sliding-bars](https://amicro-sv.enisdev.com/r/sliding-bars.json): Sliding Bars
+- [smooth-dot-shift](https://amicro-sv.enisdev.com/r/smooth-dot-shift.json): Smooth Dot Shift
+- [smooth-ring](https://amicro-sv.enisdev.com/r/smooth-ring.json): Smooth Ring
+- [smooth-rounded-square](https://amicro-sv.enisdev.com/r/smooth-rounded-square.json): Smooth Rounded Square
+- [spinning-squares](https://amicro-sv.enisdev.com/r/spinning-squares.json): Spinning Squares
+- [spiral-spinner](https://amicro-sv.enisdev.com/r/spiral-spinner.json): Spiral Spinner
+- [spring-bars](https://amicro-sv.enisdev.com/r/spring-bars.json): Spring Bars
+- [spring-dot-matrix](https://amicro-sv.enisdev.com/r/spring-dot-matrix.json): Spring Dot Matrix
+- [spring-hexagon](https://amicro-sv.enisdev.com/r/spring-hexagon.json): Spring Hexagon
+- [spring-ring-expand](https://amicro-sv.enisdev.com/r/spring-ring-expand.json): Spring Ring Expand
+- [spring-text-pop](https://amicro-sv.enisdev.com/r/spring-text-pop.json): Spring Text Pop
+- [square-accordion](https://amicro-sv.enisdev.com/r/square-accordion.json): Square Accordion
+- [square-grid](https://amicro-sv.enisdev.com/r/square-grid.json): Square Grid
+- [square-snake](https://amicro-sv.enisdev.com/r/square-snake.json): Square Snake
+- [square-spinner](https://amicro-sv.enisdev.com/r/square-spinner.json): Square Spinner
+- [stacked-bar-pulse](https://amicro-sv.enisdev.com/r/stacked-bar-pulse.json): Stacked Bar Pulse
+- [swapping-dots](https://amicro-sv.enisdev.com/r/swapping-dots.json): Swapping Dots
+- [swirling-spinner](https://amicro-sv.enisdev.com/r/swirling-spinner.json): Swirling Spinner
+- [symmetric-wave](https://amicro-sv.enisdev.com/r/symmetric-wave.json): Symmetric Wave
+- [terminal-loader](https://amicro-sv.enisdev.com/r/terminal-loader.json): Terminal Loader
+- [text-blink](https://amicro-sv.enisdev.com/r/text-blink.json): Text Blink
+- [text-dots](https://amicro-sv.enisdev.com/r/text-dots.json): Text Dots
+- [text-morph](https://amicro-sv.enisdev.com/r/text-morph.json): Text Morph
+- [text-shimmer](https://amicro-sv.enisdev.com/r/text-shimmer.json): Text Shimmer
+- [text-shimmer-wave](https://amicro-sv.enisdev.com/r/text-shimmer-wave.json): Text Shimmer Wave
+- [trailing-dots](https://amicro-sv.enisdev.com/r/trailing-dots.json): Trailing Dots
+- [triple-dot-spinner](https://amicro-sv.enisdev.com/r/triple-dot-spinner.json): Triple Dot Spinner
+- [twin-orbit](https://amicro-sv.enisdev.com/r/twin-orbit.json): Twin Orbit
+- [typing](https://amicro-sv.enisdev.com/r/typing.json): Typing
+- [typing-indicator](https://amicro-sv.enisdev.com/r/typing-indicator.json): Typing Indicator
+- [wandering-cube](https://amicro-sv.enisdev.com/r/wandering-cube.json): Wandering Cube
+- [watch-spinner](https://amicro-sv.enisdev.com/r/watch-spinner.json): Watch Spinner
+- [wave-dots](https://amicro-sv.enisdev.com/r/wave-dots.json): Wave Dots
+- [wave-physics-loader](https://amicro-sv.enisdev.com/r/wave-physics-loader.json): Wave Physics Loader
+- [waveform-loader](https://amicro-sv.enisdev.com/r/waveform-loader.json): Waveform Loader
+- [zig-zag-pulse](https://amicro-sv.enisdev.com/r/zig-zag-pulse.json): Zig Zag Pulse
 
 ## Hooks (5)
 
-- [use-mouse-position](https://amicro.enisdev.com/r/use-mouse-position.json): Use Mouse Position
-- [use-reduced-motion](https://amicro.enisdev.com/r/use-reduced-motion.json): Use Reduced Motion
-- [use-scroll-progress](https://amicro.enisdev.com/r/use-scroll-progress.json): Use Scroll Progress
-- [use-stagger](https://amicro.enisdev.com/r/use-stagger.json): Use Stagger
-- [use-web-haptics](https://amicro.enisdev.com/r/use-web-haptics.json): Use Web Haptics
+- [use-mouse-position](https://amicro-sv.enisdev.com/r/use-mouse-position.json): Use Mouse Position
+- [use-reduced-motion](https://amicro-sv.enisdev.com/r/use-reduced-motion.json): Use Reduced Motion
+- [use-scroll-progress](https://amicro-sv.enisdev.com/r/use-scroll-progress.json): Use Scroll Progress
+- [use-stagger](https://amicro-sv.enisdev.com/r/use-stagger.json): Use Stagger
+- [use-web-haptics](https://amicro-sv.enisdev.com/r/use-web-haptics.json): Use Web Haptics
 
 ## Helpers (2)
 
-- [presets](https://amicro.enisdev.com/r/presets.json): Presets
-- [utils](https://amicro.enisdev.com/r/utils.json): Utils
+- [presets](https://amicro-sv.enisdev.com/r/presets.json): Presets
+- [utils](https://amicro-sv.enisdev.com/r/utils.json): Utils
 
 ## License
 
-- [MIT notice](https://amicro.enisdev.com/r/amicro-notice.json): copyright of the original, installed alongside every component
+- [MIT notice](https://amicro-sv.enisdev.com/r/amicro-notice.json): copyright of the original, installed alongside every component

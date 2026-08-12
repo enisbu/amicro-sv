@@ -1,7 +1,7 @@
 {
   "$schema": "https://shadcn-svelte.com/schema/registry.json",
   "name": "amicro-sv",
-  "homepage": "https://amicro.enisdev.com",
+  "homepage": "https://amicro-sv.enisdev.com",
   "items": [
     {
       "name": "amicro-notice",
