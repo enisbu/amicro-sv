@@ -9,7 +9,7 @@
 ![Tailwind CSS 4](https://img.shields.io/badge/Tailwind_CSS-4-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)
 ![MIT](https://img.shields.io/badge/License-MIT-6366F1?style=flat-square)
 
-**168 micro interactions for Svelte 5**, published as 179 shadcn style registry items and pulled into your project one file at a time.
+**168 micro interactions for Svelte 5**, published as 179 shadcn style registry items.
 
 [Demo](https://amicro-sv.enisdev.com) · [Install page](https://amicro-sv.enisdev.com/install) · [llms.txt](https://amicro-sv.enisdev.com/llms.txt)
 
