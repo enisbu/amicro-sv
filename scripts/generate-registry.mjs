@@ -153,37 +153,32 @@ const CHART_SUPPORT = {
 	'dither-math': ['dither-math.ts', 'registry:lib']
 };
 
-const readChart = (file) => readFileSync(join(ROOT, CHART_SOURCE, file), 'utf8');
-const chartFiles = (file, type) => [
-	{ path: `${CHART_SOURCE}/${file}`, type, target: `${TARGET_DIR}/${file}` },
-	NOTICE_FILE
+const chartEntries = [
+	...Object.entries(CHART_ITEMS).map(([name, file]) => [
+		name,
+		file,
+		'registry:ui',
+		'Canvas dither chart from Amicro, ported to Svelte 5 and motion-sv.'
+	]),
+	...Object.entries(CHART_SUPPORT).map(([name, [file, type]]) => [
+		name,
+		file,
+		type,
+		'Building block behind the dither charts, ported to Svelte 5.'
+	])
 ];
 
-for (const [name, file] of Object.entries(CHART_ITEMS)) {
-	const source = readChart(file);
-	section(CHART_SECTION, name);
-	items.push({
-		name,
-		type: 'registry:ui',
-		title: titleize(name),
-		description: 'Canvas dither chart from Amicro, ported to Svelte 5 and motion-sv.',
-		dependencies: externalDeps(source),
-		registryDependencies: localDeps(source),
-		files: chartFiles(file, 'registry:ui')
-	});
-}
-
-for (const [name, [file, type]] of Object.entries(CHART_SUPPORT)) {
-	const source = readChart(file);
+for (const [name, file, type, description] of chartEntries) {
+	const source = readFileSync(join(ROOT, CHART_SOURCE, file), 'utf8');
 	section(CHART_SECTION, name);
 	items.push({
 		name,
 		type,
 		title: titleize(name),
-		description: 'Building block behind the dither charts, ported to Svelte 5.',
+		description,
 		dependencies: externalDeps(source),
 		registryDependencies: localDeps(source),
-		files: chartFiles(file, type)
+		files: [{ path: `${CHART_SOURCE}/${file}`, type, target: `${TARGET_DIR}/${file}` }, NOTICE_FILE]
 	});
 }
 

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { motion, AnimatePresence } from 'motion-sv';
+	import { motion, AnimatePresence, createLayoutMotion } from 'motion-sv';
 	import { ArrowDownAZ, ChevronRight, Github, LayoutGrid, LayoutTemplate, List } from '@lucide/svelte';
 	import { SvelteSet } from 'svelte/reactivity';
 	import { getAppState } from '$lib/app/app-state.svelte.js';
@@ -36,18 +36,7 @@
 	let dropdownOpen = $state(false);
 	let gridAnchor = $state<HTMLDivElement>();
 
-	const tabEls: Partial<Record<CatalogTabType, HTMLButtonElement>> = {};
-	let pill = $state<{ x: number; y: number; w: number; h: number } | null>(null);
-
-	function measurePill() {
-		const el = tabEls[catalogTab];
-		if (el) pill = { x: el.offsetLeft, y: el.offsetTop, w: el.offsetWidth, h: el.offsetHeight };
-	}
-
-	$effect(() => {
-		catalogTab;
-		measurePill();
-	});
+	const tabPill = createLayoutMotion(motion);
 
 	const visitedTabs = new SvelteSet<CatalogTabType>(['buttons']);
 
@@ -59,9 +48,10 @@
 		layout = mode;
 	};
 
-	const setCatalogTab = (id: CatalogTabType) => {
-		catalogTab = id;
-	};
+	const setCatalogTab = (id: CatalogTabType) =>
+		tabPill.update.with(() => {
+			catalogTab = id;
+		})();
 
 	// Every section keeps its own layout namespace, so the snapshot has to be
 	// triggered per section instead of from one shared scope.
@@ -76,16 +66,17 @@
 		carouselsSection?.snapshot();
 	};
 
-	const tabs: { id: CatalogTabType; label: string }[] = [
+	const tabs: { id: CatalogTabType; label: string; standalone?: boolean }[] = [
 		{ id: 'buttons', label: 'Buttons' },
 		{ id: 'cards', label: 'Card Spreads' },
 		{ id: 'carousels', label: '3D Carousels' },
-		{ id: 'loaders', label: 'Loaders' },
-		{ id: 'dither-charts', label: 'Dither Charts' }
+		{ id: 'loaders', label: 'Loaders', standalone: true },
+		{ id: 'dither-charts', label: 'Dither Charts', standalone: true }
 	];
 
-	const tabLabel = $derived(tabs.find((t) => t.id === catalogTab)?.label ?? '');
-	const controlsHidden = $derived(catalogTab === 'loaders' || catalogTab === 'dither-charts');
+	const activeTab = $derived(tabs.find((t) => t.id === catalogTab));
+	const tabLabel = $derived(activeTab?.label ?? '');
+	const controlsHidden = $derived(activeTab?.standalone ?? false);
 
 	const displayedButtons = $derived.by(() => {
 		const sorted = [...buttonsData];
@@ -103,8 +94,7 @@
 	const carouselCards = $derived(cardsOfCategory('carousels'));
 
 	const gridClass = $derived.by(() => {
-		if (catalogTab === 'loaders' || catalogTab === 'dither-charts')
-			return 'flex flex-col items-center w-full max-w-[1060px]';
+		if (controlsHidden) return 'flex flex-col items-center w-full max-w-[1060px]';
 		if (layout === 'list') return 'flex flex-col items-center gap-4 max-w-md';
 		if (layout === 'grid') {
 			return catalogTab === 'buttons'
@@ -120,8 +110,6 @@
 		gridAnchor?.scrollIntoView({ behavior: 'smooth' });
 	}
 </script>
-
-<svelte:window onresize={measurePill} />
 
 <div class="relative z-10 flex-1 w-full max-w-[1240px] mx-auto px-6 flex flex-col items-center">
 	<div class="mt-12 mb-16 text-center w-full flex flex-col items-center">
@@ -283,26 +271,23 @@
 				class="hidden md:flex items-center p-1 rounded-full border shadow-inner transition-colors duration-300 max-w-full overflow-x-visible {segmentShell}"
 			>
 				<div class="relative flex items-center gap-1.5 pr-1">
-					{#if pill}
-						<motion.div
-							initial={{ x: pill.x, y: pill.y, width: pill.w, height: pill.h }}
-							animate={{ x: pill.x, y: pill.y, width: pill.w, height: pill.h }}
-							transition={{ type: 'spring', stiffness: 500, damping: 35 }}
-							class="absolute left-0 top-0 rounded-full bg-white shadow-sm dark:bg-[#2a2a2a] dark:shadow-none"
-						/>
-					{/if}
 					{#each tabs as tab (tab.id)}
 						<button
-							bind:this={tabEls[tab.id]}
 							onclick={() => setCatalogTab(tab.id)}
 							class={cn(
-								'relative z-10 flex-none flex items-center justify-center gap-2 px-3 sm:px-4 py-1.5 text-[13px] font-medium whitespace-nowrap',
+								'relative z-10 flex-none flex items-center justify-center gap-2 px-3 sm:px-4 py-1.5 text-[13px] font-medium whitespace-nowrap bg-transparent',
 								segmentItem,
-								catalogTab === tab.id
-									? 'text-black dark:text-white'
-									: segmentItemIdle
+								catalogTab === tab.id ? 'text-black dark:text-white' : segmentItemIdle
 							)}
 						>
+							{#if catalogTab === tab.id}
+								<tabPill.div
+									layoutId="catalog-tab-pill"
+									layoutDependency={catalogTab}
+									transition={{ type: 'spring', stiffness: 500, damping: 35 }}
+									class="absolute inset-0 rounded-full -z-10 bg-white shadow-sm dark:bg-[#2a2a2a] dark:shadow-none"
+								/>
+							{/if}
 							{tab.label}
 						</button>
 					{/each}

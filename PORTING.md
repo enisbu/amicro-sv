@@ -91,6 +91,17 @@ exported `interface Props`. No `export let`.
   (`transition:motionExit|global`). Destroying a parent block does not kill them, the
   subtree stays until every nested exit has finished. Anything that has to swap
   instantly must keep its animated subtree mounted instead of unmounting it.
+- Tab panels that unmount on switch (`{#if}`) keep that `{#if}` inside a wrapper whose
+  class flips to `hidden` for every inactive tab. The wrapper looks redundant next to
+  the `{#if}` but is not: the destroyed subtree lingers in the DOM until its exits
+  finish, and the wrapper is what keeps that corpse from pushing the next panel down.
+  Measured on the loaders to dither-charts switch, 330 ms of double layout without it.
+- A tile that swaps its content between layout modes keeps both variant shells mounted
+  and flips classes instead of branching the whole tile with `{#if}/{:else}`. Swapping
+  the shell eats the FLIP snapshot of the tile and paints one uncompensated frame, a
+  visible teleport before the spring starts (`CardsSection.svelte`, measured 1484 to
+  3248 px single-frame jumps before the change). Expensive content inside a mounted
+  shell may still unmount per mode, that leaves the snapshot intact (measured).
 - No Svelte `transition:` directives in ported components.
 - Full reference: `docs/motion-sv.md`.
 

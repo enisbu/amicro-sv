@@ -151,7 +151,7 @@
 				>
 					Svelte-Port
 				</span>
-				<nav class="hidden sm:flex items-center gap-[8px]">
+				<nav class="hidden md:flex items-center gap-[8px]">
 					{#each navLinks as link (link.href)}
 						<a
 							href={link.href}
@@ -219,7 +219,7 @@
 
 				<button
 					onclick={() => (menuOpen = !menuOpen)}
-					class="inline-flex sm:hidden items-center justify-center w-[36px] h-[36px] rounded-full transition-colors duration-150 cursor-pointer border-0 {pillButton}"
+					class="inline-flex md:hidden items-center justify-center w-[36px] h-[36px] rounded-full transition-colors duration-150 cursor-pointer border-0 {pillButton}"
 					aria-label={menuOpen ? 'Close menu' : 'Open menu'}
 					aria-expanded={menuOpen}
 				>
@@ -239,7 +239,7 @@
 					animate={{ opacity: 1, y: 0 }}
 					exit={{ opacity: 0, y: -8 }}
 					transition={{ duration: 0.18, ease: 'easeOut' }}
-					class="absolute top-[64px] left-6 right-6 z-[60] p-2 rounded-2xl border border-border shadow-2xl flex flex-col gap-1 sm:hidden backdrop-blur-xl bg-popover text-popover-foreground"
+					class="absolute top-[64px] left-6 right-6 z-[60] p-2 rounded-2xl border border-border shadow-2xl flex flex-col gap-1 md:hidden backdrop-blur-xl bg-popover text-popover-foreground"
 				>
 					{#each navLinks as link (link.href)}
 						<a

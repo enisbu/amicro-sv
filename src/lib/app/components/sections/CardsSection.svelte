@@ -123,7 +123,7 @@
 					<div
 						class="absolute inset-0 rounded-[14px] pointer-events-none z-10 shadow-[inset_0_0_0_1px_rgba(0,0,0,0.03)] dark:shadow-[inset_0_0_0_1px_rgba(255,255,255,0.05)]"
 					></div>
-					{#if preview}
+					{#if preview && layout !== 'list'}
 						<preview.component
 							hovered={hoveredCardId === card.id}
 							class={preview.class}
