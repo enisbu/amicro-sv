@@ -13,15 +13,25 @@
 	let doneWidth = $state(0);
 
 	const LABEL_CLASS = 'font-medium tracking-tight text-[13px] whitespace-nowrap';
+	// The visible label ends its enter animation on letter-spacing 0, not on the
+	// tracking of the class. The hidden spans the width is measured from have to match
+	// that, otherwise the box comes out narrower than the text and clips the last letter.
+	const MEASURE_CLASS = LABEL_CLASS.replace('tracking-tight', 'tracking-normal');
 
 	const labelWidth = useSpring(0, { stiffness: 500, damping: 25 });
-	const targetWidth = $derived(showIcon2 && doneWidth ? doneWidth : restWidth);
+	// One pixel of slack: clientWidth rounds down, and the label spreads out while it
+	// enters, so without it the last letter clips against the box. Zero stays zero,
+	// it means the hidden spans have not been measured yet.
+	const measured = $derived(showIcon2 && doneWidth ? doneWidth : restWidth);
+	const targetWidth = $derived(measured ? measured + 1 : 0);
 
 	let primed = false;
 	$effect(() => {
-		if (!targetWidth) return;
-		if (primed && !prefersReducedMotion.current) labelWidth.set(targetWidth);
-		else labelWidth.jump(targetWidth);
+		// In the matrix layout the label collapses instead of unmounting, see below.
+		const target = isMatrix ? 0 : targetWidth;
+		if (!isMatrix && !targetWidth) return;
+		if (primed && !prefersReducedMotion.current) labelWidth.set(target);
+		else labelWidth.jump(target);
 		primed = true;
 	});
 
@@ -64,48 +74,55 @@
 	</AnimatePresence>
 </div>
 
-{#if !isMatrix}
-	{#if config.id === '4'}
-		<motion.span style={{ width: labelWidth }} class="relative block h-[18px] ml-2.5">
-			<AnimatePresence mode="popLayout" initial={false}>
-				{#if showIcon2}
-					<motion.span
-						initial={{ opacity: 0, letterSpacing: `${enterSpacing}px` }}
-						animate={{ opacity: 1, letterSpacing: '0px' }}
-						exit={{ opacity: 0 }}
-						transition={{ type: 'spring', stiffness: 500, damping: 25 }}
-						class="absolute left-0 top-0 w-max leading-[18px] {LABEL_CLASS}"
-					>
-						Copied
-					</motion.span>
-				{:else}
-					<motion.span
-						initial={{ opacity: 0, letterSpacing: `${enterSpacing}px` }}
-						animate={{ opacity: 1, letterSpacing: '0px' }}
-						exit={{ opacity: 0 }}
-						transition={{ type: 'spring', stiffness: 500, damping: 25 }}
-						class="absolute left-0 top-0 w-max leading-[18px] {LABEL_CLASS}"
-					>
-						{config.label}
-					</motion.span>
-				{/if}
-			</AnimatePresence>
-			<span
-				bind:clientWidth={restWidth}
-				aria-hidden="true"
-				class="absolute left-0 top-0 w-max opacity-0 leading-[18px] {LABEL_CLASS}"
-			>
-				{config.label}
-			</span>
-			<span
-				bind:clientWidth={doneWidth}
-				aria-hidden="true"
-				class="absolute left-0 top-0 w-max opacity-0 leading-[18px] {LABEL_CLASS}"
-			>
-				Copied
-			</span>
-		</motion.span>
-	{:else}
-		<span class="{LABEL_CLASS} ml-2.5">{label}</span>
-	{/if}
+{#if config.id === '4'}
+	<!--
+		This label stays mounted in every layout and collapses to width 0 in the matrix.
+		Unmounting it would remount the presence below on the way back, and that mount
+		eats the FLIP snapshot of the tile around it: the matrix -> list switch then
+		jumps instead of animating.
+	-->
+	<motion.span
+		style={{ width: labelWidth }}
+		class="relative block h-[18px] overflow-hidden {isMatrix ? '' : 'ml-2.5'}"
+	>
+		<AnimatePresence mode="popLayout" initial={false}>
+			{#if showIcon2}
+				<motion.span
+					initial={{ opacity: 0, letterSpacing: `${enterSpacing}px` }}
+					animate={{ opacity: 1, letterSpacing: '0px' }}
+					exit={{ opacity: 0 }}
+					transition={{ type: 'spring', stiffness: 500, damping: 25 }}
+					class="absolute left-0 top-0 w-max leading-[18px] {LABEL_CLASS}"
+				>
+					Copied
+				</motion.span>
+			{:else}
+				<motion.span
+					initial={{ opacity: 0, letterSpacing: `${enterSpacing}px` }}
+					animate={{ opacity: 1, letterSpacing: '0px' }}
+					exit={{ opacity: 0 }}
+					transition={{ type: 'spring', stiffness: 500, damping: 25 }}
+					class="absolute left-0 top-0 w-max leading-[18px] {LABEL_CLASS}"
+				>
+					{config.label}
+				</motion.span>
+			{/if}
+		</AnimatePresence>
+		<span
+			bind:clientWidth={restWidth}
+			aria-hidden="true"
+			class="absolute left-0 top-0 w-max opacity-0 leading-[18px] {MEASURE_CLASS}"
+		>
+			{config.label}
+		</span>
+		<span
+			bind:clientWidth={doneWidth}
+			aria-hidden="true"
+			class="absolute left-0 top-0 w-max opacity-0 leading-[18px] {MEASURE_CLASS}"
+		>
+			Copied
+		</span>
+	</motion.span>
+{:else if !isMatrix}
+	<span class="{LABEL_CLASS} ml-2.5">{label}</span>
 {/if}
