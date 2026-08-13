@@ -24,6 +24,14 @@
 		else labelWidth.jump(targetWidth);
 		primed = true;
 	});
+
+	const enterSpacing = $derived.by(() => {
+		const from = showIcon2 ? restWidth : doneWidth;
+		const to = showIcon2 ? doneWidth : restWidth;
+		const chars = (showIcon2 ? 'Copied' : config.label).length;
+		if (!from || !to || !chars) return 0;
+		return (from - to) / chars;
+	});
 </script>
 
 <div class="relative w-[16px] h-[16px] flex items-center justify-center shrink-0">
@@ -62,20 +70,20 @@
 			<AnimatePresence mode="popLayout" initial={false}>
 				{#if showIcon2}
 					<motion.span
-						initial={{ opacity: 0, y: 8 }}
-						animate={{ opacity: 1, y: 0 }}
-						exit={{ opacity: 0, y: -8 }}
-						transition={{ type: 'spring', stiffness: 600, damping: 25 }}
+						initial={{ opacity: 0, letterSpacing: `${enterSpacing}px` }}
+						animate={{ opacity: 1, letterSpacing: '0px' }}
+						exit={{ opacity: 0 }}
+						transition={{ type: 'spring', stiffness: 500, damping: 25 }}
 						class="absolute left-0 top-0 w-max leading-[18px] {LABEL_CLASS}"
 					>
 						Copied
 					</motion.span>
 				{:else}
 					<motion.span
-						initial={{ opacity: 0, y: 8 }}
-						animate={{ opacity: 1, y: 0 }}
-						exit={{ opacity: 0, y: -8 }}
-						transition={{ type: 'spring', stiffness: 600, damping: 25 }}
+						initial={{ opacity: 0, letterSpacing: `${enterSpacing}px` }}
+						animate={{ opacity: 1, letterSpacing: '0px' }}
+						exit={{ opacity: 0 }}
+						transition={{ type: 'spring', stiffness: 500, damping: 25 }}
 						class="absolute left-0 top-0 w-max leading-[18px] {LABEL_CLASS}"
 					>
 						{config.label}
