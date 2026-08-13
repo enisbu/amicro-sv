@@ -4,7 +4,7 @@ export * from './clubbed-components.js';
 export * from './form-elements.js';
 export * from './loaders.js';
 export * from './metrics.js';
-export * from './simple-comp.js';
+export * from './dither-charts.js';
 export * from './text-animations.js';
 export * from './toggles.js';
 export * from './transitions.js';

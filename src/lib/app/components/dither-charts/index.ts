@@ -23,7 +23,7 @@ export { default as UptimeChart } from './UptimeChart.svelte';
 export { default as ChartCard } from './ChartCard.svelte';
 export { default as PaymentsChart } from './PaymentsChart.svelte';
 export { default as MembersGrowthChart } from './MembersGrowthChart.svelte';
-export { default as SimpleCompGrid } from './SimpleCompGrid.svelte';
+export { default as DitherChartsGrid } from './DitherChartsGrid.svelte';
 export { default as SimpleCompExtracted } from './SimpleCompExtracted.svelte';
 export { default as ExtractedBook } from './ExtractedBook.svelte';
 

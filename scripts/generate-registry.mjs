@@ -132,7 +132,7 @@ for (const [group, type, label, title] of [
 	}
 }
 
-const CHART_SOURCE = 'src/lib/app/components/simple-comp';
+const CHART_SOURCE = 'src/lib/app/components/dither-charts';
 const CHART_SECTION = 'Dither charts';
 
 const CHART_ITEMS = {

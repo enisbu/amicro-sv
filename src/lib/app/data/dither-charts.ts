@@ -1,4 +1,4 @@
-export interface SimpleCompItem {
+export interface DitherChartItem {
 	id: string;
 	label: string;
 	kebabName: string;
@@ -14,7 +14,7 @@ const usage = (componentName: string, fileName: string) =>
 
 <${componentName} theme="dark" />`;
 
-export const simpleCompData: SimpleCompItem[] = [
+export const ditherChartsData: DitherChartItem[] = [
 	{
 		id: 'dither-donut',
 		label: 'Dither Donut Chart',

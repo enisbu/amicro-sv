@@ -1,12 +1,12 @@
 <script lang="ts">
-	import SimpleCompGrid from '$lib/app/components/simple-comp/SimpleCompGrid.svelte';
+	import DitherChartsGrid from '$lib/app/components/dither-charts/DitherChartsGrid.svelte';
 </script>
 
 <svelte:head>
 	<title>Dither Charts — Amicro SV</title>
 	<meta
 		name="description"
-		content="Canvas dither shaders, real-time data visualizers, dot matrix gauges and a 3D page-flipping book, ported to Svelte 5 and motion-sv. Copy the usage code or install every chart from the registry."
+		content="Canvas dither shaders, real-time data visualizersand dot matrix gauges, ported to Svelte 5 and motion-sv. Copy the usage code or install every chart from the registry."
 	/>
 </svelte:head>
 
@@ -25,5 +25,5 @@
 		</p>
 	</div>
 
-	<SimpleCompGrid />
+	<DitherChartsGrid />
 </div>

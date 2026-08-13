@@ -3,7 +3,7 @@
 	import { motion } from 'motion-sv';
 	import { Copy, Check } from '@lucide/svelte';
 	import { getAppState } from '$lib/app/app-state.svelte.js';
-	import { simpleCompData, type SimpleCompItem } from '$lib/app/data/simple-comp.js';
+	import { ditherChartsData, type DitherChartItem } from '$lib/app/data/dither-charts.js';
 	import IconSwap from '../IconSwap.svelte';
 	import DitherDonutChart from './DitherDonutChart.svelte';
 	import DitherGrowthChart from './DitherGrowthChart.svelte';
@@ -39,7 +39,7 @@
 	let copiedId = $state<string | null>(null);
 	let copiedTimer: ReturnType<typeof setTimeout> | undefined;
 
-	async function handleCopyCode(item: SimpleCompItem) {
+	async function handleCopyCode(item: DitherChartItem) {
 		try {
 			await navigator.clipboard.writeText(item.codeSnippet);
 			app.haptic('success');
@@ -57,7 +57,7 @@
 
 <div class="w-full flex flex-col gap-8 max-w-[1060px] mx-auto text-left font-sans">
 	<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 w-full">
-		{#each simpleCompData as item (item.id)}
+		{#each ditherChartsData as item (item.id)}
 			{@const isCopied = copiedId === item.id}
 			{@const Preview = PREVIEWS[item.id]}
 			<div

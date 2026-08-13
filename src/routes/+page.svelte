@@ -10,7 +10,7 @@
 	import ButtonsSection from '$lib/app/components/sections/ButtonsSection.svelte';
 	import CardsSection from '$lib/app/components/sections/CardsSection.svelte';
 	import LoadersSection from '$lib/app/components/sections/LoadersSection.svelte';
-	import SimpleCompGrid from '$lib/app/components/simple-comp/SimpleCompGrid.svelte';
+	import DitherChartsGrid from '$lib/app/components/dither-charts/DitherChartsGrid.svelte';
 	import { githubStars } from './stars.remote.js';
 
 	type LayoutMode = 'list' | 'grid' | 'matrix';
@@ -387,7 +387,7 @@
 		{/if}
 		<div class={catalogTab === 'dither-charts' ? 'contents' : 'hidden'}>
 			{#if catalogTab === 'dither-charts'}
-				<SimpleCompGrid />
+				<DitherChartsGrid />
 			{/if}
 		</div>
 		<div class={catalogTab === 'loaders' ? 'contents' : 'hidden'}>

@@ -18,7 +18,7 @@
 > [!NOTE]
 > Port of the React library [Amicro](https://github.com/Subhan-code/Amicro--Micro-transitions-) by [Syed Subhan](https://x.com/SubhanHQ). He designed every interaction, this repo rebuilds them on Svelte 5 and [motion-sv](https://github.com/hanielu/motion-svelte). Provenance and license: [NOTICE.md](NOTICE.md).
 
-motion-sv is the best Motion port for Svelte I know of, and this site is the stress test: 168 components that exist in React, rebuilt to show what carries over and where Svelte and React actually diverge. 157 live in `src/lib/amicro/`, the 11 dither charts in `src/lib/app/components/simple-comp/`.
+motion-sv is the best Motion port for Svelte I know of, and this site is the stress test: 168 components that exist in React, rebuilt to show what carries over and where Svelte and React actually diverge. 157 live in `src/lib/amicro/`, the 11 dither charts in `src/lib/app/components/dither-charts/`.
 
 ## Install
 

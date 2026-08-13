@@ -3618,7 +3618,7 @@
       ],
       "files": [
         {
-          "path": "src/lib/app/components/simple-comp/DitherDonutChart.svelte",
+          "path": "src/lib/app/components/dither-charts/DitherDonutChart.svelte",
           "type": "registry:ui",
           "target": "amicro/DitherDonutChart.svelte"
         },
@@ -3644,7 +3644,7 @@
       ],
       "files": [
         {
-          "path": "src/lib/app/components/simple-comp/DitherStackedChart.svelte",
+          "path": "src/lib/app/components/dither-charts/DitherStackedChart.svelte",
           "type": "registry:ui",
           "target": "amicro/DitherStackedChart.svelte"
         },
@@ -3671,7 +3671,7 @@
       ],
       "files": [
         {
-          "path": "src/lib/app/components/simple-comp/DitherGrowthChart.svelte",
+          "path": "src/lib/app/components/dither-charts/DitherGrowthChart.svelte",
           "type": "registry:ui",
           "target": "amicro/DitherGrowthChart.svelte"
         },
@@ -3696,7 +3696,7 @@
       ],
       "files": [
         {
-          "path": "src/lib/app/components/simple-comp/ActivityHeatmap.svelte",
+          "path": "src/lib/app/components/dither-charts/ActivityHeatmap.svelte",
           "type": "registry:ui",
           "target": "amicro/ActivityHeatmap.svelte"
         },
@@ -3721,7 +3721,7 @@
       ],
       "files": [
         {
-          "path": "src/lib/app/components/simple-comp/ServerGauge.svelte",
+          "path": "src/lib/app/components/dither-charts/ServerGauge.svelte",
           "type": "registry:ui",
           "target": "amicro/ServerGauge.svelte"
         },
@@ -3745,7 +3745,7 @@
       ],
       "files": [
         {
-          "path": "src/lib/app/components/simple-comp/TrafficBubble.svelte",
+          "path": "src/lib/app/components/dither-charts/TrafficBubble.svelte",
           "type": "registry:ui",
           "target": "amicro/TrafficBubble.svelte"
         },
@@ -3769,7 +3769,7 @@
       ],
       "files": [
         {
-          "path": "src/lib/app/components/simple-comp/DitherFunnelChart.svelte",
+          "path": "src/lib/app/components/dither-charts/DitherFunnelChart.svelte",
           "type": "registry:ui",
           "target": "amicro/DitherFunnelChart.svelte"
         },
@@ -3793,7 +3793,7 @@
       ],
       "files": [
         {
-          "path": "src/lib/app/components/simple-comp/DeviceUsageChart.svelte",
+          "path": "src/lib/app/components/dither-charts/DeviceUsageChart.svelte",
           "type": "registry:ui",
           "target": "amicro/DeviceUsageChart.svelte"
         },
@@ -3818,7 +3818,7 @@
       ],
       "files": [
         {
-          "path": "src/lib/app/components/simple-comp/StorageUsageChart.svelte",
+          "path": "src/lib/app/components/dither-charts/StorageUsageChart.svelte",
           "type": "registry:ui",
           "target": "amicro/StorageUsageChart.svelte"
         },
@@ -3842,7 +3842,7 @@
       ],
       "files": [
         {
-          "path": "src/lib/app/components/simple-comp/RevenueLineChart.svelte",
+          "path": "src/lib/app/components/dither-charts/RevenueLineChart.svelte",
           "type": "registry:ui",
           "target": "amicro/RevenueLineChart.svelte"
         },
@@ -3866,7 +3866,7 @@
       ],
       "files": [
         {
-          "path": "src/lib/app/components/simple-comp/UptimeChart.svelte",
+          "path": "src/lib/app/components/dither-charts/UptimeChart.svelte",
           "type": "registry:ui",
           "target": "amicro/UptimeChart.svelte"
         },
@@ -3888,7 +3888,7 @@
       "registryDependencies": [],
       "files": [
         {
-          "path": "src/lib/app/components/simple-comp/AnimatedNumber.svelte",
+          "path": "src/lib/app/components/dither-charts/AnimatedNumber.svelte",
           "type": "registry:ui",
           "target": "amicro/AnimatedNumber.svelte"
         },
@@ -3910,7 +3910,7 @@
       "registryDependencies": [],
       "files": [
         {
-          "path": "src/lib/app/components/simple-comp/DitherAnimatedValue.svelte",
+          "path": "src/lib/app/components/dither-charts/DitherAnimatedValue.svelte",
           "type": "registry:ui",
           "target": "amicro/DitherAnimatedValue.svelte"
         },
@@ -3930,7 +3930,7 @@
       "registryDependencies": [],
       "files": [
         {
-          "path": "src/lib/app/components/simple-comp/dither-math.ts",
+          "path": "src/lib/app/components/dither-charts/dither-math.ts",
           "type": "registry:ui",
           "target": "amicro/dither-math.ts"
         },
