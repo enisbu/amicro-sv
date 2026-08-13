@@ -61,12 +61,13 @@ exported `interface Props`. No `export let`.
 - `viewport={{...}}` is called `inViewOptions={{...}}`.
 - Layout animations need `createLayoutMotion(motion)` plus `<layout.div>` and
   `layout.update.with(fn)` around the state change. The `layout` prop alone is not enough.
-- A `layout` prop in the original is never dropped, it is translated. The element that owns
-  the changing box gets its own `createLayoutMotion(motion)` scope and becomes `<layout.x>`,
-  and every handler that changes the state is wrapped in `layout.update.with(fn)`. Children
-  that must not stretch with the box keep their own `layout` prop. Dropping it looks fine
-  until a label changes width: the box then jumps in a single frame instead of animating
-  (`AnimatedButton.svelte`, label span in `Morph.svelte`).
+- A `layout` prop in the original is never dropped, it is translated. Drop it and the box
+  jumps in a single frame as soon as its content changes width.
+- Text is the exception. A layout animation moves a box by scaling it, so a label that
+  changes width gets stretched and squeezed while it travels: measured 1.36 on the way in,
+  and the original does exactly the same. Animate the width instead. Two hidden spans
+  measure both labels, `useSpring` drives the width, `jump()` sets the first value so
+  nothing unfolds on load (`Morph.svelte`). No layout scope, so nothing can snapshot twice.
 - Reordering a keyed list is the strict case: the snapshot has to happen in the handler
   that changes the state, before Svelte touches the DOM. A `$effect.pre` that calls
   `update()` is not a substitute. It is early enough when a class on the container

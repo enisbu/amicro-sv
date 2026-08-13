@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { motion, createLayoutMotion } from 'motion-sv';
+	import { motion } from 'motion-sv';
 	import { MediaQuery } from 'svelte/reactivity';
 	import { prefersReducedMotion } from 'svelte/motion';
 	import { getAppState } from '$lib/app/app-state.svelte.js';
@@ -42,7 +42,6 @@
 	};
 
 	const canHover = new MediaQuery('(hover: hover)');
-	const layoutMotion = createLayoutMotion(motion);
 
 	const app = getAppState();
 
@@ -88,23 +87,13 @@
 	}
 
 	function handleTouchEnd() {
-		resetTimer = setTimeout(
-			layoutMotion.update.with(() => {
-				isHovered = false;
-				if (hasInteracted) {
-					resetTimer = setTimeout(
-						layoutMotion.update.with(() => (hasInteracted = false)),
-						500
-					);
-				}
-			}),
-			500
-		);
+		resetTimer = setTimeout(() => {
+			isHovered = false;
+			if (hasInteracted) {
+				resetTimer = setTimeout(() => (hasInteracted = false), 500);
+			}
+		}, 500);
 	}
-
-	const onEnter = layoutMotion.update.with(handleMouseEnter);
-	const onLeave = layoutMotion.update.with(handleMouseLeave);
-	const onTouchStart = layoutMotion.update.with(handleTouchStart);
 
 	const isMagnetic = $derived(config.interactionType === 'magnetic');
 
@@ -140,14 +129,14 @@
 		class={isMatrix ? 'scale-[0.5] origin-center text-[10px] gap-1 px-1 py-1' : 'text-sm gap-4'}
 	/>
 {:else}
-	<layoutMotion.button
+	<motion.button
 		transition={springy}
-		onmouseenter={onEnter}
+		onmouseenter={handleMouseEnter}
 		onmousemove={handleMouseMove}
-		onmouseleave={onLeave}
-		onfocus={onEnter}
-		onblur={onLeave}
-		ontouchstart={onTouchStart}
+		onmouseleave={handleMouseLeave}
+		onfocus={handleMouseEnter}
+		onblur={handleMouseLeave}
+		ontouchstart={handleTouchStart}
 		ontouchend={handleTouchEnd}
 		animate={{
 			paddingLeft: isMatrix ? 0 : isHovered ? 28 : 24,
@@ -163,7 +152,6 @@
 			: 'h-[36px] min-w-[75px]'} {config.interactionType === 'glare' ? 'overflow-hidden' : ''}"
 	>
 		<motion.div
-			layout
 			transition={springy}
 			class="flex items-center justify-center w-full {isMatrix
 				? 'scale-100 sm:scale-[1.15] origin-center'
@@ -173,5 +161,5 @@
 				<Variant {config} {isHovered} {isMatrix} {isLightTheme} {showIcon2} />
 			{/if}
 		</motion.div>
-	</layoutMotion.button>
+	</motion.button>
 {/if}
