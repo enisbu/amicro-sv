@@ -26,11 +26,11 @@ Requires SvelteKit and Tailwind 4. `shadcn-svelte init` does not install Tailwin
 Tailwind is missing, so add it first.
 
 ```
-╭────────────────────────────────────── amicro-sv registry ───────────────────────────────────────╮
-│ npx sv add tailwindcss                                                   add Tailwind 4         │
-│ npx shadcn-svelte@latest init                                            set up components.json │
+╭──────────────────────────────────────── amicro-sv registry ────────────────────────────────────────╮
+│ npx sv add tailwindcss                                                      add Tailwind 4         │
+│ npx shadcn-svelte@latest init                                               set up components.json │
 │ npx shadcn-svelte@latest add https://amicro-sv.enisdev.com/r/fade-in.json   add a component        │
-╰─────────────────────────────────────────────────────────────────────────────────────────────────╯
+╰────────────────────────────────────────────────────────────────────────────────────────────────────╯
 ```
 
 The CLI writes the component into your `ui` alias under `amicro/`, installs `motion-sv` and drops
