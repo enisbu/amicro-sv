@@ -15,9 +15,12 @@ const browser = await chromium.launch({
 const page = await browser.newPage({ viewport: { width: 1200, height: 630 }, deviceScaleFactor: 2 });
 await page.goto(BASE);
 await page.waitForTimeout(2500);
+await page.addStyleTag({
+	content: 'html { scrollbar-gutter: auto !important; scrollbar-width: none !important; }'
+});
 await page.evaluate(() => {
 	const grid = document.querySelector('#component-grid');
-	if (grid) window.scrollTo({ top: window.scrollY + grid.getBoundingClientRect().top + 70, behavior: 'instant' });
+	if (grid) window.scrollTo({ top: window.scrollY + grid.getBoundingClientRect().top + 45, behavior: 'instant' });
 });
 await page.waitForTimeout(800);
 
