@@ -59,7 +59,29 @@
 {#if !isMatrix}
 	{#if config.id === '4'}
 		<motion.span style={{ width: labelWidth }} class="relative block h-[18px] ml-2.5">
-			<span class="absolute left-0 top-0 w-max leading-[18px] {LABEL_CLASS}">{label}</span>
+			<AnimatePresence mode="popLayout" initial={false}>
+				{#if showIcon2}
+					<motion.span
+						initial={{ opacity: 0, y: 8 }}
+						animate={{ opacity: 1, y: 0 }}
+						exit={{ opacity: 0, y: -8 }}
+						transition={{ type: 'spring', stiffness: 600, damping: 25 }}
+						class="absolute left-0 top-0 w-max leading-[18px] {LABEL_CLASS}"
+					>
+						Copied
+					</motion.span>
+				{:else}
+					<motion.span
+						initial={{ opacity: 0, y: 8 }}
+						animate={{ opacity: 1, y: 0 }}
+						exit={{ opacity: 0, y: -8 }}
+						transition={{ type: 'spring', stiffness: 600, damping: 25 }}
+						class="absolute left-0 top-0 w-max leading-[18px] {LABEL_CLASS}"
+					>
+						{config.label}
+					</motion.span>
+				{/if}
+			</AnimatePresence>
 			<span
 				bind:clientWidth={restWidth}
 				aria-hidden="true"
