@@ -1,19 +1,14 @@
-import { Context, useDebounce } from 'runed';
+import { Context } from 'runed';
+import { toast } from 'svelte-sonner';
 import { triggerHaptic, type HapticsType } from './haptics.js';
 
 export type Theme = 'dark' | 'light';
 
 export class AppState {
 	theme = $state<Theme>('dark');
-	toastMessage = $state<string | null>(null);
 
-	#clearToast = useDebounce(() => {
-		this.toastMessage = null;
-	}, 2000);
-
-	showToast(message: string) {
-		this.toastMessage = message;
-		this.#clearToast();
+	showToast(message: string, kind: 'success' | 'error' = 'success') {
+		toast[kind](message);
 	}
 
 	toggleTheme() {
@@ -30,7 +25,7 @@ export class AppState {
 			await navigator.clipboard.writeText(text);
 			this.showToast(successMessage);
 		} catch {
-			this.showToast(failMessage);
+			this.showToast(failMessage, 'error');
 		}
 	}
 }

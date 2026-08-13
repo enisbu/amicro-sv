@@ -41,6 +41,7 @@
     "motion": "^11.15.0",
     "motion-sv": "^0.1.13",
     "runed": "^0.34.0",
+    "svelte-sonner": "^1.1.1",
     "tailwind-merge": "^3.6.0"
   }
 }

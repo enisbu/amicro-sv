@@ -26,6 +26,9 @@ importers:
       runed:
         specifier: ^0.34.0
         version: 0.34.0(@sveltejs/kit@2.70.2(@sveltejs/vite-plugin-svelte@7.3.0(svelte@5.56.8)(vite@8.2.1(jiti@2.7.0)))(svelte@5.56.8)(typescript@6.0.3)(vite@8.2.1(jiti@2.7.0)))(svelte@5.56.8)
+      svelte-sonner:
+        specifier: ^1.1.1
+        version: 1.1.1(svelte@5.56.8)
       tailwind-merge:
         specifier: ^3.6.0
         version: 3.6.0
@@ -1147,6 +1150,11 @@ packages:
     engines: {node: '>=18.0.0', npm: '>=8.0.0'}
     hasBin: true
 
+  runed@0.28.0:
+    resolution: {integrity: sha512-k2xx7RuO9hWcdd9f+8JoBeqWtYrm5CALfgpkg2YDB80ds/QE4w0qqu34A7fqiAwiBBSBQOid7TLxwxVC27ymWQ==}
+    peerDependencies:
+      svelte: ^5.7.0
+
   runed@0.34.0:
     resolution: {integrity: sha512-hdDCoxWCuOCa7HnuU2ihu2tXuAOacNXtvTDDZ02km+rguHZBtglzAoo3dVYtssZjFsooY9xawvYX9HmDJqaPTA==}
     peerDependencies:
@@ -1206,6 +1214,11 @@ packages:
     peerDependencies:
       svelte: ^4.0.0 || ^5.0.0-next.0
       typescript: ^5.0.0 || ^6.0.0
+
+  svelte-sonner@1.1.1:
+    resolution: {integrity: sha512-5cd3p7wa4cq0NsqslMwdlPb7x1JglEZ/GKrLePWNr5bCxR1nagAVrY01FRFrXfUGs41miLt3C327+8XJo5BzZw==}
+    peerDependencies:
+      svelte: ^5.0.0
 
   svelte@5.56.8:
     resolution: {integrity: sha512-PY8LOw7xP6c8IOiVqdo0sbbZVYhXRSfklOQLAUyGBKqjTX0wx/z4l/9J+PmBpmlLnxzEb1NqltxQ5/wZme/Cmg==}
@@ -2165,6 +2178,11 @@ snapshots:
       '@rollup/rollup-win32-x64-msvc': 4.62.4
       fsevents: 2.3.3
 
+  runed@0.28.0(svelte@5.56.8):
+    dependencies:
+      esm-env: 1.2.2
+      svelte: 5.56.8
+
   runed@0.34.0(@sveltejs/kit@2.70.2(@sveltejs/vite-plugin-svelte@7.3.0(svelte@5.56.8)(vite@8.2.1(jiti@2.7.0)))(svelte@5.56.8)(typescript@6.0.3)(vite@8.2.1(jiti@2.7.0)))(svelte@5.56.8):
     dependencies:
       dequal: 2.0.3
@@ -2223,6 +2241,11 @@ snapshots:
       typescript: 6.0.3
     transitivePeerDependencies:
       - picomatch
+
+  svelte-sonner@1.1.1(svelte@5.56.8):
+    dependencies:
+      runed: 0.28.0(svelte@5.56.8)
+      svelte: 5.56.8
 
   svelte@5.56.8:
     dependencies:

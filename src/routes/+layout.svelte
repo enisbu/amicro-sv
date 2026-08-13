@@ -5,6 +5,7 @@
 	import { Sun, Moon, Menu, X } from '@lucide/svelte';
 	import { page } from '$app/state';
 	import { onClickOutside } from 'runed';
+	import { Toaster } from 'svelte-sonner';
 	import { setAppState } from '$lib/app/app-state.svelte.js';
 	import { ThemeToggleCode } from '$lib/app/code-generator.js';
 	import AnimatedNumber from '$lib/app/components/sections/AnimatedNumber.svelte';
@@ -314,19 +315,15 @@
 		>
 	</footer>
 
-	<div class="fixed bottom-6 right-6 z-[100] pointer-events-none">
-		<AnimatePresence>
-			{#if app.toastMessage}
-				<motion.div
-					initial={{ opacity: 0, y: 50, scale: 0.9 }}
-					animate={{ opacity: 1, y: 0, scale: 1 }}
-					exit={{ opacity: 0, y: 20, scale: 0.9 }}
-					class="px-4 py-3 rounded-xl border flex items-center gap-2.5 text-[13px] font-medium shadow-lg pointer-events-auto bg-card border-neutral-200 text-black shadow-neutral-200/50 dark:border-neutral-800 dark:text-white dark:shadow-black/20"
-				>
-					<div class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></div>
-					<span>{app.toastMessage}</span>
-				</motion.div>
-			{/if}
-		</AnimatePresence>
-	</div>
+	<!--
+		Sonner styles itself through these variables, and its own rules outrank utility
+		classes on the toast, so the theme is handed over here instead of as a class list.
+	-->
+	<Toaster
+		theme={app.theme}
+		position="bottom-right"
+		duration={2000}
+		style="--normal-bg: var(--card); --normal-border: var(--border); --normal-text: var(--card-foreground); --border-radius: 0.75rem;"
+		toastOptions={{ classes: { title: 'text-[13px] font-medium' } }}
+	/>
 </div>
