@@ -39,7 +39,7 @@
 </div>
 
 {#if !isMatrix}
-	<span class="font-medium tracking-tight text-[13px] whitespace-nowrap ml-2.5">
+	<motion.span layout class="font-medium tracking-tight text-[13px] whitespace-nowrap ml-2.5">
 		{config.id === '4' && showIcon2 ? 'Copied' : config.label}
-	</span>
+	</motion.span>
 {/if}
