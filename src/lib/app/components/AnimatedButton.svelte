@@ -97,7 +97,7 @@
 
 	const isMagnetic = $derived(config.interactionType === 'magnetic');
 
-	const background = $derived(
+	const restingBackground = $derived(
 		isLightTheme
 			? hasInteracted && config.id === '4'
 				? 'rgba(0,0,0,0.08)'
@@ -110,6 +110,23 @@
 					? 'rgba(255,255,255,0.06)'
 					: 'rgba(255,255,255,0.04)'
 	);
+
+	// The React original remounts every button on a layout switch, so its background
+	// animates up from transparent. Our tiles keep their nodes (the layout animation
+	// needs that), so the fade is spelled out: drop to alpha 0 for one frame after the
+	// switch and let the spring carry it back.
+	let fadingIn = $state(false);
+	$effect(() => {
+		void layoutMode;
+		fadingIn = true;
+		const timer = setTimeout(() => (fadingIn = false), 450);
+		return () => clearTimeout(timer);
+	});
+
+	const transparent = $derived(isLightTheme ? 'rgba(0,0,0,0)' : 'rgba(255,255,255,0)');
+	// Keyframes, not a single value: setting the target to transparent and back within
+	// the same frame gives motion nothing to animate, it just lands on the end value.
+	const background = $derived(fadingIn ? [transparent, restingBackground] : restingBackground);
 
 	const springy = $derived(
 		prefersReducedMotion.current
