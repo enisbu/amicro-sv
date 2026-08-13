@@ -1,30 +1,24 @@
-# amicro-sv
+<div align="center">
 
-[![Amicro SV, 157 micro interactions for Svelte 5](static/og.png)](https://amicro-sv.enisdev.com)
+# Amicro SV
+
+[![Amicro SV, 168 micro interactions for Svelte 5](static/og.png)](https://amicro-sv.enisdev.com)
 
 ![Svelte 5](https://img.shields.io/badge/Svelte-5-FF3E00?style=flat-square&logo=svelte&logoColor=white)
 ![SvelteKit 2](https://img.shields.io/badge/SvelteKit-2-FF3E00?style=flat-square&logo=svelte&logoColor=white)
 ![Tailwind CSS 4](https://img.shields.io/badge/Tailwind_CSS-4-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)
 ![MIT](https://img.shields.io/badge/License-MIT-6366F1?style=flat-square)
 
-Port of [Amicro](https://github.com/Subhan-code/Amicro--Micro-transitions-) (React, MIT) by [Syed Subhan](https://x.com/SubhanHQ) to Svelte 5, running on [motion-sv](https://github.com/hanielu/motion-svelte).
+**168 micro interactions for Svelte 5**, published as 179 shadcn style registry items and pulled into your project one file at a time.
 
-## Credits / Original
+[Demo](https://amicro-sv.enisdev.com) · [Install page](https://amicro-sv.enisdev.com/install) · [llms.txt](https://amicro-sv.enisdev.com/llms.txt)
 
-Every component here started as Amicro, built by [Syed Subhan](https://x.com/SubhanHQ) in React on
-Framer Motion. He designed the interactions, this repo moves them to Svelte 5 and motion-sv.
+</div>
 
-- Original project: [Amicro (Micro-transitions)](https://github.com/Subhan-code/Amicro--Micro-transitions-), npm `@subhanhq/amicro`
-- Author: SYED SUBHAN UDDIN, [@SubhanHQ](https://x.com/SubhanHQ)
-- License: MIT, inherited. Full provenance in [NOTICE.md](NOTICE.md), original license text in [LICENSE.upstream](LICENSE.upstream)
+> [!NOTE]
+> Port of the React library [Amicro](https://github.com/Subhan-code/Amicro--Micro-transitions-) by [Syed Subhan](https://x.com/SubhanHQ). He designed every interaction, this repo rebuilds them on Svelte 5 and [motion-sv](https://github.com/hanielu/motion-svelte). Provenance and license: [NOTICE.md](NOTICE.md).
 
-If you want the React original, go to his repo. This port exists because Svelte had no equivalent.
-
-motion-sv is the best Motion port for Svelte I know of, and this site is the stress test: 157 components that exist in React, rebuilt to show what carries over and where Svelte and React actually diverge.
-
-157 components in `src/lib/amicro/`, published as 165 shadcn style registry items.
-
-Demo: [amicro-sv.enisdev.com](https://amicro-sv.enisdev.com). Install page: [amicro-sv.enisdev.com/install](https://amicro-sv.enisdev.com/install).
+motion-sv is the best Motion port for Svelte I know of, and this site is the stress test: 168 components that exist in React, rebuilt to show what carries over and where Svelte and React actually diverge. 157 live in `src/lib/amicro/`, the 11 dither charts in `src/lib/app/components/simple-comp/`.
 
 ## Install
 

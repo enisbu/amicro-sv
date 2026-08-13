@@ -989,5 +989,89 @@ export const REGISTRY_ITEMS: RegistryItem[] = [
   "title": "Utils",
   "type": "registry:lib",
   "description": "Shared helper from Amicro, ported to Svelte 5."
+ },
+ {
+  "name": "dither-donut",
+  "title": "Dither Donut",
+  "type": "registry:ui",
+  "description": "Canvas dither chart from Amicro, ported to Svelte 5 and motion-sv."
+ },
+ {
+  "name": "dither-stacked",
+  "title": "Dither Stacked",
+  "type": "registry:ui",
+  "description": "Canvas dither chart from Amicro, ported to Svelte 5 and motion-sv."
+ },
+ {
+  "name": "dither-growth",
+  "title": "Dither Growth",
+  "type": "registry:ui",
+  "description": "Canvas dither chart from Amicro, ported to Svelte 5 and motion-sv."
+ },
+ {
+  "name": "dither-heatmap",
+  "title": "Dither Heatmap",
+  "type": "registry:ui",
+  "description": "Canvas dither chart from Amicro, ported to Svelte 5 and motion-sv."
+ },
+ {
+  "name": "dither-gauge",
+  "title": "Dither Gauge",
+  "type": "registry:ui",
+  "description": "Canvas dither chart from Amicro, ported to Svelte 5 and motion-sv."
+ },
+ {
+  "name": "dither-traffic",
+  "title": "Dither Traffic",
+  "type": "registry:ui",
+  "description": "Canvas dither chart from Amicro, ported to Svelte 5 and motion-sv."
+ },
+ {
+  "name": "dither-funnel",
+  "title": "Dither Funnel",
+  "type": "registry:ui",
+  "description": "Canvas dither chart from Amicro, ported to Svelte 5 and motion-sv."
+ },
+ {
+  "name": "dither-device",
+  "title": "Dither Device",
+  "type": "registry:ui",
+  "description": "Canvas dither chart from Amicro, ported to Svelte 5 and motion-sv."
+ },
+ {
+  "name": "dither-storage",
+  "title": "Dither Storage",
+  "type": "registry:ui",
+  "description": "Canvas dither chart from Amicro, ported to Svelte 5 and motion-sv."
+ },
+ {
+  "name": "dither-revenue",
+  "title": "Dither Revenue",
+  "type": "registry:ui",
+  "description": "Canvas dither chart from Amicro, ported to Svelte 5 and motion-sv."
+ },
+ {
+  "name": "dither-uptime",
+  "title": "Dither Uptime",
+  "type": "registry:ui",
+  "description": "Canvas dither chart from Amicro, ported to Svelte 5 and motion-sv."
+ },
+ {
+  "name": "animated-number",
+  "title": "Animated Number",
+  "type": "registry:ui",
+  "description": "Building block behind the dither charts, ported to Svelte 5."
+ },
+ {
+  "name": "dither-animated-value",
+  "title": "Dither Animated Value",
+  "type": "registry:ui",
+  "description": "Building block behind the dither charts, ported to Svelte 5."
+ },
+ {
+  "name": "dither-math",
+  "title": "Dither Math",
+  "type": "registry:lib",
+  "description": "Building block behind the dither charts, ported to Svelte 5."
  }
 ];

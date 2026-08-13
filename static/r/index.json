@@ -1789,5 +1789,188 @@
 		"dependencies": [],
 		"registryDependencies": [],
 		"relativeUrl": "utils.json"
+	},
+	{
+		"name": "dither-donut",
+		"title": "Dither Donut",
+		"type": "registry:ui",
+		"description": "Canvas dither chart from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"@lucide/svelte",
+			"runed"
+		],
+		"registryDependencies": [
+			"dither-math"
+		],
+		"relativeUrl": "dither-donut.json"
+	},
+	{
+		"name": "dither-stacked",
+		"title": "Dither Stacked",
+		"type": "registry:ui",
+		"description": "Canvas dither chart from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"@lucide/svelte",
+			"runed"
+		],
+		"registryDependencies": [
+			"dither-animated-value",
+			"dither-math"
+		],
+		"relativeUrl": "dither-stacked.json"
+	},
+	{
+		"name": "dither-growth",
+		"title": "Dither Growth",
+		"type": "registry:ui",
+		"description": "Canvas dither chart from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"@lucide/svelte",
+			"motion-sv",
+			"runed"
+		],
+		"registryDependencies": [
+			"dither-animated-value",
+			"dither-math"
+		],
+		"relativeUrl": "dither-growth.json"
+	},
+	{
+		"name": "dither-heatmap",
+		"title": "Dither Heatmap",
+		"type": "registry:ui",
+		"description": "Canvas dither chart from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"runed"
+		],
+		"registryDependencies": [
+			"animated-number",
+			"dither-math"
+		],
+		"relativeUrl": "dither-heatmap.json"
+	},
+	{
+		"name": "dither-gauge",
+		"title": "Dither Gauge",
+		"type": "registry:ui",
+		"description": "Canvas dither chart from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv",
+			"runed"
+		],
+		"registryDependencies": [
+			"dither-math"
+		],
+		"relativeUrl": "dither-gauge.json"
+	},
+	{
+		"name": "dither-traffic",
+		"title": "Dither Traffic",
+		"type": "registry:ui",
+		"description": "Canvas dither chart from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"runed"
+		],
+		"registryDependencies": [
+			"dither-math"
+		],
+		"relativeUrl": "dither-traffic.json"
+	},
+	{
+		"name": "dither-funnel",
+		"title": "Dither Funnel",
+		"type": "registry:ui",
+		"description": "Canvas dither chart from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"runed"
+		],
+		"registryDependencies": [
+			"dither-math"
+		],
+		"relativeUrl": "dither-funnel.json"
+	},
+	{
+		"name": "dither-device",
+		"title": "Dither Device",
+		"type": "registry:ui",
+		"description": "Canvas dither chart from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"runed"
+		],
+		"registryDependencies": [
+			"dither-math"
+		],
+		"relativeUrl": "dither-device.json"
+	},
+	{
+		"name": "dither-storage",
+		"title": "Dither Storage",
+		"type": "registry:ui",
+		"description": "Canvas dither chart from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"motion-sv",
+			"runed"
+		],
+		"registryDependencies": [
+			"dither-math"
+		],
+		"relativeUrl": "dither-storage.json"
+	},
+	{
+		"name": "dither-revenue",
+		"title": "Dither Revenue",
+		"type": "registry:ui",
+		"description": "Canvas dither chart from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"runed"
+		],
+		"registryDependencies": [
+			"dither-math"
+		],
+		"relativeUrl": "dither-revenue.json"
+	},
+	{
+		"name": "dither-uptime",
+		"title": "Dither Uptime",
+		"type": "registry:ui",
+		"description": "Canvas dither chart from Amicro, ported to Svelte 5 and motion-sv.",
+		"dependencies": [
+			"runed"
+		],
+		"registryDependencies": [
+			"dither-math"
+		],
+		"relativeUrl": "dither-uptime.json"
+	},
+	{
+		"name": "animated-number",
+		"title": "Animated Number",
+		"type": "registry:ui",
+		"description": "Building block behind the dither charts, ported to Svelte 5.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "animated-number.json"
+	},
+	{
+		"name": "dither-animated-value",
+		"title": "Dither Animated Value",
+		"type": "registry:ui",
+		"description": "Building block behind the dither charts, ported to Svelte 5.",
+		"dependencies": [
+			"motion-sv"
+		],
+		"registryDependencies": [],
+		"relativeUrl": "dither-animated-value.json"
+	},
+	{
+		"name": "dither-math",
+		"title": "Dither Math",
+		"type": "registry:lib",
+		"description": "Building block behind the dither charts, ported to Svelte 5.",
+		"dependencies": [],
+		"registryDependencies": [],
+		"relativeUrl": "dither-math.json"
 	}
 ]

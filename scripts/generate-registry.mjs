@@ -130,6 +130,63 @@ for (const [group, type, label, title] of [
 	}
 }
 
+const CHART_SOURCE = 'src/lib/app/components/simple-comp';
+const CHART_SECTION = 'Dither charts';
+
+const CHART_ITEMS = {
+	'dither-donut': 'DitherDonutChart.svelte',
+	'dither-stacked': 'DitherStackedChart.svelte',
+	'dither-growth': 'DitherGrowthChart.svelte',
+	'dither-heatmap': 'ActivityHeatmap.svelte',
+	'dither-gauge': 'ServerGauge.svelte',
+	'dither-traffic': 'TrafficBubble.svelte',
+	'dither-funnel': 'DitherFunnelChart.svelte',
+	'dither-device': 'DeviceUsageChart.svelte',
+	'dither-storage': 'StorageUsageChart.svelte',
+	'dither-revenue': 'RevenueLineChart.svelte',
+	'dither-uptime': 'UptimeChart.svelte'
+};
+
+const CHART_SUPPORT = {
+	'animated-number': ['AnimatedNumber.svelte', 'registry:ui'],
+	'dither-animated-value': ['DitherAnimatedValue.svelte', 'registry:ui'],
+	'dither-math': ['dither-math.ts', 'registry:lib']
+};
+
+const readChart = (file) => readFileSync(join(ROOT, CHART_SOURCE, file), 'utf8');
+const chartFiles = (file, type) => [
+	{ path: `${CHART_SOURCE}/${file}`, type, target: `${TARGET_DIR}/${file}` },
+	NOTICE_FILE
+];
+
+for (const [name, file] of Object.entries(CHART_ITEMS)) {
+	const source = readChart(file);
+	section(CHART_SECTION, name);
+	items.push({
+		name,
+		type: 'registry:ui',
+		title: titleize(name),
+		description: 'Canvas dither chart from Amicro, ported to Svelte 5 and motion-sv.',
+		dependencies: externalDeps(source),
+		registryDependencies: localDeps(source),
+		files: chartFiles(file, 'registry:ui')
+	});
+}
+
+for (const [name, [file, type]] of Object.entries(CHART_SUPPORT)) {
+	const source = readChart(file);
+	section(CHART_SECTION, name);
+	items.push({
+		name,
+		type,
+		title: titleize(name),
+		description: 'Building block behind the dither charts, ported to Svelte 5.',
+		dependencies: externalDeps(source),
+		registryDependencies: localDeps(source),
+		files: chartFiles(file, type)
+	});
+}
+
 const registry = {
 	$schema: 'https://shadcn-svelte.com/schema/registry.json',
 	name: 'amicro-sv',
@@ -153,7 +210,7 @@ const titleOf = new Map(items.map((item) => [item.name, item.title]));
 const llms = [
 	'# Amicro SV',
 	'',
-	`> ${items.filter((item) => item.type === 'registry:ui').length} micro interaction components for Svelte 5 plus the hooks and helpers behind them, pulled into your project one file at a time from a shadcn style registry. Entrance and hover animations, text and scroll effects, cursor effects, page transitions, card layouts and ${sections.get('Loaders')?.length ?? 0} loaders, all running on motion-sv.`,
+	`> ${items.filter((item) => item.type === 'registry:ui').length} micro interaction components for Svelte 5 plus the hooks and helpers behind them, pulled into your project one file at a time from a shadcn style registry. Entrance and hover animations, text and scroll effects, cursor effects, page transitions, card layouts, canvas dither charts and ${sections.get('Loaders')?.length ?? 0} loaders, all running on motion-sv.`,
 	'',
 	'Amicro SV is a Svelte 5 port of Amicro (React, MIT) by Syed Subhan and is not affiliated with the original. There is no npm package: each item is a plain Svelte file with motion-sv as its only runtime dependency, copied into your repo, yours to edit afterwards.',
 	'',

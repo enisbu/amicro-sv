@@ -53,6 +53,7 @@
 
 	const navLinks = [
 		{ href: '/', label: 'Components' },
+		{ href: '/dither-charts', label: 'Dither Charts' },
 		{ href: '/install', label: 'CLI Install' }
 	];
 
@@ -65,11 +66,11 @@
 </script>
 
 <svelte:head>
-	<title>Amicro SV — 157 micro interactions for Svelte 5</title>
-	<meta name="title" content="Amicro SV — 157 micro interactions for Svelte 5" />
+	<title>Amicro SV — 168 micro interactions for Svelte 5</title>
+	<meta name="title" content="Amicro SV — 168 micro interactions for Svelte 5" />
 	<meta
 		name="description"
-		content="Buttons, card spreads, 3D carousels and 134 loaders for Svelte 5, running on motion-sv. Port of the React library Amicro, installable one component at a time."
+		content="Buttons, card spreads, 3D carousels, dither charts and 134 loaders for Svelte 5, running on motion-sv. Port of the React library Amicro, installable one component at a time."
 	/>
 	<meta
 		name="keywords"
@@ -81,21 +82,21 @@
 
 	<meta property="og:type" content="website" />
 	<meta property="og:url" content={canonical} />
-	<meta property="og:title" content="Amicro SV — 157 micro interactions for Svelte 5" />
+	<meta property="og:title" content="Amicro SV — 168 micro interactions for Svelte 5" />
 	<meta property="og:image" content="https://amicro-sv.enisdev.com/og.png" />
 	<meta property="og:image:width" content="1200" />
 	<meta property="og:image:height" content="630" />
 	<meta
 		property="og:description"
-		content="Buttons, card spreads, 3D carousels and 134 loaders for Svelte 5, running on motion-sv. Port of the React library Amicro, installable one component at a time."
+		content="Buttons, card spreads, 3D carousels, dither charts and 134 loaders for Svelte 5, running on motion-sv. Port of the React library Amicro, installable one component at a time."
 	/>
 
 	<meta property="twitter:card" content="summary_large_image" />
-	<meta property="twitter:title" content="Amicro SV — 157 micro interactions for Svelte 5" />
+	<meta property="twitter:title" content="Amicro SV — 168 micro interactions for Svelte 5" />
 	<meta property="twitter:image" content="https://amicro-sv.enisdev.com/og.png" />
 	<meta
 		property="twitter:description"
-		content="Buttons, card spreads, 3D carousels and 134 loaders for Svelte 5, running on motion-sv. Port of the React library Amicro, installable one component at a time."
+		content="Buttons, card spreads, 3D carousels, dither charts and 134 loaders for Svelte 5, running on motion-sv. Port of the React library Amicro, installable one component at a time."
 	/>
 
 	<link rel="icon" type="image/jpeg" href="/favicon.jpg" />

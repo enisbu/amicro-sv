@@ -5,7 +5,6 @@
 	import { getAppState } from '$lib/app/app-state.svelte.js';
 	import { simpleCompData, type SimpleCompItem } from '$lib/app/data/simple-comp.js';
 	import IconSwap from '../IconSwap.svelte';
-	import DitherBook from './DitherBook.svelte';
 	import DitherDonutChart from './DitherDonutChart.svelte';
 	import DitherGrowthChart from './DitherGrowthChart.svelte';
 	import DitherStackedChart from './DitherStackedChart.svelte';
@@ -54,61 +53,11 @@
 		}
 	}
 
-	const bookItem = simpleCompData.find((i) => i.id === 'dither-book') ?? simpleCompData[0];
-	const chartItems = simpleCompData.filter((i) => i.id !== 'dither-book');
 </script>
 
 <div class="w-full flex flex-col gap-8 max-w-[1060px] mx-auto text-left font-sans">
-	<div class="w-full">
-		<div
-			class="relative group rounded-[24px] flex flex-col items-center justify-center p-4 md:p-6 transition-all duration-300 border w-full overflow-hidden {app.theme ===
-			'dark'
-				? 'bg-[#181818] border-white/5 hover:bg-[#1f1f1f] shadow-[inset_0_1px_0_rgba(255,255,255,0.02)]'
-				: 'bg-white border-neutral-100 hover:shadow-[0_4px_20px_rgba(0,0,0,0.03)]'}"
-		>
-			<div
-				class="flex-1 flex items-center justify-center w-full min-h-[260px] md:min-h-[300px]"
-			>
-				<DitherBook theme={app.theme} />
-			</div>
-
-			<div class="w-full flex items-center justify-between mt-3 px-2">
-				<span
-					class="text-[13px] font-semibold transition-colors {app.theme === 'dark'
-						? 'text-neutral-300'
-						: 'text-neutral-700'}"
-				>
-					{bookItem.label}
-				</span>
-
-				<motion.button
-					whileHover={{ scale: 1.08 }}
-					whilePress={{ scale: 0.92 }}
-					onclick={() => handleCopyCode(bookItem)}
-					class="p-2 rounded-xl transition-all cursor-pointer border flex items-center justify-center {copiedId ===
-					bookItem.id
-						? app.theme === 'dark'
-							? 'bg-emerald-500/20 text-emerald-400 border-emerald-500/30'
-							: 'bg-emerald-100 text-emerald-600 border-emerald-300'
-						: app.theme === 'dark'
-							? 'bg-white/[0.08] border-transparent hover:bg-white/[0.14] text-neutral-300 hover:text-white'
-							: 'bg-neutral-100 border-transparent hover:bg-neutral-200 text-neutral-650 hover:text-black'}"
-					title="Copy component code"
-				>
-					<IconSwap key={copiedId === bookItem.id ? 'check' : 'copy'}>
-						{#if copiedId === bookItem.id}
-							<Check class="w-4 h-4 text-emerald-500 dark:text-emerald-400" />
-						{:else}
-							<Copy class="w-4 h-4" />
-						{/if}
-					</IconSwap>
-				</motion.button>
-			</div>
-		</div>
-	</div>
-
 	<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 w-full">
-		{#each chartItems as item (item.id)}
+		{#each simpleCompData as item (item.id)}
 			{@const isCopied = copiedId === item.id}
 			{@const Preview = PREVIEWS[item.id]}
 			<div

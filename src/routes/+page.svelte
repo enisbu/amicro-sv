@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { motion, AnimatePresence } from 'motion-sv';
-	import { ArrowDownAZ, ChevronDown, ChevronRight, Github, LayoutGrid, LayoutTemplate, List } from '@lucide/svelte';
+	import { ArrowDownAZ, ChevronRight, Github, LayoutGrid, LayoutTemplate, List } from '@lucide/svelte';
 	import { SvelteSet } from 'svelte/reactivity';
 	import { getAppState } from '$lib/app/app-state.svelte.js';
 	import { cn } from '$lib/app/utils.js';
@@ -10,18 +10,18 @@
 	import ButtonsSection from '$lib/app/components/sections/ButtonsSection.svelte';
 	import CardsSection from '$lib/app/components/sections/CardsSection.svelte';
 	import LoadersSection from '$lib/app/components/sections/LoadersSection.svelte';
+	import SimpleCompGrid from '$lib/app/components/simple-comp/SimpleCompGrid.svelte';
 	import { githubStars } from './stars.remote.js';
 
 	type LayoutMode = 'list' | 'grid' | 'matrix';
 	type SortMode = 'default' | 'alphabetical';
-	type CatalogTabType = 'buttons' | 'cards' | 'carousels' | 'loaders';
+	type CatalogTabType = 'buttons' | 'cards' | 'carousels' | 'loaders' | 'dither-charts';
 
 	const app = getAppState();
 	const isDark = $derived(app.theme === 'dark');
 
 	const heroLink =
 		'text-black decoration-black/40 hover:decoration-black dark:text-[#e9e9e9] dark:decoration-white/40 dark:hover:decoration-white';
-	const mutedNote = 'text-black opacity-70 dark:text-[#767676] dark:opacity-100';
 	const dropdownPanel = 'bg-card/95 border-neutral-200 text-foreground dark:border-white/5';
 	const segmentShell = 'bg-neutral-200/50 border-neutral-300/30 dark:bg-[#181818] dark:border-white/5';
 	const segmentItemActive =
@@ -34,8 +34,20 @@
 	let sortBy = $state<SortMode>('default');
 	let catalogTab = $state<CatalogTabType>('buttons');
 	let dropdownOpen = $state(false);
-	let moreDropdownOpen = $state(false);
 	let gridAnchor = $state<HTMLDivElement>();
+
+	const tabEls: Partial<Record<CatalogTabType, HTMLButtonElement>> = {};
+	let pill = $state<{ x: number; y: number; w: number; h: number } | null>(null);
+
+	function measurePill() {
+		const el = tabEls[catalogTab];
+		if (el) pill = { x: el.offsetLeft, y: el.offsetTop, w: el.offsetWidth, h: el.offsetHeight };
+	}
+
+	$effect(() => {
+		catalogTab;
+		measurePill();
+	});
 
 	const visitedTabs = new SvelteSet<CatalogTabType>(['buttons']);
 
@@ -68,10 +80,12 @@
 		{ id: 'buttons', label: 'Buttons' },
 		{ id: 'cards', label: 'Card Spreads' },
 		{ id: 'carousels', label: '3D Carousels' },
-		{ id: 'loaders', label: 'Loaders' }
+		{ id: 'loaders', label: 'Loaders' },
+		{ id: 'dither-charts', label: 'Dither Charts' }
 	];
 
 	const tabLabel = $derived(tabs.find((t) => t.id === catalogTab)?.label ?? '');
+	const controlsHidden = $derived(catalogTab === 'loaders' || catalogTab === 'dither-charts');
 
 	const displayedButtons = $derived.by(() => {
 		const sorted = [...buttonsData];
@@ -89,7 +103,8 @@
 	const carouselCards = $derived(cardsOfCategory('carousels'));
 
 	const gridClass = $derived.by(() => {
-		if (catalogTab === 'loaders') return 'flex flex-col items-center w-full max-w-[1060px]';
+		if (catalogTab === 'loaders' || catalogTab === 'dither-charts')
+			return 'flex flex-col items-center w-full max-w-[1060px]';
 		if (layout === 'list') return 'flex flex-col items-center gap-4 max-w-md';
 		if (layout === 'grid') {
 			return catalogTab === 'buttons'
@@ -105,6 +120,8 @@
 		gridAnchor?.scrollIntoView({ behavior: 'smooth' });
 	}
 </script>
+
+<svelte:window onresize={measurePill} />
 
 <div class="relative z-10 flex-1 w-full max-w-[1240px] mx-auto px-6 flex flex-col items-center">
 	<div class="mt-12 mb-16 text-center w-full flex flex-col items-center">
@@ -214,9 +231,9 @@
 		</div>
 
 		<div
-			class="flex flex-col sm:flex-row items-center justify-center gap-4 mt-12 w-full max-w-xl mx-auto px-4 sm:px-0"
+			class="flex flex-col md:flex-row items-center justify-center gap-4 mt-12 w-full max-w-xl mx-auto px-4 sm:px-0"
 		>
-			<div class="relative block sm:hidden w-full max-w-[260px] mx-auto z-40">
+			<div class="relative block md:hidden w-full max-w-[260px] mx-auto z-40">
 				<button
 					onclick={() => (dropdownOpen = !dropdownOpen)}
 					class="w-full flex items-center justify-between px-5 py-2.5 rounded-full text-[13px] font-semibold cursor-pointer transition-all duration-300 shadow-sm border-0 focus-visible:outline-none bg-card text-black hover:bg-neutral-50 dark:text-white dark:hover:bg-[#222]"
@@ -257,90 +274,54 @@
 									{tab.label}
 								</button>
 							{/each}
-							<div
-								class="mt-2 pt-3 border-t px-4 py-2 flex flex-col gap-1 text-center select-none border-neutral-100 dark:border-white/5"
-							>
-								<span class="text-[10px] font-bold uppercase tracking-widest text-foreground">
-									More Coming Soon
-								</span>
-								<span class="text-[10.5px] leading-normal italic {mutedNote}">
-									"Motion is the brush stroke of digital art. More premium transitions are crafting
-									behind the scenes."
-								</span>
-							</div>
 						</motion.div>
 					{/if}
 				</AnimatePresence>
 			</div>
 
 			<div
-				class="hidden sm:flex items-center p-1 rounded-full border shadow-inner transition-colors duration-300 max-w-full overflow-x-visible {segmentShell}"
+				class="hidden md:flex items-center p-1 rounded-full border shadow-inner transition-colors duration-300 max-w-full overflow-x-visible {segmentShell}"
 			>
-				<div class="flex items-center gap-1.5 pr-1">
+				<div class="relative flex items-center gap-1.5 pr-1">
+					{#if pill}
+						<motion.div
+							initial={{ x: pill.x, y: pill.y, width: pill.w, height: pill.h }}
+							animate={{ x: pill.x, y: pill.y, width: pill.w, height: pill.h }}
+							transition={{ type: 'spring', stiffness: 500, damping: 35 }}
+							class="absolute left-0 top-0 rounded-full bg-white shadow-sm dark:bg-[#2a2a2a] dark:shadow-none"
+						/>
+					{/if}
 					{#each tabs as tab (tab.id)}
 						<button
+							bind:this={tabEls[tab.id]}
 							onclick={() => setCatalogTab(tab.id)}
 							class={cn(
-								'flex-none flex items-center justify-center gap-2 px-3 sm:px-4 py-1.5 text-[13px] font-medium whitespace-nowrap',
+								'relative z-10 flex-none flex items-center justify-center gap-2 px-3 sm:px-4 py-1.5 text-[13px] font-medium whitespace-nowrap',
 								segmentItem,
-								catalogTab === tab.id ? segmentItemActive : segmentItemIdle
+								catalogTab === tab.id
+									? 'text-black dark:text-white'
+									: segmentItemIdle
 							)}
 						>
 							{tab.label}
 						</button>
 					{/each}
-
-					<div class="relative animate-none">
-						<button
-							onclick={() => (moreDropdownOpen = !moreDropdownOpen)}
-							class={cn(
-								'flex-none flex items-center justify-center gap-1.5 px-3 sm:px-4 py-1.5 text-[13px] font-medium whitespace-nowrap',
-								segmentItem,
-								segmentItemIdle
-							)}
-						>
-							<span>More</span>
-							<ChevronDown class="w-3.5 h-3.5" />
-						</button>
-
-						<AnimatePresence>
-							{#if moreDropdownOpen}
-								<!-- svelte-ignore a11y_no_static_element_interactions -->
-								<!-- svelte-ignore a11y_click_events_have_key_events -->
-								<div
-									class="fixed inset-0 z-40 bg-transparent"
-									onclick={() => (moreDropdownOpen = false)}
-								></div>
-								<motion.div
-									initial={{ opacity: 0, y: -8, scale: 0.96 }}
-									animate={{ opacity: 1, y: 6, scale: 1 }}
-									exit={{ opacity: 0, y: -8, scale: 0.96 }}
-									transition={{ duration: 0.15, ease: 'easeOut' }}
-									class="absolute top-full right-0 z-50 rounded-[20px] border p-4 shadow-xl flex flex-col gap-2 min-w-[260px] text-center select-none backdrop-blur-xl {dropdownPanel} shadow-neutral-200/30 dark:shadow-black/40"
-								>
-									<div class="font-bold text-[11px] uppercase tracking-widest mb-0.5 text-foreground">
-										More Coming Soon
-									</div>
-									<p class="text-[11px] leading-[15px] italic m-0 transition-colors {mutedNote}">
-										"Motion is the brush stroke of digital art. More premium transitions are crafting
-										behind the scenes."
-									</p>
-								</motion.div>
-							{/if}
-						</AnimatePresence>
-					</div>
 				</div>
 			</div>
 
-			{#if catalogTab !== 'loaders'}
-				<div class="flex items-center justify-center gap-3 shrink-0">
+			<div
+				class="flex items-center justify-center gap-3 shrink-0 overflow-hidden transition-all duration-300 {controlsHidden
+					? 'opacity-0 pointer-events-none max-h-0 -mt-4 md:mt-0 md:max-h-14 md:max-w-0 md:-ml-4'
+					: 'opacity-100 max-h-14 md:max-w-[260px]'}"
+				aria-hidden={controlsHidden}
+			>
 					<div
-						class="flex items-center p-1 rounded-full border shadow-inner transition-colors duration-300 {segmentShell}"
+						class="flex items-center shrink-0 p-1 rounded-full border shadow-inner transition-colors duration-300 {segmentShell}"
 					>
 						<button
 							onclick={toggleSort}
 							class={cn(
-								'flex items-center gap-2 px-4 py-1.5 text-[13px] font-medium',
+								'flex items-center gap-2 px-4 py-1.5 text-[13px] font-medium whitespace-nowrap',
 								segmentItem,
 								sortBy === 'alphabetical' ? segmentItemActive : segmentItemIdle
 							)}
@@ -351,7 +332,7 @@
 					</div>
 
 					<div
-						class="hidden sm:flex items-center p-1 rounded-full border shadow-inner transition-colors duration-300 {segmentShell}"
+						class="hidden md:flex items-center shrink-0 p-1 rounded-full border shadow-inner transition-colors duration-300 {segmentShell}"
 					>
 						<button
 							onclick={() => setLayout('list')}
@@ -380,7 +361,6 @@
 						</button>
 					</div>
 				</div>
-			{/if}
 		</div>
 	</div>
 
@@ -420,8 +400,15 @@
 				/>
 			</div>
 		{/if}
-		{#if catalogTab === 'loaders'}
-			<LoadersSection />
-		{/if}
+		<div class={catalogTab === 'dither-charts' ? 'contents' : 'hidden'}>
+			{#if catalogTab === 'dither-charts'}
+				<SimpleCompGrid />
+			{/if}
+		</div>
+		<div class={catalogTab === 'loaders' ? 'contents' : 'hidden'}>
+			{#if catalogTab === 'loaders'}
+				<LoadersSection />
+			{/if}
+		</div>
 	</div>
 </div>

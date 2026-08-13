@@ -1,0 +1,22 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "dither-animated-value",
+	"title": "Dither Animated Value",
+	"type": "registry:ui",
+	"description": "Building block behind the dither charts, ported to Svelte 5.",
+	"dependencies": [
+		"motion-sv"
+	],
+	"files": [
+		{
+			"content": "<script lang=\"ts\">\n\timport { motion, useSpring, useTransform, useCurrentMotionValue } from 'motion-sv';\n\timport type { SpringOptions } from 'motion-sv';\n\timport { prefersReducedMotion } from 'svelte/motion';\n\timport { untrack } from 'svelte';\n\n\texport interface Props {\n\t\tvalue: number;\n\t\tformat?: (current: number) => string;\n\t\tspring?: SpringOptions;\n\t\tclass?: string;\n\t}\n\n\tlet {\n\t\tvalue,\n\t\tformat = (current: number) => Math.round(current).toLocaleString('en-US'),\n\t\tspring: springConfig = { stiffness: 190, damping: 27, mass: 0.7 },\n\t\tclass: className = 'tabular-nums'\n\t}: Props = $props();\n\n\tconst spring = useSpring(untrack(() => value), untrack(() => springConfig));\n\tconst display = useTransform(spring, (current) => format(current as number));\n\tconst text = useCurrentMotionValue(display);\n\n\t$effect(() => {\n\t\tif (prefersReducedMotion.current) spring.jump(value);\n\t\telse spring.set(value);\n\t});\n</script>\n\n<motion.span class={className}>{text.current}</motion.span>\n",
+			"type": "registry:ui",
+			"target": "amicro/DitherAnimatedValue.svelte"
+		},
+		{
+			"content": "This file was ported from Amicro (React) and copied into your project by the\namicro-sv registry: https://amicro-sv.enisdev.com\n\nOriginal: https://github.com/Subhan-code/Amicro--Micro-transitions-\n\nMIT License\n\nCopyright (c) 2026 SYED SUBHAN UDDIN\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+			"type": "registry:file",
+			"target": "amicro/LICENSE"
+		}
+	]
+}

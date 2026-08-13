@@ -3603,6 +3603,343 @@
           "target": "amicro/LICENSE"
         }
       ]
+    },
+    {
+      "name": "dither-donut",
+      "type": "registry:ui",
+      "title": "Dither Donut",
+      "description": "Canvas dither chart from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "@lucide/svelte",
+        "runed"
+      ],
+      "registryDependencies": [
+        "dither-math"
+      ],
+      "files": [
+        {
+          "path": "src/lib/app/components/simple-comp/DitherDonutChart.svelte",
+          "type": "registry:ui",
+          "target": "amicro/DitherDonutChart.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "dither-stacked",
+      "type": "registry:ui",
+      "title": "Dither Stacked",
+      "description": "Canvas dither chart from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "@lucide/svelte",
+        "runed"
+      ],
+      "registryDependencies": [
+        "dither-animated-value",
+        "dither-math"
+      ],
+      "files": [
+        {
+          "path": "src/lib/app/components/simple-comp/DitherStackedChart.svelte",
+          "type": "registry:ui",
+          "target": "amicro/DitherStackedChart.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "dither-growth",
+      "type": "registry:ui",
+      "title": "Dither Growth",
+      "description": "Canvas dither chart from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "@lucide/svelte",
+        "motion-sv",
+        "runed"
+      ],
+      "registryDependencies": [
+        "dither-animated-value",
+        "dither-math"
+      ],
+      "files": [
+        {
+          "path": "src/lib/app/components/simple-comp/DitherGrowthChart.svelte",
+          "type": "registry:ui",
+          "target": "amicro/DitherGrowthChart.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "dither-heatmap",
+      "type": "registry:ui",
+      "title": "Dither Heatmap",
+      "description": "Canvas dither chart from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "runed"
+      ],
+      "registryDependencies": [
+        "animated-number",
+        "dither-math"
+      ],
+      "files": [
+        {
+          "path": "src/lib/app/components/simple-comp/ActivityHeatmap.svelte",
+          "type": "registry:ui",
+          "target": "amicro/ActivityHeatmap.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "dither-gauge",
+      "type": "registry:ui",
+      "title": "Dither Gauge",
+      "description": "Canvas dither chart from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv",
+        "runed"
+      ],
+      "registryDependencies": [
+        "dither-math"
+      ],
+      "files": [
+        {
+          "path": "src/lib/app/components/simple-comp/ServerGauge.svelte",
+          "type": "registry:ui",
+          "target": "amicro/ServerGauge.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "dither-traffic",
+      "type": "registry:ui",
+      "title": "Dither Traffic",
+      "description": "Canvas dither chart from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "runed"
+      ],
+      "registryDependencies": [
+        "dither-math"
+      ],
+      "files": [
+        {
+          "path": "src/lib/app/components/simple-comp/TrafficBubble.svelte",
+          "type": "registry:ui",
+          "target": "amicro/TrafficBubble.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "dither-funnel",
+      "type": "registry:ui",
+      "title": "Dither Funnel",
+      "description": "Canvas dither chart from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "runed"
+      ],
+      "registryDependencies": [
+        "dither-math"
+      ],
+      "files": [
+        {
+          "path": "src/lib/app/components/simple-comp/DitherFunnelChart.svelte",
+          "type": "registry:ui",
+          "target": "amicro/DitherFunnelChart.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "dither-device",
+      "type": "registry:ui",
+      "title": "Dither Device",
+      "description": "Canvas dither chart from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "runed"
+      ],
+      "registryDependencies": [
+        "dither-math"
+      ],
+      "files": [
+        {
+          "path": "src/lib/app/components/simple-comp/DeviceUsageChart.svelte",
+          "type": "registry:ui",
+          "target": "amicro/DeviceUsageChart.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "dither-storage",
+      "type": "registry:ui",
+      "title": "Dither Storage",
+      "description": "Canvas dither chart from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "motion-sv",
+        "runed"
+      ],
+      "registryDependencies": [
+        "dither-math"
+      ],
+      "files": [
+        {
+          "path": "src/lib/app/components/simple-comp/StorageUsageChart.svelte",
+          "type": "registry:ui",
+          "target": "amicro/StorageUsageChart.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "dither-revenue",
+      "type": "registry:ui",
+      "title": "Dither Revenue",
+      "description": "Canvas dither chart from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "runed"
+      ],
+      "registryDependencies": [
+        "dither-math"
+      ],
+      "files": [
+        {
+          "path": "src/lib/app/components/simple-comp/RevenueLineChart.svelte",
+          "type": "registry:ui",
+          "target": "amicro/RevenueLineChart.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "dither-uptime",
+      "type": "registry:ui",
+      "title": "Dither Uptime",
+      "description": "Canvas dither chart from Amicro, ported to Svelte 5 and motion-sv.",
+      "dependencies": [
+        "runed"
+      ],
+      "registryDependencies": [
+        "dither-math"
+      ],
+      "files": [
+        {
+          "path": "src/lib/app/components/simple-comp/UptimeChart.svelte",
+          "type": "registry:ui",
+          "target": "amicro/UptimeChart.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "animated-number",
+      "type": "registry:ui",
+      "title": "Animated Number",
+      "description": "Building block behind the dither charts, ported to Svelte 5.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/app/components/simple-comp/AnimatedNumber.svelte",
+          "type": "registry:ui",
+          "target": "amicro/AnimatedNumber.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "dither-animated-value",
+      "type": "registry:ui",
+      "title": "Dither Animated Value",
+      "description": "Building block behind the dither charts, ported to Svelte 5.",
+      "dependencies": [
+        "motion-sv"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/app/components/simple-comp/DitherAnimatedValue.svelte",
+          "type": "registry:ui",
+          "target": "amicro/DitherAnimatedValue.svelte"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "dither-math",
+      "type": "registry:lib",
+      "title": "Dither Math",
+      "description": "Building block behind the dither charts, ported to Svelte 5.",
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "src/lib/app/components/simple-comp/dither-math.ts",
+          "type": "registry:lib",
+          "target": "amicro/dither-math.ts"
+        },
+        {
+          "path": "src/lib/amicro/LICENSE",
+          "type": "registry:file",
+          "target": "amicro/LICENSE"
+        }
+      ]
     }
   ]
 }

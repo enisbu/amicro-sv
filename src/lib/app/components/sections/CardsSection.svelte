@@ -109,12 +109,13 @@
 			? 'w-full flex justify-center sm:w-auto sm:block'
 			: ''}"
 	>
-		{#if layout === 'grid' || layout === 'matrix'}
 			<!-- svelte-ignore a11y_no_static_element_interactions -->
 			<div
 				onmouseenter={() => (hoveredCardId = card.id)}
 				onmouseleave={() => (hoveredCardId = null)}
-				class="relative w-full max-w-[480px] sm:w-[480px] h-[280px] sm:h-[380px] rounded-[24px] transition-all duration-300 group bg-card {tileShell}"
+				class={layout === 'list'
+					? 'hidden'
+					: `relative w-full max-w-[480px] sm:w-[480px] h-[280px] sm:h-[380px] rounded-[24px] transition-all duration-300 group bg-card ${tileShell}`}
 			>
 				<div
 					class="absolute left-[12px] top-[12px] right-[12px] h-[200px] sm:h-[300px] rounded-[14px] flex items-center justify-center transition-colors duration-300 bg-muted"
@@ -151,11 +152,12 @@
 					<Copy class="w-3.5 h-3.5 transition-transform duration-300 group-hover:scale-110" />
 				</button>
 			</div>
-		{:else}
 			<div
-				class="w-full max-w-[500px] flex items-center justify-between p-4 rounded-xl border transition-colors bg-card text-black shadow-sm dark:text-white dark:shadow-none {isDark
-					? 'border-neutral-850'
-					: 'border-neutral-200'}"
+				class={layout !== 'list'
+					? 'hidden'
+					: `w-full max-w-[500px] flex items-center justify-between p-4 rounded-xl border transition-colors bg-card text-black shadow-sm dark:text-white dark:shadow-none ${
+							isDark ? 'border-neutral-850' : 'border-neutral-200'
+						}`}
 			>
 				<div class="flex items-center gap-4">
 					<div
@@ -178,7 +180,6 @@
 					<Copy class="w-4 h-4" />
 				</button>
 			</div>
-		{/if}
 	</motion.div>
 {/each}
 </layoutMotion.div>

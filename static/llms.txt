@@ -1,6 +1,6 @@
 # Amicro SV
 
-> 157 micro interaction components for Svelte 5 plus the hooks and helpers behind them, pulled into your project one file at a time from a shadcn style registry. Entrance and hover animations, text and scroll effects, cursor effects, page transitions, card layouts and 134 loaders, all running on motion-sv.
+> 170 micro interaction components for Svelte 5 plus the hooks and helpers behind them, pulled into your project one file at a time from a shadcn style registry. Entrance and hover animations, text and scroll effects, cursor effects, page transitions, card layouts, canvas dither charts and 134 loaders, all running on motion-sv.
 
 Amicro SV is a Svelte 5 port of Amicro (React, MIT) by Syed Subhan and is not affiliated with the original. There is no npm package: each item is a plain Svelte file with motion-sv as its only runtime dependency, copied into your repo, yours to edit afterwards.
 
@@ -216,6 +216,23 @@ The CLI writes the file into your ui alias under amicro/, installs motion-sv and
 
 - [presets](https://amicro-sv.enisdev.com/r/presets.json): Presets
 - [utils](https://amicro-sv.enisdev.com/r/utils.json): Utils
+
+## Dither charts (14)
+
+- [dither-donut](https://amicro-sv.enisdev.com/r/dither-donut.json): Dither Donut
+- [dither-stacked](https://amicro-sv.enisdev.com/r/dither-stacked.json): Dither Stacked
+- [dither-growth](https://amicro-sv.enisdev.com/r/dither-growth.json): Dither Growth
+- [dither-heatmap](https://amicro-sv.enisdev.com/r/dither-heatmap.json): Dither Heatmap
+- [dither-gauge](https://amicro-sv.enisdev.com/r/dither-gauge.json): Dither Gauge
+- [dither-traffic](https://amicro-sv.enisdev.com/r/dither-traffic.json): Dither Traffic
+- [dither-funnel](https://amicro-sv.enisdev.com/r/dither-funnel.json): Dither Funnel
+- [dither-device](https://amicro-sv.enisdev.com/r/dither-device.json): Dither Device
+- [dither-storage](https://amicro-sv.enisdev.com/r/dither-storage.json): Dither Storage
+- [dither-revenue](https://amicro-sv.enisdev.com/r/dither-revenue.json): Dither Revenue
+- [dither-uptime](https://amicro-sv.enisdev.com/r/dither-uptime.json): Dither Uptime
+- [animated-number](https://amicro-sv.enisdev.com/r/animated-number.json): Animated Number
+- [dither-animated-value](https://amicro-sv.enisdev.com/r/dither-animated-value.json): Dither Animated Value
+- [dither-math](https://amicro-sv.enisdev.com/r/dither-math.json): Dither Math
 
 ## License
 

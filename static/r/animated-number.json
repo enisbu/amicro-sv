@@ -1,0 +1,22 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "animated-number",
+	"title": "Animated Number",
+	"type": "registry:ui",
+	"description": "Building block behind the dither charts, ported to Svelte 5.",
+	"dependencies": [
+		"motion-sv"
+	],
+	"files": [
+		{
+			"content": "<script lang=\"ts\">\n\timport { motion, useSpring, useTransform, useCurrentMotionValue } from 'motion-sv';\n\timport { MediaQuery } from 'svelte/reactivity';\n\timport { untrack } from 'svelte';\n\n\texport interface Props {\n\t\tvalue: number;\n\t\tprefix?: string;\n\t\tclass?: string;\n\t}\n\n\tlet { value, prefix = '', class: className = '' }: Props = $props();\n\n\tconst reducedMotion = new MediaQuery('(prefers-reduced-motion: reduce)');\n\n\tconst initialValue = untrack(() => value);\n\tconst spring = useSpring(initialValue, { stiffness: 190, damping: 27, mass: 0.7 });\n\tconst display = useCurrentMotionValue(\n\t\tuseTransform(\n\t\t\tspring,\n\t\t\t(current: string | number) => prefix + Math.round(Number(current)).toLocaleString('en-US')\n\t\t)\n\t);\n\n\t$effect(() => {\n\t\tif (reducedMotion.current) spring.jump(value);\n\t\telse spring.set(value);\n\t});\n</script>\n\n<motion.span class=\"tabular-nums {className}\">{display.current}</motion.span>\n",
+			"type": "registry:ui",
+			"target": "amicro/AnimatedNumber.svelte"
+		},
+		{
+			"content": "This file was ported from Amicro (React) and copied into your project by the\namicro-sv registry: https://amicro-sv.enisdev.com\n\nOriginal: https://github.com/Subhan-code/Amicro--Micro-transitions-\n\nMIT License\n\nCopyright (c) 2026 SYED SUBHAN UDDIN\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+			"type": "registry:file",
+			"target": "amicro/LICENSE"
+		}
+	]
+}

@@ -34,6 +34,7 @@
 			if (!ctx) return;
 			const dpr = window.devicePixelRatio || 1;
 			const rect = canvas.getBoundingClientRect();
+			if (rect.width === 0 || rect.height === 0) return;
 			if (canvas.width !== rect.width * dpr || canvas.height !== rect.height * dpr) {
 				canvas.width = rect.width * dpr;
 				canvas.height = rect.height * dpr;

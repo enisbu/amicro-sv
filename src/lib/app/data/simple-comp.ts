@@ -4,28 +4,24 @@ export interface SimpleCompItem {
 	kebabName: string;
 	category: string;
 	description: string;
-	cliCommand: string;
 	codeSnippet: string;
 }
 
+const usage = (componentName: string, fileName: string) =>
+	`<script lang="ts">
+  import ${componentName} from '$lib/components/ui/amicro/${fileName}.svelte';
+</script>
+
+<${componentName} theme="dark" />`;
+
 export const simpleCompData: SimpleCompItem[] = [
-	{
-		id: 'dither-book',
-		label: '3D Dither Lab Book',
-		kebabName: 'dither-book',
-		category: 'book',
-		description: '3D page-flipping book with cream texture overlay & crease depth control.',
-		cliCommand: 'npx @subhanhq/amicro@latest add dither-book',
-		codeSnippet: `import { DitherBook } from '@/components/ui/dither-book';\\n\\nexport default function Demo() {\\n  return <DitherBook theme="dark" />;\\n}`
-	},
 	{
 		id: 'dither-donut',
 		label: 'Dither Donut Chart',
 		kebabName: 'dither-donut',
 		category: 'donut',
 		description: 'Canvas dithered donut graph with white particle highlights & period selectors.',
-		cliCommand: 'npx @subhanhq/amicro@latest add dither-donut',
-		codeSnippet: `import { DitherDonutChart } from '@/components/ui/dither-donut';\\n\\nexport default function Demo() {\\n  return <DitherDonutChart theme="dark" />;\\n}`
+		codeSnippet: usage('DitherDonutChart', 'DitherDonutChart')
 	},
 	{
 		id: 'dither-stacked',
@@ -33,8 +29,7 @@ export const simpleCompData: SimpleCompItem[] = [
 		kebabName: 'dither-stacked',
 		category: 'stacked',
 		description: 'Stacked canvas bar graph with regional branch hovers & white dither bands.',
-		cliCommand: 'npx @subhanhq/amicro@latest add dither-stacked',
-		codeSnippet: `import { DitherStackedChart } from '@/components/ui/dither-stacked';\\n\\nexport default function Demo() {\\n  return <DitherStackedChart theme="dark" />;\\n}`
+		codeSnippet: usage('DitherStackedChart', 'DitherStackedChart')
 	},
 	{
 		id: 'dither-growth',
@@ -42,8 +37,7 @@ export const simpleCompData: SimpleCompItem[] = [
 		kebabName: 'dither-growth',
 		category: 'growth',
 		description: 'Canvas area growth line graph with white dither tiles & date scrubber cursor.',
-		cliCommand: 'npx @subhanhq/amicro@latest add dither-growth',
-		codeSnippet: `import { DitherGrowthChart } from '@/components/ui/dither-growth';\\n\\nexport default function Demo() {\\n  return <DitherGrowthChart theme="dark" />;\\n}`
+		codeSnippet: usage('DitherGrowthChart', 'DitherGrowthChart')
 	},
 	{
 		id: 'dither-heatmap',
@@ -51,8 +45,7 @@ export const simpleCompData: SimpleCompItem[] = [
 		kebabName: 'dither-heatmap',
 		category: 'heatmap',
 		description: 'Activity heatmap grid with white dither intensity tiles.',
-		cliCommand: 'npx @subhanhq/amicro@latest add dither-heatmap',
-		codeSnippet: `import { ActivityHeatmap } from '@/components/ui/dither-heatmap';\\n\\nexport default function Demo() {\\n  return <ActivityHeatmap theme="dark" />;\\n}`
+		codeSnippet: usage('ActivityHeatmap', 'ActivityHeatmap')
 	},
 	{
 		id: 'dither-gauge',
@@ -60,8 +53,7 @@ export const simpleCompData: SimpleCompItem[] = [
 		kebabName: 'dither-gauge',
 		category: 'gauge',
 		description: 'Server CPU & memory radial gauge dial with white dither dot matrix.',
-		cliCommand: 'npx @subhanhq/amicro@latest add dither-gauge',
-		codeSnippet: `import { ServerGauge } from '@/components/ui/dither-gauge';\\n\\nexport default function Demo() {\\n  return <ServerGauge theme="dark" />;\\n}`
+		codeSnippet: usage('ServerGauge', 'ServerGauge')
 	},
 	{
 		id: 'dither-traffic',
@@ -69,8 +61,7 @@ export const simpleCompData: SimpleCompItem[] = [
 		kebabName: 'dither-traffic',
 		category: 'traffic',
 		description: 'Traffic source scatter bubble plot with floating white dither nodes.',
-		cliCommand: 'npx @subhanhq/amicro@latest add dither-traffic',
-		codeSnippet: `import { TrafficBubble } from '@/components/ui/dither-traffic';\\n\\nexport default function Demo() {\\n  return <TrafficBubble theme="dark" />;\\n}`
+		codeSnippet: usage('TrafficBubble', 'TrafficBubble')
 	},
 	{
 		id: 'dither-funnel',
@@ -78,8 +69,7 @@ export const simpleCompData: SimpleCompItem[] = [
 		kebabName: 'dither-funnel',
 		category: 'funnel',
 		description: 'Conversion funnel with white dither progress stage bars.',
-		cliCommand: 'npx @subhanhq/amicro@latest add dither-funnel',
-		codeSnippet: `import { DitherFunnelChart } from '@/components/ui/dither-funnel';\\n\\nexport default function Demo() {\\n  return <DitherFunnelChart theme="dark" />;\\n}`
+		codeSnippet: usage('DitherFunnelChart', 'DitherFunnelChart')
 	},
 	{
 		id: 'dither-device',
@@ -87,8 +77,7 @@ export const simpleCompData: SimpleCompItem[] = [
 		kebabName: 'dither-device',
 		category: 'device',
 		description: 'Device usage donut chart with white dither particle segments.',
-		cliCommand: 'npx @subhanhq/amicro@latest add dither-device',
-		codeSnippet: `import { DeviceUsageChart } from '@/components/ui/dither-device';\\n\\nexport default function Demo() {\\n  return <DeviceUsageChart theme="dark" />;\\n}`
+		codeSnippet: usage('DeviceUsageChart', 'DeviceUsageChart')
 	},
 	{
 		id: 'dither-storage',
@@ -96,8 +85,7 @@ export const simpleCompData: SimpleCompItem[] = [
 		kebabName: 'dither-storage',
 		category: 'storage',
 		description: 'Storage capacity bar with animated white dither progress shaders.',
-		cliCommand: 'npx @subhanhq/amicro@latest add dither-storage',
-		codeSnippet: `import { StorageUsageChart } from '@/components/ui/dither-storage';\\n\\nexport default function Demo() {\\n  return <StorageUsageChart theme="dark" />;\\n}`
+		codeSnippet: usage('StorageUsageChart', 'StorageUsageChart')
 	},
 	{
 		id: 'dither-revenue',
@@ -105,8 +93,7 @@ export const simpleCompData: SimpleCompItem[] = [
 		kebabName: 'dither-revenue',
 		category: 'revenue',
 		description: 'Revenue line graph with white dither gradient fill.',
-		cliCommand: 'npx @subhanhq/amicro@latest add dither-revenue',
-		codeSnippet: `import { RevenueLineChart } from '@/components/ui/dither-revenue';\\n\\nexport default function Demo() {\\n  return <RevenueLineChart theme="dark" />;\\n}`
+		codeSnippet: usage('RevenueLineChart', 'RevenueLineChart')
 	},
 	{
 		id: 'dither-uptime',
@@ -114,7 +101,6 @@ export const simpleCompData: SimpleCompItem[] = [
 		kebabName: 'dither-uptime',
 		category: 'uptime',
 		description: '90-day system uptime matrix with white dither status tiles.',
-		cliCommand: 'npx @subhanhq/amicro@latest add dither-uptime',
-		codeSnippet: `import { UptimeChart } from '@/components/ui/dither-uptime';\\n\\nexport default function Demo() {\\n  return <UptimeChart theme="dark" />;\\n}`
+		codeSnippet: usage('UptimeChart', 'UptimeChart')
 	}
 ];

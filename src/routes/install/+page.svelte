@@ -46,7 +46,7 @@
 	<title>Install — Amicro SV</title>
 	<meta
 		name="description"
-		content="Pull any of the 164 ported components, hooks and helpers into your own SvelteKit project with the shadcn-svelte CLI."
+		content="Pull any of the 178 ported components, hooks and helpers into your own SvelteKit project with the shadcn-svelte CLI."
 	/>
 </svelte:head>
 

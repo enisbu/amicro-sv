@@ -1,0 +1,26 @@
+{
+	"$schema": "https://shadcn-svelte.com/schema/registry-item.json",
+	"name": "dither-storage",
+	"title": "Dither Storage",
+	"type": "registry:ui",
+	"description": "Canvas dither chart from Amicro, ported to Svelte 5 and motion-sv.",
+	"dependencies": [
+		"motion-sv",
+		"runed"
+	],
+	"registryDependencies": [
+		"dither-math"
+	],
+	"files": [
+		{
+			"content": "<script lang=\"ts\">\n\timport { useSpring } from 'motion-sv';\n\timport { AnimationFrames } from 'runed';\n\timport { smoothstep, hash } from './dither-math.js';\n\n\texport interface Props {\n\t\ttheme?: 'dark' | 'light';\n\t\tcompact?: boolean;\n\t}\n\n\tlet { theme = 'dark', compact = false }: Props = $props();\n\n\tconst STORAGE_VIEWS = [\n\t\t{ name: 'Database', total: 500, used: 340, color: '#FFFFFF' },\n\t\t{ name: 'Assets', total: 1000, used: 850, color: '#E2E8F0' },\n\t\t{ name: 'Backups', total: 2000, used: 450, color: '#CBD5E1' }\n\t];\n\n\tconst viewIndex = 0;\n\tconst view = STORAGE_VIEWS[viewIndex];\n\tconst percentage = (view.used / view.total) * 100;\n\n\tlet canvas: HTMLCanvasElement;\n\tconst widthSpring = useSpring(percentage, { stiffness: 150, damping: 20 });\n\n\t$effect(() => {\n\t\twidthSpring.set(percentage);\n\t});\n\n\t$effect(() => {\n\t\tlet time = 0;\n\t\tconst draw = () => {\n\t\t\ttime += 0.02;\n\t\t\tconst ctx = canvas.getContext('2d');\n\t\t\tif (!ctx) return;\n\t\t\tconst dpr = window.devicePixelRatio || 1;\n\t\t\tconst rect = canvas.getBoundingClientRect();\n\t\t\tif (canvas.width !== rect.width * dpr || canvas.height !== rect.height * dpr) {\n\t\t\t\tcanvas.width = rect.width * dpr;\n\t\t\t\tcanvas.height = rect.height * dpr;\n\t\t\t}\n\t\t\tctx.save();\n\t\t\tctx.scale(dpr, dpr);\n\t\t\tctx.clearRect(0, 0, rect.width, rect.height);\n\n\t\t\tconst w = rect.width;\n\t\t\tconst h = rect.height;\n\t\t\tconst fillW = (Number(widthSpring.get()) / 100) * w;\n\t\t\tconst cell = Math.max(2, Math.round(rect.width / 200));\n\n\t\t\tctx.beginPath();\n\t\t\tctx.rect(0, 0, w, h);\n\t\t\tctx.fillStyle = 'rgba(255,255,255,0.1)';\n\t\t\tctx.fill();\n\n\t\t\tif (fillW > 0) {\n\t\t\t\tctx.save();\n\t\t\t\tctx.beginPath();\n\t\t\t\tctx.rect(0, 0, fillW, h);\n\t\t\t\tctx.clip();\n\n\t\t\t\tctx.globalAlpha = 0.85;\n\t\t\t\tctx.fillStyle = '#FFFFFF';\n\n\t\t\t\tfor (let tx = 0; tx <= Math.ceil(fillW); tx += cell) {\n\t\t\t\t\tfor (let ty = 0; ty <= h; ty += cell) {\n\t\t\t\t\t\tconst jx = tx + cell / 2;\n\t\t\t\t\t\tconst jy = ty + cell / 2;\n\t\t\t\t\t\tconst jit = hash(jx, jy);\n\n\t\t\t\t\t\tconst waveRaw = Math.sin(jx * 0.05 + time) + Math.sin(jy * 0.05 + time * 0.7);\n\t\t\t\t\t\tconst mod = smoothstep(-1.5, 1.5, waveRaw);\n\n\t\t\t\t\t\tconst sz = cell * (0.3 + 0.4 * mod) * (0.8 + 0.4 * jit);\n\t\t\t\t\t\tctx.fillRect(tx + (cell - sz) / 2, ty + (cell - sz) / 2, sz, sz);\n\t\t\t\t\t}\n\t\t\t\t}\n\n\t\t\t\tctx.restore();\n\t\t\t}\n\n\t\t\tctx.restore();\n\t\t};\n\t\tnew AnimationFrames(draw);\n\t});\n</script>\n\n<div class=\"w-full h-full flex flex-col items-center justify-center p-2\">\n\t<div class=\"relative w-full h-[32px] flex items-center justify-center px-4\">\n\t\t<canvas bind:this={canvas} class=\"w-full h-full\"></canvas>\n\t</div>\n</div>\n",
+			"type": "registry:ui",
+			"target": "amicro/StorageUsageChart.svelte"
+		},
+		{
+			"content": "This file was ported from Amicro (React) and copied into your project by the\namicro-sv registry: https://amicro-sv.enisdev.com\n\nOriginal: https://github.com/Subhan-code/Amicro--Micro-transitions-\n\nMIT License\n\nCopyright (c) 2026 SYED SUBHAN UDDIN\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+			"type": "registry:file",
+			"target": "amicro/LICENSE"
+		}
+	]
+}
