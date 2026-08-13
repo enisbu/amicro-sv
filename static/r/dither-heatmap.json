@@ -8,8 +8,8 @@
 		"runed"
 	],
 	"registryDependencies": [
-		"animated-number",
-		"dither-math"
+		"https://amicro-sv.enisdev.com/r/animated-number.json",
+		"https://amicro-sv.enisdev.com/r/dither-math.json"
 	],
 	"files": [
 		{

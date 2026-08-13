@@ -3614,7 +3614,7 @@
         "runed"
       ],
       "registryDependencies": [
-        "dither-math"
+        "https://amicro-sv.enisdev.com/r/dither-math.json"
       ],
       "files": [
         {
@@ -3639,8 +3639,8 @@
         "runed"
       ],
       "registryDependencies": [
-        "dither-animated-value",
-        "dither-math"
+        "https://amicro-sv.enisdev.com/r/dither-animated-value.json",
+        "https://amicro-sv.enisdev.com/r/dither-math.json"
       ],
       "files": [
         {
@@ -3666,8 +3666,8 @@
         "runed"
       ],
       "registryDependencies": [
-        "dither-animated-value",
-        "dither-math"
+        "https://amicro-sv.enisdev.com/r/dither-animated-value.json",
+        "https://amicro-sv.enisdev.com/r/dither-math.json"
       ],
       "files": [
         {
@@ -3691,8 +3691,8 @@
         "runed"
       ],
       "registryDependencies": [
-        "animated-number",
-        "dither-math"
+        "https://amicro-sv.enisdev.com/r/animated-number.json",
+        "https://amicro-sv.enisdev.com/r/dither-math.json"
       ],
       "files": [
         {
@@ -3717,7 +3717,7 @@
         "runed"
       ],
       "registryDependencies": [
-        "dither-math"
+        "https://amicro-sv.enisdev.com/r/dither-math.json"
       ],
       "files": [
         {
@@ -3741,7 +3741,7 @@
         "runed"
       ],
       "registryDependencies": [
-        "dither-math"
+        "https://amicro-sv.enisdev.com/r/dither-math.json"
       ],
       "files": [
         {
@@ -3765,7 +3765,7 @@
         "runed"
       ],
       "registryDependencies": [
-        "dither-math"
+        "https://amicro-sv.enisdev.com/r/dither-math.json"
       ],
       "files": [
         {
@@ -3789,7 +3789,7 @@
         "runed"
       ],
       "registryDependencies": [
-        "dither-math"
+        "https://amicro-sv.enisdev.com/r/dither-math.json"
       ],
       "files": [
         {
@@ -3814,7 +3814,7 @@
         "runed"
       ],
       "registryDependencies": [
-        "dither-math"
+        "https://amicro-sv.enisdev.com/r/dither-math.json"
       ],
       "files": [
         {
@@ -3838,7 +3838,7 @@
         "runed"
       ],
       "registryDependencies": [
-        "dither-math"
+        "https://amicro-sv.enisdev.com/r/dither-math.json"
       ],
       "files": [
         {
@@ -3862,7 +3862,7 @@
         "runed"
       ],
       "registryDependencies": [
-        "dither-math"
+        "https://amicro-sv.enisdev.com/r/dither-math.json"
       ],
       "files": [
         {
@@ -3923,7 +3923,7 @@
     },
     {
       "name": "dither-math",
-      "type": "registry:lib",
+      "type": "registry:ui",
       "title": "Dither Math",
       "description": "Building block behind the dither charts, ported to Svelte 5.",
       "dependencies": [],
@@ -3931,7 +3931,7 @@
       "files": [
         {
           "path": "src/lib/app/components/simple-comp/dither-math.ts",
-          "type": "registry:lib",
+          "type": "registry:ui",
           "target": "amicro/dither-math.ts"
         },
         {

@@ -1071,7 +1071,7 @@ export const REGISTRY_ITEMS: RegistryItem[] = [
  {
   "name": "dither-math",
   "title": "Dither Math",
-  "type": "registry:lib",
+  "type": "registry:ui",
   "description": "Building block behind the dither charts, ported to Svelte 5."
  }
 ];

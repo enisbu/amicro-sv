@@ -1,6 +1,6 @@
 # Amicro SV
 
-> 170 micro interaction components for Svelte 5 plus the hooks and helpers behind them, pulled into your project one file at a time from a shadcn style registry. Entrance and hover animations, text and scroll effects, cursor effects, page transitions, card layouts, canvas dither charts and 134 loaders, all running on motion-sv.
+> 171 micro interaction components for Svelte 5 plus the hooks and helpers behind them, pulled into your project one file at a time from a shadcn style registry. Entrance and hover animations, text and scroll effects, cursor effects, page transitions, card layouts, canvas dither charts and 134 loaders, all running on motion-sv.
 
 Amicro SV is a Svelte 5 port of Amicro (React, MIT) by Syed Subhan and is not affiliated with the original. There is no npm package: each item is a plain Svelte file with motion-sv as its only runtime dependency, copied into your repo, yours to edit afterwards.
 

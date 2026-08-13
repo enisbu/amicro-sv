@@ -63,7 +63,9 @@ const externalDeps = (source) =>
 	[...new Set(importsOf(source).filter((spec) => !spec.startsWith('.')))].sort();
 
 const localDeps = (source) =>
-	[...new Set(importsOf(source).filter((spec) => spec.startsWith('.')).map((spec) => kebab(basename(spec).replace(/\.js$/, ''))))].sort();
+	[...new Set(importsOf(source).filter((spec) => spec.startsWith('.')).map((spec) => kebab(basename(spec).replace(/\.js$/, ''))))]
+		.sort()
+		.map((name) => `${SITE}/r/${name}.json`);
 
 const items = [
 	{
@@ -150,7 +152,7 @@ const CHART_ITEMS = {
 const CHART_SUPPORT = {
 	'animated-number': ['AnimatedNumber.svelte', 'registry:ui'],
 	'dither-animated-value': ['DitherAnimatedValue.svelte', 'registry:ui'],
-	'dither-math': ['dither-math.ts', 'registry:lib']
+	'dither-math': ['dither-math.ts', 'registry:ui']
 };
 
 const chartEntries = [

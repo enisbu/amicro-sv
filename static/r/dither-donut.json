@@ -9,7 +9,7 @@
 		"runed"
 	],
 	"registryDependencies": [
-		"dither-math"
+		"https://amicro-sv.enisdev.com/r/dither-math.json"
 	],
 	"files": [
 		{

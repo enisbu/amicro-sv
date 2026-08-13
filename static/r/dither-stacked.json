@@ -9,8 +9,8 @@
 		"runed"
 	],
 	"registryDependencies": [
-		"dither-animated-value",
-		"dither-math"
+		"https://amicro-sv.enisdev.com/r/dither-animated-value.json",
+		"https://amicro-sv.enisdev.com/r/dither-math.json"
 	],
 	"files": [
 		{
